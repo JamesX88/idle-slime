@@ -119,9 +119,18 @@ export function renderSettings(container: HTMLElement, onBack: () => void): void
   })
 
   container.querySelector('#delete-btn')?.addEventListener('click', () => {
-    if (confirm('Delete all save data? This cannot be undone.')) {
-      deleteSave()
-      location.reload()
-    }
+    const row = container.querySelector('#delete-btn')!.parentElement!
+    if (row.querySelector('#delete-confirm')) return
+    const confirm = document.createElement('div')
+    confirm.id = 'delete-confirm'
+    confirm.style.cssText = 'display:flex;gap:8px;margin-top:8px;align-items:center'
+    confirm.innerHTML = `
+      <span style="font-size:var(--font-size-xs);color:var(--rarity-rare);flex:1">Really delete everything?</span>
+      <button class="btn btn--secondary" id="delete-yes" style="flex:0;padding:6px 12px;border-color:var(--rarity-rare);color:var(--rarity-rare)">Yes, delete</button>
+      <button class="btn btn--secondary" id="delete-no" style="flex:0;padding:6px 12px">Cancel</button>
+    `
+    row.appendChild(confirm)
+    confirm.querySelector('#delete-yes')?.addEventListener('click', () => { deleteSave(); location.reload() })
+    confirm.querySelector('#delete-no')?.addEventListener('click', () => confirm.remove())
   })
 }

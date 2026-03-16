@@ -334,6 +334,16 @@ button:focus-visible {
   margin: 10px auto 6px;
 }
 
+.panel__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  padding: 4px 8px;
+  line-height: 1;
+}
+
 .panel__content {
   padding: 12px 16px 24px;
 }

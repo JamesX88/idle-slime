@@ -28,7 +28,14 @@ export function initSlimeDetailPanel(): void {
   contentEl = document.createElement('div')
   contentEl.className = 'panel__content'
 
+  const closeBtn = document.createElement('button')
+  closeBtn.className = 'panel__close'
+  closeBtn.setAttribute('aria-label', 'Close')
+  closeBtn.textContent = '✕'
+  closeBtn.addEventListener('click', close)
+
   panelEl.appendChild(handle)
+  panelEl.appendChild(closeBtn)
   panelEl.appendChild(contentEl)
 
   const app = document.getElementById('app')!

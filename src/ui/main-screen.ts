@@ -10,6 +10,24 @@ import { showFloatingNumber } from './components/floating-number'
 import { TOTAL_SLIMES } from '../data/config'
 import type { SlimeId } from '../game/types'
 
+function showSummonBanner(id: SlimeId): void {
+  const def = getSlime(id)
+  if (!def) return
+  const banner = document.createElement('div')
+  banner.style.cssText = `
+    position:fixed;bottom:72px;left:50%;transform:translateX(-50%);
+    background:var(--color-surface);border:1px solid var(--color-border);
+    border-radius:var(--border-radius-sm);padding:8px 16px;
+    font-size:var(--font-size-sm);z-index:150;white-space:nowrap;
+    box-shadow:var(--shadow-md);pointer-events:none;
+  `
+  const state = getState()
+  const isNew = Object.values(state.collection).filter(o => o.id === id).length === 0
+  banner.textContent = isNew ? `✨ New: ${def.name}!` : `🟢 ${def.name} ×${(state.collection[id]?.count ?? 1)}`
+  document.getElementById('app')!.appendChild(banner)
+  setTimeout(() => banner.remove(), 2000)
+}
+
 const ZONE_NAMES: Record<number, string> = {
   1: 'Gooey Meadow',
   2: 'Crystal Caves',
@@ -253,6 +271,6 @@ function renderSlimeGrid(container: HTMLElement, state: ReturnType<typeof getSta
 
   grid.querySelector('#summon-btn')?.addEventListener('click', () => {
     const resultId = performSummon(state.activeZone)
-    if (resultId) openSlimeDetail(resultId)
+    if (resultId) showSummonBanner(resultId)
   })
 }

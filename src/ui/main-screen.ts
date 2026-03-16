@@ -159,6 +159,22 @@ export function renderMainScreen(container: HTMLElement): void {
     import('./router').then(m => m.navigate('settings'))
   })
 
+  // Event delegation for the slime grid — handles summon + slime detail clicks
+  // even after the grid innerHTML is replaced by reactive updates.
+  const grid = container.querySelector('#slime-grid')!
+  grid.addEventListener('click', (e) => {
+    const target = (e.target as HTMLElement).closest('button')
+    if (!target) return
+    if (target.id === 'summon-btn') {
+      const state = getState()
+      const resultId = performSummon(state.activeZone)
+      if (resultId) showSummonBanner(resultId)
+      return
+    }
+    const slimeId = target.dataset['slimeId'] as SlimeId | undefined
+    if (slimeId) openSlimeDetail(slimeId)
+  })
+
   // Reactive updates
   subscribe(() => updateMain(container))
   updateMain(container)
@@ -260,17 +276,5 @@ function renderSlimeGrid(container: HTMLElement, state: ReturnType<typeof getSta
   `)
 
   grid.innerHTML = cells.join('')
-
-  // Attach slime click handlers
-  grid.querySelectorAll('[data-slime-id]').forEach(el => {
-    el.addEventListener('click', () => {
-      const id = (el as HTMLElement).dataset['slimeId'] as SlimeId
-      openSlimeDetail(id)
-    })
-  })
-
-  grid.querySelector('#summon-btn')?.addEventListener('click', () => {
-    const resultId = performSummon(state.activeZone)
-    if (resultId) showSummonBanner(resultId)
-  })
+  // Click handlers are managed via event delegation on the grid (set up once in renderMainScreen)
 }

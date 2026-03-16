@@ -18,7 +18,15 @@ interface SerializedState extends Omit<GameState, 'breedSlots' | 'unlockedZones'
   breedSlots: BreedSlot[]
 }
 
+// Set to true before calling location.reload() after a delete so that the
+// beforeunload / visibilitychange handlers don't re-write the save we just removed.
+let _skipNextSave = false
+export function markSaveDeleted(): void {
+  _skipNextSave = true
+}
+
 export function saveGame(state: GameState): void {
+  if (_skipNextSave) return
   try {
     const save: SaveData = {
       version: GAME_VERSION,
@@ -87,6 +95,7 @@ export function importSave(data: string): boolean {
 }
 
 export function deleteSave(): void {
+  markSaveDeleted()
   localStorage.removeItem(SAVE_KEY)
 }
 

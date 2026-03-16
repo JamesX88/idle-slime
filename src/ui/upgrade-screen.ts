@@ -35,6 +35,16 @@ export function renderUpgradeScreen(container: HTMLElement, onBack: () => void):
     })
   })
 
+  // Event delegation on the upgrade content area — survives innerHTML replacement on every tick
+  const upgradeContent = container.querySelector('#upgrade-content')!
+  upgradeContent.addEventListener('click', (e) => {
+    const target = (e.target as HTMLElement).closest('button')
+    if (!target || target.disabled) return
+    if (target.id === 'upgrade-tap-btn') { upgradeTap(); return }
+    if (target.id === 'upgrade-output-btn') { upgradeOutput(); return }
+    if (target.id === 'upgrade-disc-btn') { upgradeDiscovery(); return }
+  })
+
   subscribe(() => renderUpgrades(container))
   renderUpgrades(container)
 }
@@ -77,7 +87,7 @@ function renderUpgrades(container: HTMLElement): void {
         </div>
       </div>
     `
-    content.querySelector('#upgrade-tap-btn')?.addEventListener('click', () => upgradeTap())
+    // Click handled via event delegation (set up once in renderUpgradeScreen)
   }
 
   if (activeTrack === 'output') {
@@ -115,7 +125,7 @@ function renderUpgrades(container: HTMLElement): void {
         </div>
       </div>
     `
-    content.querySelector('#upgrade-output-btn')?.addEventListener('click', () => upgradeOutput())
+    // Click handled via event delegation (set up once in renderUpgradeScreen)
   }
 
   if (activeTrack === 'discovery') {
@@ -164,6 +174,6 @@ function renderUpgrades(container: HTMLElement): void {
         </div>
       </div>
     `
-    content.querySelector('#upgrade-disc-btn')?.addEventListener('click', () => upgradeDiscovery())
+    // Click handled via event delegation (set up once in renderUpgradeScreen)
   }
 }

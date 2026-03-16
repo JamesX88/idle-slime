@@ -25,6 +25,35 @@ export function renderBreedLab(container: HTMLElement, onBack: () => void): void
 
   container.querySelector('#back-btn')?.addEventListener('click', onBack)
 
+  // Event delegation on the breed-lab content — survives innerHTML replacement on every 100ms tick
+  const content = container.querySelector('#breed-lab-content')!
+  content.addEventListener('click', (e) => {
+    const target = (e.target as HTMLElement).closest('button')
+    if (!target || target.disabled) return
+
+    if (target.dataset['parent']) {
+      const slotIdx = parseInt(target.dataset['slot']!)
+      const parentNum = parseInt(target.dataset['parent']!)
+      openParentPicker(slotIdx, parentNum, (id) => {
+        if (!pendingSelections[slotIdx]) pendingSelections[slotIdx] = { p1: null, p2: null }
+        if (parentNum === 1) pendingSelections[slotIdx]!.p1 = id
+        else pendingSelections[slotIdx]!.p2 = id
+        // Next render cycle will reflect the selection in the buttons
+      })
+      return
+    }
+
+    if (target.dataset['action'] === 'breed') {
+      const slotIdx = parseInt(target.dataset['slot']!)
+      const sel = pendingSelections[slotIdx]
+      if (sel?.p1 && sel?.p2) {
+        startBreed(slotIdx, sel.p1, sel.p2)
+        delete pendingSelections[slotIdx]
+      }
+      return
+    }
+  })
+
   subscribe(() => renderSlots(container))
   renderSlots(container)
 }
@@ -105,29 +134,7 @@ function renderSlots(container: HTMLElement): void {
     `
   }).join('')
 
-  content.querySelectorAll('[data-parent]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const slotIdx = parseInt((btn as HTMLElement).dataset['slot']!)
-      const parentNum = parseInt((btn as HTMLElement).dataset['parent']!)
-      openParentPicker(slotIdx, parentNum, (id) => {
-        if (!pendingSelections[slotIdx]) pendingSelections[slotIdx] = { p1: null, p2: null }
-        if (parentNum === 1) pendingSelections[slotIdx]!.p1 = id
-        else pendingSelections[slotIdx]!.p2 = id
-        // Next render cycle will reflect the selection in the buttons
-      })
-    })
-  })
-
-  content.querySelectorAll('[data-action="breed"]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const slotIdx = parseInt((btn as HTMLElement).dataset['slot']!)
-      const sel = pendingSelections[slotIdx]
-      if (sel?.p1 && sel?.p2) {
-        startBreed(slotIdx, sel.p1, sel.p2)
-        delete pendingSelections[slotIdx]
-      }
-    })
-  })
+  // Click handlers are managed via event delegation on the content div (set up once in renderBreedLab)
 }
 
 function openParentPicker(slotIndex: number, parentNum: number, onSelect: (id: SlimeId) => void): void {

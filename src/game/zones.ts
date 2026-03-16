@@ -1,144 +1,158 @@
-import { ZONE_UNLOCK_COSTS, PITY_SUMMON_THRESHOLD, PITY_REDUCTION } from '../data/config'
-import { getState, setState } from './state'
-import { getZoneSummonPool, weightedSummon, pitySummon } from './slimes'
-import type { ZoneId, SlimeId, OwnedSlime } from './types'
-import { emitDiscovery } from './events'
+// Zone summoning and exploration logic
+import type { GameState, ZoneId, SlimeId } from './state'
+import { getSummonableSlimes, getSlime } from './slimes'
+import { SUMMON_COST, PITY_SUMMON_THRESHOLD } from '../data/config'
+import { addSpecialSlime } from './breeds'
 
-export function canUnlockZone(zoneId: ZoneId): boolean {
-  const state = getState()
-  const cost = ZONE_UNLOCK_COSTS[zoneId] ?? Infinity
-  return !state.unlockedZones.includes(zoneId) && state.goo >= cost
-}
+// Weighted random summon from zone pool
+export function performSummon(state: GameState): { slimeId: SlimeId; isNew: boolean; cost: number } | null {
+  const zone = state.activeZone
+  const pool = getSummonableSlimes(zone)
+  if (pool.length === 0) return null
 
-export function unlockZone(zoneId: ZoneId): void {
-  const state = getState()
-  const cost = ZONE_UNLOCK_COSTS[zoneId] ?? Infinity
-  if (state.goo < cost || state.unlockedZones.includes(zoneId)) return
+  // Determine what we can afford
+  const canAffordRare = state.goo >= SUMMON_COST.Rare
+  const canAffordUncommon = state.goo >= SUMMON_COST.Uncommon
+  const canAffordCommon = state.goo >= SUMMON_COST.Common
 
-  setState(s => {
-    s.goo -= cost
-    s.unlockedZones = [...s.unlockedZones, zoneId].sort() as ZoneId[]
-  })
+  if (!canAffordCommon) return null
 
-  // Zone 6 secret: unlock all 6 zones
-  checkZone6Secret()
-}
+  // Pity system: if summonsSinceNew >= threshold, guarantee undiscovered slime
+  const pityThreshold = state.discoveryLevel >= 13 ? 5 : state.discoveryLevel >= 2 ? 7 : PITY_SUMMON_THRESHOLD
+  const isPityTrigger = (state.summonsSinceNew[zone] ?? 0) >= pityThreshold
 
-export function setActiveZone(zoneId: ZoneId): void {
-  setState(s => { s.activeZone = zoneId })
-}
+  let candidates = pool
 
-// ---------------------------------------------------------------------------
-// Summoning
-// ---------------------------------------------------------------------------
-
-export function getSummonCost(zoneId: ZoneId): number {
-  const pool = getZoneSummonPool(zoneId)
-  // Cost is based on the cheapest available: if all common owned, rises slightly
-  // Simple rule: base is 25 (Common price) — the detailed cost is for the rarity drawn
-  // We show 25💧 as the listed cost (minimum)
-  return 25
-}
-
-export function canSummon(zoneId: ZoneId): boolean {
-  const state = getState()
-  return state.unlockedZones.includes(zoneId) && state.goo >= getSummonCost(zoneId)
-}
-
-export function performSummon(zoneId: ZoneId): SlimeId | null {
-  const state = getState()
-  const pool = getZoneSummonPool(zoneId)
-  if (!pool.length) return null
-
-  const pityCount = state.summonPity[zoneId] ?? 0
-  const pityThreshold = getPityThreshold(state.discoveryLevel)
-  const ownedIds = new Set(Object.keys(state.collection) as SlimeId[])
-
-  // Only draw from rarities the player can currently afford
-  const costMap: Record<string, number> = { Common: 25, Uncommon: 100, Rare: 500 }
-  const affordablePool = pool.filter(s => (costMap[s.rarity] ?? 25) <= state.goo)
-  if (!affordablePool.length) return null
-
-  let drawn = pityCount >= pityThreshold
-    ? pitySummon(affordablePool, ownedIds)
-    : weightedSummon(affordablePool)
-
-  const cost = costMap[drawn.rarity] ?? 25
-
-  const isNew = !state.collection[drawn.id]
-
-  setState(s => {
-    s.goo -= cost
-
-    if (s.collection[drawn.id]) {
-      s.collection[drawn.id]!.count += 1
-    } else {
-      const owned: OwnedSlime = {
-        id: drawn.id,
-        count: 1,
-        level: 1,
-        discoveredAt: Date.now(),
-        discoveryNumber: ++s.totalDiscoveries,
-      }
-      s.collection[drawn.id] = owned
+  if (isPityTrigger) {
+    // Force undiscovered slime
+    const undiscovered = pool.filter(s => !state.collection[s.id])
+    if (undiscovered.length > 0) {
+      candidates = undiscovered
     }
+  }
 
-    // Reset pity on new discovery, else increment
-    s.summonPity[zoneId] = isNew ? 0 : pityCount + 1
-  })
+  // Filter by affordability
+  const affordable = candidates.filter(s => state.goo >= (SUMMON_COST[s.rarity] ?? SUMMON_COST.Common))
+  if (affordable.length === 0) return null
 
+  // Weighted by rarity (Common most likely)
+  const weights: Record<string, number> = { Common: 60, Uncommon: 30, Rare: 10 }
+  const weightedPool: SlimeId[] = []
+  for (const s of affordable) {
+    const w = weights[s.rarity] ?? 5
+    for (let i = 0; i < w; i++) weightedPool.push(s.id)
+  }
+
+  const pickedId = weightedPool[Math.floor(Math.random() * weightedPool.length)]
+  const picked = getSlime(pickedId)
+  if (!picked) return null
+
+  const cost = SUMMON_COST[picked.rarity] ?? SUMMON_COST.Common
+  if (state.goo < cost) return null
+
+  state.goo -= cost
+  state.tapsSinceSpend = 0
+
+  const isNew = !state.collection[pickedId]
+
+  if (state.collection[pickedId]) {
+    state.collection[pickedId].count++
+  } else {
+    state.totalDiscoveries++
+    state.collection[pickedId] = {
+      id: pickedId,
+      count: 1,
+      level: 1,
+      discoveredAt: Date.now(),
+      discoveryNumber: state.totalDiscoveries,
+    }
+    state.zoneDiscoveries[zone] = (state.zoneDiscoveries[zone] ?? 0) + 1
+    if (isNew) state.prismShards++
+  }
+
+  // Update pity counter
   if (isNew) {
-    emitDiscovery(drawn.id)
-    // Award Prism Shard on discovery
-    setState(s => { s.prismShards += 1 })
+    state.summonsSinceNew[zone] = 0
+  } else {
+    state.summonsSinceNew[zone] = (state.summonsSinceNew[zone] ?? 0) + 1
   }
 
-  return drawn.id
+  // Check special triggers
+  checkSummonSpecials(state)
+
+  return { slimeId: pickedId, isNew, cost }
 }
 
-function getPityThreshold(discoveryLevel: number): number {
-  if (discoveryLevel >= 13) return PITY_REDUCTION[13] ?? 5
-  if (discoveryLevel >= 2) return PITY_REDUCTION[2] ?? 7
-  return PITY_SUMMON_THRESHOLD
-}
+function checkSummonSpecials(state: GameState): void {
+  // Oversized Slime: 100+ slimes in collection
+  if (!state.oversizedSlimeUnlocked) {
+    const total = Object.values(state.collection).reduce((sum, o) => sum + o.count, 0)
+    if (total >= 100) {
+      state.oversizedSlimeUnlocked = true
+      addSpecialSlime(state, '517')
+    }
+  }
 
-function checkZone6Secret(): void {
-  const state = getState()
-  if (state.unlockedZones.length === 6) {
-    const secret = state.zoneSecrets.find(s => s.zoneId === 6)
-    if (secret && !secret.completed) {
-      setState(s => {
-        const sec = s.zoneSecrets.find(z => z.zoneId === 6)
-        if (sec) {
-          sec.progress = 1
-          sec.completed = true
-        }
-      })
-      awardSecretSlime('150')
+  // Slime King: all 25 Zone 3 slimes
+  if (!state.slimeKingUnlocked && state.unlockedZones.includes(3)) {
+    const zone3Count = Object.keys(state.collection).filter(id => {
+      const def = getSlime(id)
+      return def?.zone === 3
+    }).length
+    if (zone3Count >= 25) {
+      state.slimeKingUnlocked = true
+      addSpecialSlime(state, '522')
+    }
+  }
+
+  // Slime Queen: all 25 Zone 4 slimes
+  if (!state.slimeQueenUnlocked && state.unlockedZones.includes(4)) {
+    const zone4Count = Object.keys(state.collection).filter(id => {
+      const def = getSlime(id)
+      return def?.zone === 4
+    }).length
+    if (zone4Count >= 25) {
+      state.slimeQueenUnlocked = true
+      addSpecialSlime(state, '523')
+    }
+  }
+
+  // Primordial Goo: all 6 zone apex Epics
+  if (!state.primordialGooUnlocked) {
+    const apexIds = ['162', '174', '186', '198', '210', '222']
+    if (apexIds.every(id => !!state.collection[id])) {
+      state.primordialGooUnlocked = true
+      addSpecialSlime(state, '526')
+    }
+  }
+
+  // True Form: all 526 other slimes
+  if (!state.trueFormUnlocked) {
+    const count = Object.keys(state.collection).filter(id => id !== '527').length
+    if (count >= 526) {
+      state.trueFormUnlocked = true
+      addSpecialSlime(state, '527')
     }
   }
 }
 
-export function awardSecretSlime(id: SlimeId): void {
-  const state = getState()
-  const isNew = !state.collection[id]
-
-  setState(s => {
-    if (s.collection[id]) {
-      s.collection[id]!.count += 1
-    } else {
-      s.collection[id] = {
-        id,
-        count: 1,
-        level: 1,
-        discoveredAt: Date.now(),
-        discoveryNumber: ++s.totalDiscoveries,
-      }
-    }
-  })
-
-  if (isNew) {
-    emitDiscovery(id)
-    setState(s => { s.prismShards += 1 })
+export function checkTapSpecials(state: GameState): void {
+  // Glitch Slime: exactly 999 taps without spending
+  if (!state.glitchSlimeUnlocked && state.tapsSinceSpend === 999) {
+    state.glitchSlimeUnlocked = true
+    addSpecialSlime(state, '515')
   }
+}
+
+export function checkTimeSpecials(state: GameState): void {
+  // Elder Slime: a slime at max level for 24h
+  if (!state.collection['519'] && state.maxLevelReachedAt) {
+    const hoursElapsed = (Date.now() - state.maxLevelReachedAt) / (1000 * 60 * 60)
+    if (hoursElapsed >= 24) {
+      addSpecialSlime(state, '519')
+    }
+  }
+
+  // Haunted Slime: breed after midnight
+  // Checked in breed start
 }

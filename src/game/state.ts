@@ -1,132 +1,184 @@
-import type { GameState, BreedSlot, ZoneSecret } from './types'
+// Central game state — single source of truth
+// Uses a simple pub/sub reactive store (no framework needed)
 
-function makeBreedSlots(): GameState['breedSlots'] {
-  const makeSlot = (i: number): BreedSlot => ({
-    slotIndex: i,
-    status: i === 0 ? 'idle' : 'locked',
-    parent1: null,
-    parent2: null,
-    startTime: null,
-    cooldownMs: 45_000,
-  })
-  return [makeSlot(0), makeSlot(1), makeSlot(2), makeSlot(3)]
+export type Rarity = 'Common' | 'Uncommon' | 'Rare' | 'Epic' | 'Legendary' | 'Mythic'
+export type ZoneId = 1 | 2 | 3 | 4 | 5 | 6
+export type SlimeId = string
+
+export interface SlimeDefinition {
+  id: SlimeId
+  name: string
+  rarity: Rarity
+  discovery: 'Zone' | 'Breed' | 'Special'
+  zone: ZoneId | null
+  parent1: SlimeId | null
+  parent2: SlimeId | null
+  element: string
+  baseGooPerSec: number
+  lore: string
+  favoriteFood: string
+  notes: string
 }
 
-function makeZoneSecrets(): ZoneSecret[] {
-  return [
-    {
-      zoneId: 1,
-      resultSlimeId: '025',
-      triggerType: 'TAP_N_TIMES',
-      target: 100,
-      progress: 0,
-      completed: false,
-      description: 'Tap the ancient oak',
-    },
-    {
-      zoneId: 2,
-      resultSlimeId: '050',
-      triggerType: 'REACH_GOO_THRESHOLD',
-      target: 10_000,
-      progress: 0,
-      completed: false,
-      description: 'Accumulate 10,000 Goo while in Crystal Caves',
-    },
-    {
-      zoneId: 3,
-      resultSlimeId: '075',
-      triggerType: 'TAP_N_TIMES',
-      target: 60,
-      progress: 0,
-      completed: false,
-      description: 'Survive without spending for 60 taps',
-    },
-    {
-      zoneId: 4,
-      resultSlimeId: '100',
-      triggerType: 'HAVE_N_TYPE_SLIMES',
-      target: 5,
-      progress: 0,
-      completed: false,
-      description: 'Have 5 Ice-type slimes active simultaneously',
-    },
-    {
-      zoneId: 5,
-      resultSlimeId: '125',
-      triggerType: 'BREED_COUNT',
-      target: 10,
-      progress: 0,
-      completed: false,
-      description: 'Complete 10 breeds while Zone 5 is active',
-    },
-    {
-      zoneId: 6,
-      resultSlimeId: '150',
-      triggerType: 'TAP_N_TIMES',
-      target: 1,
-      progress: 0,
-      completed: false,
-      description: 'Unlock all 6 zones',
-    },
-  ]
+export interface OwnedSlime {
+  id: SlimeId
+  count: number
+  level: number
+  discoveredAt: number
+  discoveryNumber: number
 }
 
-export function createNewGame(): GameState {
-  return {
-    goo: 50,
-    essence: 0,
-    prismShards: 0,
-    unlockedZones: [1],
-    activeZone: 1,
-    summonPity: {},
-    collection: {},
-    tapPowerLevel: 0,
-    outputLevel: 0,
-    discoveryLevel: 0,
-    breedSlots: makeBreedSlots(),
-    zoneSecrets: makeZoneSecrets(),
-    totalBreeds: 0,
-    totalDiscoveries: 0,
-    lastSaveTime: Date.now(),
-    firstPlayTime: Date.now(),
-    soundEnabled: true,
-    musicEnabled: true,
-    reduceMotion: false,
-    highContrast: false,
-    largeText: false,
-    notificationsEnabled: true,
-  }
+export interface BreedSlot {
+  id: number
+  locked: boolean
+  parent1: SlimeId | null
+  parent2: SlimeId | null
+  startTime: number | null
+  cooldownMs: number
+  resultId: SlimeId | null  // set when breed completes, cleared on collect
 }
 
-// ---------------------------------------------------------------------------
-// Reactive store — simple pub/sub, no framework needed
-// ---------------------------------------------------------------------------
+export interface GameState {
+  // Currencies
+  goo: number
+  essence: number
+  prismShards: number
 
-type Listener = () => void
+  // Zones
+  unlockedZones: ZoneId[]
+  activeZone: ZoneId
 
-let _state: GameState = createNewGame()
-const _listeners = new Set<Listener>()
+  // Collection — keyed by slime ID
+  collection: Record<SlimeId, OwnedSlime>
+
+  // Upgrades
+  tapPowerLevel: number
+  outputLevel: number
+  discoveryLevel: number
+
+  // Breed slots
+  breedSlots: BreedSlot[]
+
+  // Tap tracking
+  tapCount: number          // total taps ever
+  tapsSinceSpend: number    // for Glitch Slime (999 taps without spending)
+  consecutiveTapTarget: SlimeId | null  // for Curious Slime
+  consecutiveTapCount: number
+
+  // Meta
+  totalBreeds: number
+  totalDiscoveries: number
+  lastSaveTime: number
+  firstPlayTime: number
+
+  // Pity system per zone
+  summonsSinceNew: Record<ZoneId, number>
+
+  // Zone summon counts per zone (for tracking)
+  zoneDiscoveries: Record<ZoneId, number>
+
+  // Special trigger tracking
+  maxLevelEverReached: boolean
+  maxLevelSlimeId: SlimeId | null
+  maxLevelReachedAt: number | null
+  glitchSlimeUnlocked: boolean
+  oversizedSlimeUnlocked: boolean
+  miniatureSlimeUnlocked: boolean
+  slimeKingUnlocked: boolean
+  slimeQueenUnlocked: boolean
+  ancientSlimeUnlocked: boolean
+  cosmicJesterUnlocked: boolean
+  primordialGooUnlocked: boolean
+  trueFormUnlocked: boolean
+
+  // Settings
+  sfxEnabled: boolean
+  musicEnabled: boolean
+  reduceMotion: boolean
+  highContrast: boolean
+  largeText: boolean
+}
+
+// ---- Reactive Store ----
+
+let _state: GameState
+const _subscribers: Set<() => void> = new Set()
+
+export function initState(initial: GameState): void {
+  _state = initial
+}
 
 export function getState(): GameState {
   return _state
 }
 
-export function setState(updater: (s: GameState) => GameState | void): void {
-  const result = updater(_state)
-  if (result !== undefined) _state = result
+export function setState(updater: (s: GameState) => void): void {
+  updater(_state)
   notify()
 }
 
-export function subscribe(fn: Listener): () => void {
-  _listeners.add(fn)
-  return () => _listeners.delete(fn)
+export function subscribe(fn: () => void): () => void {
+  _subscribers.add(fn)
+  return () => _subscribers.delete(fn)
 }
 
 function notify(): void {
-  for (const fn of _listeners) fn()
+  for (const fn of _subscribers) {
+    try { fn() } catch (e) { console.error('Subscriber error:', e) }
+  }
 }
 
-export function replaceState(newState: GameState): void {
-  _state = newState
+// Batch multiple updates without intermediate notifications
+export function batch(fn: () => void): void {
+  fn()
   notify()
+}
+
+// ---- Default State ----
+
+export function createNewGame(): GameState {
+  return {
+    goo: 0,
+    essence: 0,
+    prismShards: 0,
+    unlockedZones: [1],
+    activeZone: 1,
+    collection: {},
+    tapPowerLevel: 0,
+    outputLevel: 0,
+    discoveryLevel: 0,
+    breedSlots: [
+      { id: 0, locked: false, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
+      { id: 1, locked: true, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
+      { id: 2, locked: true, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
+      { id: 3, locked: true, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
+    ],
+    tapCount: 0,
+    tapsSinceSpend: 0,
+    consecutiveTapTarget: null,
+    consecutiveTapCount: 0,
+    totalBreeds: 0,
+    totalDiscoveries: 0,
+    lastSaveTime: Date.now(),
+    firstPlayTime: Date.now(),
+    summonsSinceNew: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+    zoneDiscoveries: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+    maxLevelEverReached: false,
+    maxLevelSlimeId: null,
+    maxLevelReachedAt: null,
+    glitchSlimeUnlocked: false,
+    oversizedSlimeUnlocked: false,
+    miniatureSlimeUnlocked: false,
+    slimeKingUnlocked: false,
+    slimeQueenUnlocked: false,
+    ancientSlimeUnlocked: false,
+    cosmicJesterUnlocked: false,
+    primordialGooUnlocked: false,
+    trueFormUnlocked: false,
+    sfxEnabled: true,
+    musicEnabled: false,
+    reduceMotion: false,
+    highContrast: false,
+    largeText: false,
+  }
 }

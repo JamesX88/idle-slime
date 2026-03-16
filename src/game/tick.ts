@@ -1,154 +1,86 @@
+// Game loop — production tick + UI tick
 import { getState, setState } from './state'
-import { computeTotalProduction, gooPerTap } from './economy'
-import { tickBreedSlots } from './breeds'
-import { emitTap } from './events'
-import { SAVE_INTERVAL_MS } from '../data/config'
+import { computeTotalProduction } from './economy'
+import { tickBreeds } from './breeds'
+import { checkTimeSpecials } from './zones'
 import { saveGame } from './save'
-import { getAllSlimes } from './slimes'
 
-// ---------------------------------------------------------------------------
-// Production tick — every 100ms
-// ---------------------------------------------------------------------------
+const PRODUCTION_INTERVAL_MS = 100
+const SAVE_INTERVAL_MS = 30_000
+const SPECIAL_CHECK_INTERVAL_MS = 60_000
 
-let productionInterval: ReturnType<typeof setInterval> | null = null
+let _productionInterval: number | null = null
+let _saveInterval: number | null = null
+let _specialCheckInterval: number | null = null
+let _lastProductionTime = Date.now()
 
-export function startProductionTick(): void {
-  if (productionInterval) return
-  productionInterval = setInterval(() => {
-    const state = getState()
-    const production = computeTotalProduction(state)
-    const delta = production * 0.1  // 100ms = 0.1s
+// Callbacks for UI to hook into
+type BreedCompleteCallback = (resultIds: string[]) => void
+let _onBreedComplete: BreedCompleteCallback | null = null
 
-    setState(s => { s.goo += delta })
-
-    tickBreedSlots()
-    tickZoneGooSecret()
-  }, 100)
+export function onBreedComplete(cb: BreedCompleteCallback): void {
+  _onBreedComplete = cb
 }
 
-export function stopProductionTick(): void {
-  if (productionInterval) {
-    clearInterval(productionInterval)
-    productionInterval = null
-  }
-}
+export function startGameLoop(): void {
+  stopGameLoop()
 
-// ---------------------------------------------------------------------------
-// Auto-save tick
-// ---------------------------------------------------------------------------
+  _productionInterval = window.setInterval(() => {
+    const now = Date.now()
+    const dt = (now - _lastProductionTime) / 1000
+    _lastProductionTime = now
 
-let saveInterval: ReturnType<typeof setInterval> | null = null
+    setState(state => {
+      // Production tick
+      const production = computeTotalProduction(state)
+      state.goo += production * dt
 
-export function startAutoSave(): void {
-  if (saveInterval) return
-  saveInterval = setInterval(() => {
+      // Breed ticks
+      const completed = tickBreeds(state)
+      if (completed.length > 0 && _onBreedComplete) {
+        _onBreedComplete(completed)
+      }
+    })
+  }, PRODUCTION_INTERVAL_MS)
+
+  _saveInterval = window.setInterval(() => {
     saveGame(getState())
   }, SAVE_INTERVAL_MS)
-}
 
-// ---------------------------------------------------------------------------
-// Tap handler
-// ---------------------------------------------------------------------------
-
-export function handleTap(): void {
-  const state = getState()
-  const earned = gooPerTap(state)
-  setState(s => { s.goo += earned })
-  emitTap(earned)
-  tickTapSecrets()
-}
-
-// ---------------------------------------------------------------------------
-// Zone secrets: tap-based and goo-threshold
-// ---------------------------------------------------------------------------
-
-let consecutiveTaps = 0
-let lastTapTarget: string | null = null
-
-function tickTapSecrets(): void {
-  const state = getState()
-
-  // Zone tap secret
-  const secret = state.zoneSecrets.find(
-    s => s.zoneId === state.activeZone &&
-         s.triggerType === 'TAP_N_TIMES' &&
-         !s.completed
-  )
-  if (!secret) return
-
-  setState(s => {
-    const sec = s.zoneSecrets.find(
-      z => z.zoneId === s.activeZone && z.triggerType === 'TAP_N_TIMES' && !z.completed
-    )
-    if (!sec) return
-    sec.progress += 1
-    if (sec.progress >= sec.target) {
-      sec.completed = true
-      import('./zones').then(({ awardSecretSlime }) => awardSecretSlime(sec.resultSlimeId))
-    }
-  })
-}
-
-function tickZoneGooSecret(): void {
-  const state = getState()
-  const secret = state.zoneSecrets.find(
-    s => s.zoneId === state.activeZone &&
-         s.triggerType === 'REACH_GOO_THRESHOLD' &&
-         !s.completed
-  )
-  if (!secret) return
-  if (state.goo >= secret.target) {
-    setState(s => {
-      const sec = s.zoneSecrets.find(
-        z => z.zoneId === s.activeZone && z.triggerType === 'REACH_GOO_THRESHOLD' && !z.completed
-      )
-      if (!sec) return
-      sec.progress = sec.target
-      sec.completed = true
+  _specialCheckInterval = window.setInterval(() => {
+    setState(state => {
+      checkTimeSpecials(state)
     })
-    import('./zones').then(({ awardSecretSlime }) => awardSecretSlime(secret.resultSlimeId))
+  }, SPECIAL_CHECK_INTERVAL_MS)
+
+  // Save on tab blur
+  document.addEventListener('visibilitychange', _onVisibilityChange)
+  window.addEventListener('beforeunload', _onBeforeUnload)
+}
+
+export function stopGameLoop(): void {
+  if (_productionInterval !== null) {
+    clearInterval(_productionInterval)
+    _productionInterval = null
+  }
+  if (_saveInterval !== null) {
+    clearInterval(_saveInterval)
+    _saveInterval = null
+  }
+  if (_specialCheckInterval !== null) {
+    clearInterval(_specialCheckInterval)
+    _specialCheckInterval = null
+  }
+  document.removeEventListener('visibilitychange', _onVisibilityChange)
+  window.removeEventListener('beforeunload', _onBeforeUnload)
+}
+
+function _onVisibilityChange(): void {
+  if (document.visibilityState === 'hidden') {
+    saveGame(getState())
   }
 }
 
-// ---------------------------------------------------------------------------
-// Ice-type slime secret (Zone 4)
-// ---------------------------------------------------------------------------
-
-export function checkIceSlimeSecret(): void {
-  const state = getState()
-  const secret = state.zoneSecrets.find(
-    s => s.zoneId === 4 && s.triggerType === 'HAVE_N_TYPE_SLIMES' && !s.completed
-  )
-  if (!secret) return
-
-  const iceCount = Object.values(state.collection).filter(owned => {
-    const def = import('./slimes').then(m => m.getSlime(owned.id))
-    return false // async — handled in UI layer on collection change
-  }).length
-
-  // This check is performed from the UI after any summon/breed event
-}
-
-export function checkIceSlimeSecretSync(state: typeof getState extends () => infer S ? S : never): void {
-  const secret = state.zoneSecrets.find(
-    s => s.zoneId === 4 && s.triggerType === 'HAVE_N_TYPE_SLIMES' && !s.completed
-  )
-  if (!secret) return
-
-  const allDefs = getAllSlimes()
-  const defMap = new Map(allDefs.map(d => [d.id, d]))
-  const iceSlimes = Object.values(state.collection).filter(owned => {
-    const def = defMap.get(owned.id)
-    return def?.element.includes('Ice') && owned.count > 0
-  })
-
-  if (iceSlimes.length >= secret.target) {
-    setState(s => {
-      const sec = s.zoneSecrets.find(z => z.zoneId === 4 && z.triggerType === 'HAVE_N_TYPE_SLIMES' && !z.completed)
-      if (!sec) return
-      sec.progress = sec.target
-      sec.completed = true
-    })
-    import('./zones').then(({ awardSecretSlime }) => awardSecretSlime(secret.resultSlimeId))
-  }
+function _onBeforeUnload(): void {
+  saveGame(getState())
 }

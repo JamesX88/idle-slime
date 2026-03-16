@@ -1,46 +1,25 @@
-import type { GameState, OwnedSlime, BreedSlot, ZoneId } from './types'
-import { createNewGame, replaceState } from './state'
+// Save/load system — localStorage with offline production calculation
+import type { GameState, ZoneId } from './state'
+import { createNewGame } from './state'
 import { computeTotalProduction } from './economy'
-import { OFFLINE_CAP_HOURS } from '../data/config'
+import { SAVE_KEY, GAME_VERSION, OFFLINE_CAP_HOURS } from '../data/config'
 
-const SAVE_KEY = 'idle-slime-save'
-const GAME_VERSION = '0.1.0'
-
-interface SaveData {
-  version: string
-  savedAt: number
-  state: SerializedState
-}
-
-// Maps and complex types need explicit serialization
-interface SerializedState extends Omit<GameState, 'breedSlots' | 'unlockedZones'> {
-  unlockedZones: number[]
-  breedSlots: BreedSlot[]
-}
-
-// Set to true before calling location.reload() after a delete so that the
-// beforeunload / visibilitychange handlers don't re-write the save we just removed.
 let _skipNextSave = false
-export function markSaveDeleted(): void {
-  _skipNextSave = true
-}
 
 export function saveGame(state: GameState): void {
-  if (_skipNextSave) return
+  if (_skipNextSave) {
+    _skipNextSave = false
+    return
+  }
   try {
-    const save: SaveData = {
+    const save = {
       version: GAME_VERSION,
       savedAt: Date.now(),
-      state: {
-        ...state,
-        unlockedZones: state.unlockedZones,
-        breedSlots: state.breedSlots,
-      },
+      state: serializeState(state),
     }
-    const json = JSON.stringify(save)
-    localStorage.setItem(SAVE_KEY, json)
+    localStorage.setItem(SAVE_KEY, JSON.stringify(save))
   } catch (e) {
-    console.error('Save failed:', e)
+    console.warn('Save failed:', e)
   }
 }
 
@@ -49,59 +28,88 @@ export function loadGame(): GameState {
     const raw = localStorage.getItem(SAVE_KEY)
     if (!raw) return createNewGame()
 
-    const save: SaveData = JSON.parse(raw)
-    if (!save.state) return createNewGame()
+    const save = JSON.parse(raw)
+    if (!save?.state) return createNewGame()
 
-    const state: GameState = {
-      ...createNewGame(),
-      ...save.state,
-      unlockedZones: (save.state.unlockedZones ?? [1]) as ZoneId[],
-      breedSlots: (save.state.breedSlots ?? createNewGame().breedSlots) as GameState['breedSlots'],
-    }
+    const state = deserializeState(save.state)
 
     // Offline production
-    const offlineSecs = Math.min(
-      (Date.now() - save.savedAt) / 1000,
+    const offlineSec = Math.min(
+      (Date.now() - (save.savedAt ?? Date.now())) / 1000,
       OFFLINE_CAP_HOURS * 3600
     )
-    if (offlineSecs > 0) {
-      const offlineGoo = computeTotalProduction(state) * offlineSecs
-      state.goo += offlineGoo
-      state._offlineGooEarned = offlineGoo  // shown in UI notification
+    if (offlineSec > 5) {
+      state.goo += computeTotalProduction(state) * offlineSec
     }
 
+    state.lastSaveTime = Date.now()
     return state
   } catch (e) {
-    console.error('Load failed, starting fresh:', e)
+    console.warn('Load failed, starting new game:', e)
     return createNewGame()
   }
 }
 
-export function exportSave(): string {
-  return localStorage.getItem(SAVE_KEY) ?? ''
-}
-
-export function importSave(data: string): boolean {
-  try {
-    const save: SaveData = JSON.parse(data)
-    if (!save.state || !save.version) return false
-    localStorage.setItem(SAVE_KEY, data)
-    const state = loadGame()
-    replaceState(state)
-    return true
-  } catch {
-    return false
-  }
-}
-
 export function deleteSave(): void {
-  markSaveDeleted()
+  _skipNextSave = true
   localStorage.removeItem(SAVE_KEY)
 }
 
-// Extend GameState for offline notification
-declare module './types' {
-  interface GameState {
-    _offlineGooEarned?: number
+export function exportSave(state: GameState): string {
+  const save = {
+    version: GAME_VERSION,
+    savedAt: Date.now(),
+    state: serializeState(state),
   }
+  return btoa(JSON.stringify(save))
+}
+
+export function importSave(encoded: string): GameState | null {
+  try {
+    const save = JSON.parse(atob(encoded))
+    if (!save?.state) return null
+    return deserializeState(save.state)
+  } catch {
+    return null
+  }
+}
+
+// ---- Serialization ----
+// We serialize to plain JSON — Maps/Sets become arrays
+
+function serializeState(state: GameState): object {
+  return {
+    ...state,
+    unlockedZones: state.unlockedZones,
+    collection: state.collection,
+    breedSlots: state.breedSlots,
+  }
+}
+
+function deserializeState(raw: any): GameState {
+  const defaults = createNewGame()
+
+  const state: GameState = {
+    ...defaults,
+    ...raw,
+    // Ensure arrays/objects are correct types
+    unlockedZones: Array.isArray(raw.unlockedZones) ? raw.unlockedZones : [1],
+    collection: raw.collection && typeof raw.collection === 'object' ? raw.collection : {},
+    breedSlots: Array.isArray(raw.breedSlots) ? raw.breedSlots : defaults.breedSlots,
+    summonsSinceNew: raw.summonsSinceNew ?? { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+    zoneDiscoveries: raw.zoneDiscoveries ?? { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+  }
+
+  // Ensure breed slots have all required fields
+  state.breedSlots = state.breedSlots.map((slot: any, i: number) => ({
+    id: i,
+    locked: slot.locked ?? (i > 0),
+    parent1: slot.parent1 ?? null,
+    parent2: slot.parent2 ?? null,
+    startTime: slot.startTime ?? null,
+    cooldownMs: slot.cooldownMs ?? 45000,
+    resultId: slot.resultId ?? null,
+  }))
+
+  return state
 }

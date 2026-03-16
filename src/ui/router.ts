@@ -1,67 +1,52 @@
-import { renderMainScreen } from './main-screen'
-import { renderSlimepedia } from './slimepedia'
-import { renderBreedLab } from './breed-lab'
-import { renderUpgradeScreen } from './upgrade-screen'
-import { renderZoneMap } from './zone-map'
-import { renderSettings } from './settings'
+// Simple screen router — no re-renders, just CSS transitions
+export type ScreenId = 'main' | 'slimepedia' | 'breed-lab' | 'upgrades' | 'zone-map' | 'settings' | 'pedia-entry'
 
-type ScreenId = 'main' | 'slimepedia' | 'breed-lab' | 'upgrades' | 'zone-map' | 'settings'
+const _screens = new Map<ScreenId, HTMLElement>()
+let _currentScreen: ScreenId = 'main'
+let _history: ScreenId[] = ['main']
 
-interface Screen {
-  id: ScreenId
-  el: HTMLElement
+export function registerScreen(id: ScreenId, el: HTMLElement): void {
+  _screens.set(id, el)
 }
 
-const screens = new Map<ScreenId, Screen>()
-let activeScreenId: ScreenId = 'main'
-let appEl: HTMLElement
+export function navigateTo(id: ScreenId): void {
+  const current = _screens.get(_currentScreen)
+  const next = _screens.get(id)
+  if (!next || id === _currentScreen) return
 
-export function initRouter(app: HTMLElement): void {
-  appEl = app
-
-  const screenIds: ScreenId[] = ['main', 'slimepedia', 'breed-lab', 'upgrades', 'zone-map', 'settings']
-
-  for (const id of screenIds) {
-    const el = document.createElement('div')
-    el.className = `screen${id === 'main' ? ' main active' : ''}`
-    el.id = `screen-${id}`
-    el.setAttribute('role', 'main')
-    app.appendChild(el)
-    screens.set(id, { id, el })
+  if (current) {
+    current.classList.remove('active')
+    current.classList.add('slide-left')
+    setTimeout(() => current.classList.remove('slide-left'), 300)
   }
 
-  const mainEl = screens.get('main')!.el
-  renderMainScreen(mainEl)
+  next.classList.add('active')
+  _history.push(id)
+  _currentScreen = id
 
-  // Zone map button in topbar (injected after main renders)
-  mainEl.querySelector('#zone-name')?.addEventListener('click', () => navigate('zone-map'))
+  // Dispatch event so screens can refresh their content
+  window.dispatchEvent(new CustomEvent('screen-change', { detail: { screen: id } }))
 }
 
-export function navigate(to: ScreenId): void {
-  if (to === activeScreenId) return
+export function navigateBack(): void {
+  if (_history.length <= 1) return
+  _history.pop()
+  const prevId = _history[_history.length - 1]
 
-  const current = screens.get(activeScreenId)!
-  const next = screens.get(to)!
+  const current = _screens.get(_currentScreen)
+  const prev = _screens.get(prevId)
+  if (!prev) return
 
-  // Lazy-render screens on first visit
-  if (!next.el.dataset['rendered']) {
-    renderScreen(to, next.el)
-    next.el.dataset['rendered'] = '1'
+  if (current) {
+    current.classList.remove('active')
   }
 
-  current.el.classList.remove('active')
-  next.el.classList.add('active')
-  activeScreenId = to
+  prev.classList.add('active')
+  _currentScreen = prevId
+
+  window.dispatchEvent(new CustomEvent('screen-change', { detail: { screen: prevId } }))
 }
 
-function renderScreen(id: ScreenId, el: HTMLElement): void {
-  const back = () => navigate('main')
-
-  switch (id) {
-    case 'slimepedia': renderSlimepedia(el, back); break
-    case 'breed-lab':  renderBreedLab(el, back); break
-    case 'upgrades':   renderUpgradeScreen(el, back); break
-    case 'zone-map':   renderZoneMap(el, back); break
-    case 'settings':   renderSettings(el, back); break
-  }
+export function getCurrentScreen(): ScreenId {
+  return _currentScreen
 }

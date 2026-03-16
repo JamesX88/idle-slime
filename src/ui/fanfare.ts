@@ -1,91 +1,95 @@
-import { getSlime, rarityIcon, rarityColor } from '../game/slimes'
-import type { SlimeId } from '../game/types'
-import { on } from '../game/events'
+// Discovery fanfare overlay
+import { getSlime, rarityColor, rarityEmoji, slimeEmoji, formatNumber } from '../game/slimes'
 import { getState } from '../game/state'
-import { TOTAL_SLIMES } from '../data/config'
+import { computeSlimeOutput } from '../game/economy'
 
-// Only show full fanfare for Rare+
-const FANFARE_RARITIES = new Set(['Rare', 'Epic', 'Legendary', 'Mythic'])
+let _overlay: HTMLElement | null = null
+let _queue: string[] = []
+let _showing = false
 
-let overlayEl: HTMLElement | null = null
-let cardEl: HTMLElement | null = null
+export function initFanfare(container: HTMLElement): void {
+  _overlay = document.createElement('div')
+  _overlay.className = 'fanfare-overlay'
+  _overlay.innerHTML = '<div class="fanfare-content"></div>'
+  container.appendChild(_overlay)
 
-export function initFanfare(): void {
-  overlayEl = document.createElement('div')
-  overlayEl.className = 'fanfare'
-  overlayEl.setAttribute('role', 'dialog')
-  overlayEl.setAttribute('aria-modal', 'true')
-  overlayEl.setAttribute('aria-label', 'New discovery')
-
-  cardEl = document.createElement('div')
-  cardEl.className = 'fanfare__card'
-  overlayEl.appendChild(cardEl)
-
-  overlayEl.addEventListener('click', (e) => {
-    if (e.target === overlayEl) close()
-  })
-
-  document.getElementById('app')!.appendChild(overlayEl)
-
-  on('discovery', (id) => {
-    const def = getSlime(id)
-    if (!def) return
-    if (FANFARE_RARITIES.has(def.rarity)) {
-      show(id)
-    } else {
-      showBanner(id)
-    }
+  _overlay.addEventListener('click', () => {
+    dismissFanfare()
   })
 }
 
-function show(id: SlimeId): void {
+export function showFanfare(slimeId: string): void {
+  _queue.push(slimeId)
+  if (!_showing) processQueue()
+}
+
+function processQueue(): void {
+  if (_queue.length === 0) { _showing = false; return }
+  _showing = true
+  const id = _queue.shift()!
+  renderFanfare(id)
+}
+
+function renderFanfare(id: string): void {
+  if (!_overlay) return
+
   const def = getSlime(id)
-  if (!def || !cardEl || !overlayEl) return
+  if (!def) { processQueue(); return }
 
   const state = getState()
-  const totalDiscovered = Object.keys(state.collection).length
-  const pct = Math.floor((totalDiscovered / TOTAL_SLIMES) * 100)
-
-  const icon = rarityIcon(def.rarity)
   const color = rarityColor(def.rarity)
+  const emoji = slimeEmoji(id)
+  const rarityEmo = rarityEmoji(def.rarity)
+  const production = computeSlimeOutput(state, id)
+  const totalDiscoveries = state.totalDiscoveries
 
-  cardEl.innerHTML = `
-    <div class="fanfare__title">✨ NEW DISCOVERY! ✨</div>
-    <span class="fanfare__emoji">🟢</span>
-    <div class="fanfare__name">${def.name}</div>
-    <div class="fanfare__rarity" style="color:${color}">${icon} ${def.rarity} ${icon}</div>
-    <div class="fanfare__lore">"${def.lore}"</div>
-    <div class="fanfare__reward">+1 💎 Prism Shard earned!</div>
-    <div class="fanfare__progress">Slimepedia #${totalDiscovered} of ${TOTAL_SLIMES} — ${pct}%</div>
-    <button class="btn btn--primary" id="fanfare-close">Add to Collection</button>
+  const isEpicPlus = ['Epic', 'Legendary', 'Mythic'].includes(def.rarity)
+  const isLegendaryPlus = ['Legendary', 'Mythic'].includes(def.rarity)
+
+  const content = _overlay.querySelector('.fanfare-content')!
+  content.innerHTML = `
+    <div class="fanfare-badge" style="color:${color};border-color:${color}20;background:${color}15">
+      ${rarityEmo} ${def.rarity.toUpperCase()} DISCOVERY
+    </div>
+    <div class="fanfare-emoji">${emoji}</div>
+    <div class="fanfare-title" style="color:${color}">${def.name}</div>
+    <div class="fanfare-lore">"${def.lore}"</div>
+    <div class="fanfare-stats">
+      <div class="fanfare-stat">
+        <div class="fanfare-stat__value" style="color:var(--color-goo)">${formatNumber(production)}/s</div>
+        <div class="fanfare-stat__label">Production</div>
+      </div>
+      <div class="fanfare-stat">
+        <div class="fanfare-stat__value">#${totalDiscoveries}</div>
+        <div class="fanfare-stat__label">Your Discovery</div>
+      </div>
+    </div>
+    ${def.parent1 && def.parent2 ? `
+      <div style="font-size:var(--font-size-xs);color:var(--color-text-muted)">
+        Recipe: ${getSlime(def.parent1)?.name ?? '?'} + ${getSlime(def.parent2)?.name ?? '?'}
+      </div>
+    ` : ''}
+    <div class="fanfare-reward">+1 💎 Prism Shard earned!</div>
+    <button class="btn btn--primary" style="margin-top:8px;width:100%">Add to Collection</button>
   `
 
-  cardEl.querySelector('#fanfare-close')?.addEventListener('click', close)
+  _overlay.classList.add('open')
 
-  overlayEl.classList.add('open')
-  overlayEl.focus()
+  // Screen shake for Epic+
+  if (isEpicPlus) {
+    const app = document.getElementById('app')!
+    app.style.animation = 'screen-shake 0.4s ease-out'
+    setTimeout(() => { app.style.animation = '' }, 400)
+  }
+
+  // Auto-dismiss for Common/Uncommon
+  if (!['Rare', 'Epic', 'Legendary', 'Mythic'].includes(def.rarity)) {
+    setTimeout(() => dismissFanfare(), 2000)
+  }
 }
 
-function close(): void {
-  overlayEl?.classList.remove('open')
-}
-
-// Banner for Common/Uncommon discoveries
-function showBanner(id: SlimeId): void {
-  const def = getSlime(id)
-  if (!def) return
-
-  const banner = document.createElement('div')
-  banner.className = 'discovery-banner'
-  banner.style.cssText = `
-    position: fixed; bottom: ${64}px; left: 50%; transform: translateX(-50%);
-    background: var(--color-surface); border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm); padding: 8px 16px;
-    font-size: var(--font-size-sm); z-index: 150; white-space: nowrap;
-    box-shadow: var(--shadow-md);
-  `
-  banner.textContent = `🟢 New: ${def.name}!`
-  document.getElementById('app')!.appendChild(banner)
-
-  setTimeout(() => banner.remove(), 2500)
+function dismissFanfare(): void {
+  if (!_overlay) return
+  _overlay.classList.remove('open')
+  setTimeout(() => processQueue(), 300)
 }

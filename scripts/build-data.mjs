@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dirname, '..')
 
-const csvPath = '/home/ubuntu/projects/idle-slime-cec89536/slime-roster.csv'
+const csvPath = resolve(__dirname, 'slime-roster.csv')
 const csv = readFileSync(csvPath, 'utf-8')
 const lines = csv.trim().split('\n')
 const headers = lines[0].split(',')

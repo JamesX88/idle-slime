@@ -18,7 +18,7 @@ function makeZoneSecrets(): ZoneSecret[] {
       zoneId: 1,
       resultSlimeId: '025',
       triggerType: 'TAP_N_TIMES',
-      target: 30,
+      target: 100,
       progress: 0,
       completed: false,
       description: 'Tap the ancient oak',
@@ -73,7 +73,7 @@ function makeZoneSecrets(): ZoneSecret[] {
 
 export function createNewGame(): GameState {
   return {
-    goo: 0,
+    goo: 50,
     essence: 0,
     prismShards: 0,
     unlockedZones: [1],

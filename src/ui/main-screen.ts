@@ -252,6 +252,7 @@ function renderSlimeGrid(container: HTMLElement, state: ReturnType<typeof getSta
   })
 
   grid.querySelector('#summon-btn')?.addEventListener('click', () => {
-    performSummon(state.activeZone)
+    const resultId = performSummon(state.activeZone)
+    if (resultId) openSlimeDetail(resultId)
   })
 }

@@ -1,0 +1,83 @@
+/* Reduce motion: disable all animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+@keyframes float-up {
+  0%   { opacity: 1; transform: translateY(0) scale(1); }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(-48px) scale(0.8); }
+}
+
+@keyframes pulse-amber {
+  0%, 100% { border-color: #f59e0b; box-shadow: 0 0 0 0 rgba(245,158,11,0.4); }
+  50%       { border-color: #fbbf24; box-shadow: 0 0 0 4px rgba(245,158,11,0); }
+}
+
+@keyframes blob-squish {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(0.92, 1.08); }
+  50%  { transform: scale(1.06, 0.94); }
+  75%  { transform: scale(0.97, 1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fanfare-in {
+  0%   { transform: scale(0.6) translateY(40px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-in {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Slime cell appears */
+.slime-cell-enter {
+  animation: bounce-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Merge pulse */
+.merge-flash {
+  animation: blob-squish 0.4s ease;
+}
+
+/* Discovery notification banner */
+.discovery-banner {
+  animation: slide-up 0.3s ease;
+}
+
+/* Mythic shimmer on slime cells */
+.rarity-mythic-bg {
+  background: linear-gradient(
+    90deg,
+    #f43f5e 0%, #f59e0b 20%, #22c55e 40%, #3b82f6 60%, #a855f7 80%, #f43f5e 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}

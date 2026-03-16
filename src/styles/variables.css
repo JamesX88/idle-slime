@@ -1,0 +1,75 @@
+:root {
+  /* Rarity colors */
+  --rarity-common: #9ca3af;
+  --rarity-uncommon: #22c55e;
+  --rarity-rare: #3b82f6;
+  --rarity-epic: #a855f7;
+  --rarity-legendary: #eab308;
+  --rarity-mythic: linear-gradient(90deg, #f43f5e, #f59e0b, #22c55e, #3b82f6, #a855f7);
+
+  /* Brand */
+  --color-bg: #1a1a2e;
+  --color-bg-2: #16213e;
+  --color-bg-3: #0f3460;
+  --color-surface: #1e2a4a;
+  --color-surface-2: #253558;
+  --color-border: #334166;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-accent: #7c3aed;
+  --color-accent-hover: #6d28d9;
+  --color-goo: #22c55e;
+  --color-essence: #f59e0b;
+  --color-shard: #06b6d4;
+
+  /* Zones */
+  --zone-1-color: #4ade80;
+  --zone-2-color: #818cf8;
+  --zone-3-color: #f97316;
+  --zone-4-color: #67e8f9;
+  --zone-5-color: #86efac;
+  --zone-6-color: #c084fc;
+
+  /* Layout */
+  --nav-height: 56px;
+  --topbar-height: 48px;
+  --currency-height: 44px;
+  --tap-target-size: 140px;
+  --slime-cell-size: 72px;
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* High contrast mode */
+.high-contrast {
+  --color-text: #ffffff;
+  --color-text-muted: #cbd5e1;
+  --color-bg: #000000;
+  --color-surface: #111111;
+  --color-border: #666666;
+}
+
+/* Large text */
+.large-text {
+  --font-size-base: 1.125rem;
+  --font-size-sm: 1rem;
+  --font-size-xs: 0.875rem;
+}

@@ -4,7 +4,7 @@ import { initState, getState } from './game/state'
 import { computeTotalProduction } from './game/economy'
 import { formatNumber } from './game/slimes'
 import { showNotif } from './ui/components/notif'
-import { loadGame } from './game/save'
+import { loadGame, wipeLegacySaves } from './game/save'
 import { startGameLoop, onBreedComplete } from './game/tick'
 import { registerScreen, navigateTo } from './ui/router'
 import { buildMainScreen } from './ui/screens/main-screen'
@@ -23,6 +23,9 @@ import { getSlime } from './game/slimes'
 // ---- Bootstrap ----
 
 const app = document.getElementById('app')!
+
+// Wipe any legacy/incompatible saves BEFORE loading — prevents hard crashes
+wipeLegacySaves()
 
 // Load saved game
 const savedState = loadGame()

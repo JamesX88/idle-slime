@@ -1,6 +1,7 @@
 // Settings screen
 import { getState, setState, initState } from '../../game/state'
 import { saveGame, deleteSave, exportSave, importSave } from '../../game/save'
+import { stopGameLoop } from '../../game/tick'
 import { navigateBack } from '../router'
 import { showNotif } from '../components/notif'
 import { GAME_VERSION } from '../../data/config'
@@ -213,6 +214,9 @@ export function buildSettingsScreen(container: HTMLElement): void {
   })
 
   container.querySelector('#delete-confirm-yes')!.addEventListener('click', () => {
+    // Stop the game loop FIRST to remove beforeunload/visibilitychange listeners
+    // that would re-save the game immediately after deletion
+    stopGameLoop()
     deleteSave()
     location.reload()
   })

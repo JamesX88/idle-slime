@@ -51,6 +51,7 @@
   --nav-height: 64px;
   --topbar-height: 52px;
   --currency-height: 48px;
+  --summon-height: 56px;
 }
 
 /* ===== Reset ===== */
@@ -294,6 +295,13 @@ html, body {
 .summon-btn:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+}
+
+/* Upgrade button can't-afford state — uses class not disabled so clicks still bubble */
+.btn--cant-afford {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
 }
 
 .summon-btn__icon { font-size: 16px; }
@@ -1196,7 +1204,7 @@ html, body {
 /* ===== Notification Banner ===== */
 .notif-banner {
   position: absolute;
-  top: calc(var(--topbar-height) + var(--currency-height) + 8px);
+  top: calc(var(--topbar-height) + var(--currency-height) + var(--summon-height) + 8px);
   left: var(--spacing-4);
   right: var(--spacing-4);
   background: var(--color-surface-2);

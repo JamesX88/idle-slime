@@ -58,7 +58,13 @@ export function buildUpgradesScreen(container: HTMLElement): void {
   const content = container.querySelector('#upg-content')!
   content.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest('#do-upgrade') as HTMLElement | null
-    if (!btn || btn.hasAttribute('disabled')) return
+    if (!btn) return
+
+    // Check affordability via data attribute (not disabled, which blocks bubbling)
+    if (btn.dataset.canAfford === 'false') {
+      showNotif('Not enough resources to upgrade!')
+      return
+    }
 
     let success = false
     setState(state => {
@@ -70,7 +76,7 @@ export function buildUpgradesScreen(container: HTMLElement): void {
     if (success) {
       renderContent(container)
     } else {
-      showNotif('Not enough resources!')
+      showNotif('Not enough resources to upgrade!')
     }
   })
 
@@ -132,7 +138,7 @@ function renderTapTrack(content: HTMLElement, state: ReturnType<typeof getState>
         ${isMax ? '<span style="color:var(--color-success)">✓ MAX</span>' : `<span class="upgrade-card__cost-value">${formatNumber(cost)} 💧</span>`}
       </div>
       ${!isMax ? `
-        <button id="do-upgrade" class="btn btn--primary" ${!canAfford ? 'disabled' : ''}>
+        <button id="do-upgrade" class="btn btn--primary${!canAfford ? ' btn--cant-afford' : ''}" data-can-afford="${canAfford}">
           Upgrade — ${formatNumber(cost)} 💧
         </button>
       ` : ''}
@@ -194,7 +200,7 @@ function renderOutputTrack(content: HTMLElement, state: ReturnType<typeof getSta
         ${isMax ? '<span style="color:var(--color-success)">✓ MAX</span>' : `<span class="upgrade-card__cost-value">${formatNumber(cost)} 💧</span>`}
       </div>
       ${!isMax ? `
-        <button id="do-upgrade" class="btn btn--primary" ${!canAfford ? 'disabled' : ''}>
+        <button id="do-upgrade" class="btn btn--primary${!canAfford ? ' btn--cant-afford' : ''}" data-can-afford="${canAfford}">
           Upgrade — ${formatNumber(cost)} 💧
         </button>
       ` : ''}
@@ -246,8 +252,8 @@ function renderDiscoveryTrack(content: HTMLElement, state: ReturnType<typeof get
         ${isMax ? '<span style="color:var(--color-success)">✓ MAX</span>' : `<span style="color:var(--color-essence);font-weight:700">${formatNumber(cost)} ✨</span>`}
       </div>
       ${!isMax ? `
-        <button id="do-upgrade" class="btn btn--primary" ${!canAfford ? 'disabled' : ''}
-          style="background:var(--color-essence);${!canAfford ? 'background:var(--color-surface-3);color:var(--color-text-dim)' : ''}">
+        <button id="do-upgrade" class="btn btn--primary${!canAfford ? ' btn--cant-afford' : ''}" data-can-afford="${canAfford}"
+          style="background:${canAfford ? 'var(--color-essence)' : 'var(--color-surface-3)'};${!canAfford ? 'color:var(--color-text-dim)' : ''}">
           Upgrade — ${formatNumber(cost)} ✨
         </button>
       ` : ''}

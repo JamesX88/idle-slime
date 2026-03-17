@@ -1207,12 +1207,18 @@ html, body {
   align-items: center;
   gap: var(--spacing-3);
   z-index: 150;
-  transform: translateY(-120%);
-  transition: transform var(--transition-med);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity var(--transition-med), transform var(--transition-med);
   font-size: var(--font-size-sm);
 }
 
-.notif-banner.show { transform: translateY(0); }
+.notif-banner.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
 
 /* ===== Animations ===== */
 @keyframes jiggle {

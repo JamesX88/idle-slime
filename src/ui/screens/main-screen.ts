@@ -6,7 +6,8 @@ import { getSlime, rarityColor, slimeEmoji, formatNumber, sortByRarity } from '.
 import { computeTotalProduction, getGooPerTap } from '../../game/economy'
 import { performSummon } from '../../game/zones'
 import { checkTapSpecials } from '../../game/zones'
-import { SUMMON_COST, ZONE_NAMES } from '../../data/config'
+import { ZONE_NAMES } from '../../data/config'
+import { getMinSummonCost } from '../../game/economy'
 import { navigateTo } from '../router'
 import { openSlimePanel, refreshPanel } from '../components/slime-panel'
 import { spawnFloatingNumber } from '../components/floating-numbers'
@@ -56,7 +57,7 @@ export function buildMainScreen(container: HTMLElement): void {
       <button class="summon-btn" id="summon-btn" disabled>
         <span class="summon-btn__icon">＋</span>
         <span>Summon Slime</span>
-        <span class="summon-btn__cost" id="summon-cost-label">${formatNumber(SUMMON_COST.Common)} 💧</span>
+        <span class="summon-btn__cost" id="summon-cost-label">… 💧</span>
       </button>
     </div>
 
@@ -144,9 +145,13 @@ function tickFrame(): void {
   const shard = formatNumber(state.prismShards)
   const prod = formatNumber(computeTotalProduction(state))
   const zone = ZONE_NAMES[state.activeZone] ?? 'Zone 1'
-  const prog = `${state.totalDiscoveries}/527 🔬`
-  const minCost = SUMMON_COST.Common
+  const totalSlimes = 648
+  const prog = `${state.totalDiscoveries}/${totalSlimes} 🔬`
+  const minCost = getMinSummonCost(state.activeZone)
   const canSummon = state.goo >= minCost
+  const costLabel = formatNumber(minCost) + ' 💧'
+  const costEl = document.getElementById('summon-cost-label')
+  if (costEl && costEl.textContent !== costLabel) costEl.textContent = costLabel
 
   if (_gooEl && _gooEl.textContent !== goo) _gooEl.textContent = goo
   if (_essEl && _essEl.textContent !== ess) _essEl.textContent = ess

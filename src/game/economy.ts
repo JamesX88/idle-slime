@@ -6,7 +6,7 @@ import {
   FAVORITE_FOOD_DISCOUNT, OUTPUT_MULTIPLIERS,
   TAP_UPGRADE_BASE_COST, TAP_UPGRADE_COST_MULT,
   OUTPUT_UPGRADE_BASE_COST, OUTPUT_UPGRADE_COST_MULT,
-  DISCOVERY_UPGRADE_COSTS, SUMMON_COST,
+  DISCOVERY_UPGRADE_COSTS, SUMMON_COST, ZONE_SUMMON_COST,
   ZONE_COSTS, GOO_PER_TAP_BASE, MAX_LEVEL,
 } from '../data/config'
 import { checkFeedSpecials } from './specials'
@@ -201,6 +201,12 @@ export function mergeSlimes(
   owned.count -= 3
   if (owned.count <= 0) delete state.collection[id]
 
+  // Track session merges per zone (for Crystal Specter special trigger)
+  if (def.zone !== null) {
+    state.sessionMergesByZone = state.sessionMergesByZone ?? {}
+    state.sessionMergesByZone[def.zone] = (state.sessionMergesByZone[def.zone] ?? 0) + 1
+  }
+
   const rarityChain: string[] = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic']
   const currentIdx = rarityChain.indexOf(def.rarity)
   const nextRarity = rarityChain[currentIdx + 1]
@@ -250,11 +256,17 @@ export function mergeSlimes(
 }
 
 /**
- * Determine the deterministic merge output: the lowest-ID zone-discoverable
- * slime of `nextRarity` in `zone` that the player has not yet discovered.
- * If all same-zone slimes of that rarity are already owned, returns the
- * lowest-ID same-zone slime of that rarity (giving a duplicate copy).
- * Falls back globally if no same-zone candidates exist.
+ * Determine the deterministic merge output.
+ *
+ * With the new roster, merging can produce both Zone-summonable slimes AND
+ * Merge-only slimes (discovery === 'Merge'). Breed-only and Special slimes
+ * are never produced by merging.
+ *
+ * Priority order:
+ *   1. Undiscovered same-zone Merge-eligible slime of next rarity
+ *   2. Already-owned same-zone Merge-eligible slime (gives a duplicate)
+ *   3. Any undiscovered Merge-eligible slime globally
+ *   4. Any Merge-eligible slime globally
  */
 function getMergeResult(
   state: GameState,
@@ -263,20 +275,24 @@ function getMergeResult(
 ): SlimeId | null {
   const allSlimes = getAllSlimes()
 
-  // Priority 1: undiscovered same-zone slime of next rarity
+  // A slime is merge-eligible if it is Zone-summonable or Merge-only (not Breed/Special)
+  const isMergeEligible = (s: typeof allSlimes[0]) =>
+    s.rarity === nextRarity &&
+    (s.discovery === 'Zone' || s.discovery === 'Merge')
+
+  // Priority 1: undiscovered same-zone merge-eligible slime
   if (zone !== null) {
     const sameZoneUndiscovered = allSlimes.filter(
-      s => s.rarity === nextRarity && s.zone === zone && s.discovery === 'Zone' && !state.collection[s.id]
+      s => isMergeEligible(s) && s.zone === zone && !state.collection[s.id]
     )
     if (sameZoneUndiscovered.length > 0) {
-      // Sort by numeric ID ascending — deterministic
       sameZoneUndiscovered.sort((a, b) => parseInt(a.id) - parseInt(b.id))
       return sameZoneUndiscovered[0].id
     }
 
-    // Priority 2: already-discovered same-zone slime (gives a duplicate)
+    // Priority 2: already-discovered same-zone merge-eligible slime (gives duplicate)
     const sameZoneAny = allSlimes.filter(
-      s => s.rarity === nextRarity && s.zone === zone && s.discovery === 'Zone'
+      s => isMergeEligible(s) && s.zone === zone
     )
     if (sameZoneAny.length > 0) {
       sameZoneAny.sort((a, b) => parseInt(a.id) - parseInt(b.id))
@@ -284,17 +300,17 @@ function getMergeResult(
     }
   }
 
-  // Priority 3: any undiscovered zone slime globally
+  // Priority 3: any undiscovered merge-eligible slime globally
   const globalUndiscovered = allSlimes.filter(
-    s => s.rarity === nextRarity && s.discovery === 'Zone' && !state.collection[s.id]
+    s => isMergeEligible(s) && !state.collection[s.id]
   )
   if (globalUndiscovered.length > 0) {
     globalUndiscovered.sort((a, b) => parseInt(a.id) - parseInt(b.id))
     return globalUndiscovered[0].id
   }
 
-  // Priority 4: any zone slime globally
-  const globalAny = allSlimes.filter(s => s.rarity === nextRarity && s.discovery === 'Zone')
+  // Priority 4: any merge-eligible slime globally
+  const globalAny = allSlimes.filter(s => isMergeEligible(s))
   if (globalAny.length > 0) {
     globalAny.sort((a, b) => parseInt(a.id) - parseInt(b.id))
     return globalAny[0].id
@@ -304,13 +320,23 @@ function getMergeResult(
 }
 
 // ---- Summon ----
+// Use ZONE_SUMMON_COST directly from config to avoid circular imports with zones.ts.
+export function getZoneSummonCost(zone: number, rarity: string): number {
+  const zoneCosts = ZONE_SUMMON_COST[zone] ?? ZONE_SUMMON_COST[1]
+  return zoneCosts[rarity] ?? zoneCosts['Common']
+}
 
-export function getSummonCost(rarity: string): number {
+export function getMinSummonCost(zone: number): number {
+  return getZoneSummonCost(zone, 'Common')
+}
+
+export function getSummonCost(rarity: string, zone?: number): number {
+  if (zone !== undefined) return getZoneSummonCost(zone, rarity)
   return SUMMON_COST[rarity] ?? SUMMON_COST.Common
 }
 
 export function canSummon(state: GameState): boolean {
-  return state.goo >= SUMMON_COST.Common
+  return state.goo >= getMinSummonCost(state.activeZone)
 }
 
 // ---- Zone unlock ----

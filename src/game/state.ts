@@ -9,7 +9,7 @@ export interface SlimeDefinition {
   id: SlimeId
   name: string
   rarity: Rarity
-  discovery: 'Zone' | 'Breed' | 'Special'
+  discovery: 'Zone' | 'Breed' | 'Merge' | 'Special'
   zone: ZoneId | null
   parent1: SlimeId | null
   parent2: SlimeId | null
@@ -84,7 +84,16 @@ export interface GameState {
 
   // ---- Pity system per zone ----
   summonsSinceNew: Record<ZoneId, number>
-
+  /**
+   * Multi-tier pity counters. Keyed by zone, then by rarity name.
+   * Tracks how many summons have occurred without getting that rarity or higher.
+   * Used by the new per-rarity pity system in zones.ts.
+   */
+  summonsSinceRarity: Record<number, Record<string, number>>
+  /** Total summons performed per zone — used for zone-secret triggers. */
+  totalSummonsByZone: Record<ZoneId, number>
+  /** Merges performed per zone in the current session — used for Crystal Specter trigger. */
+  sessionMergesByZone: Record<number, number>
   // ---- Zone summon counts (for tracking) ----
   zoneDiscoveries: Record<ZoneId, number>
 
@@ -171,6 +180,9 @@ export function createNewGame(): GameState {
     lastSaveTime: Date.now(),
     firstPlayTime: Date.now(),
     summonsSinceNew: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+    summonsSinceRarity: { 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {} },
+    totalSummonsByZone: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+    sessionMergesByZone: {},
     zoneDiscoveries: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     unlockedSpecials: new Set(),
     maxLevelEverReached: false,

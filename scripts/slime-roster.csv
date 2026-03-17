@@ -1,528 +1,649 @@
 id,name,rarity,discovery,zone,parent_1,parent_2,notes
-001,Blob Slime,Common,Zone,1,,,Tutorial slime — always the first encountered
-002,Puddle Slime,Common,Zone,1,,,
-003,Sprout Slime,Common,Zone,1,,,
-004,Pebble Slime,Common,Zone,1,,,
-005,Breeze Slime,Common,Zone,1,,,
-006,Dewdrop Slime,Common,Zone,1,,,
-007,Clover Slime,Common,Zone,1,,,
-008,Muddy Slime,Common,Zone,1,,,
-009,Sandy Slime,Common,Zone,1,,,
-010,Mossy Slime,Common,Zone,1,,,
-011,Petal Slime,Uncommon,Zone,1,,,
-012,Vine Slime,Uncommon,Zone,1,,,
-013,Brook Slime,Uncommon,Zone,1,,,
-014,Dust Slime,Uncommon,Zone,1,,,
-015,Thorn Slime,Uncommon,Zone,1,,,
-016,Honey Slime,Uncommon,Zone,1,,,
-017,Flint Slime,Uncommon,Zone,1,,,
-018,Wisp Slime,Uncommon,Zone,1,,,
-019,Pollen Slime,Uncommon,Zone,1,,,
-020,Burr Slime,Uncommon,Zone,1,,,
-021,Verdant Slime,Rare,Zone,1,,,
-022,Gale Slime,Rare,Zone,1,,,
-023,Meadow Guardian Slime,Rare,Zone,1,,,
-024,Raindrop Slime,Rare,Zone,1,,,
-025,Earthen Sage Slime,Rare,Zone,1,,,Zone 1 secret — tap the ancient oak 30 times
-026,Quartz Slime,Common,Zone,2,,,
-027,Geode Slime,Common,Zone,2,,,
-028,Amber Slime,Common,Zone,2,,,
-029,Chalk Slime,Common,Zone,2,,,
-030,Marble Slime,Common,Zone,2,,,
-031,Slate Slime,Common,Zone,2,,,
-032,Onyx Slime,Common,Zone,2,,,
-033,Ruby Slime,Common,Zone,2,,,
-034,Calcite Slime,Common,Zone,2,,,
-035,Flint Crystal Slime,Common,Zone,2,,,
-036,Sapphire Slime,Uncommon,Zone,2,,,
-037,Diamond Slime,Uncommon,Zone,2,,,
-038,Echo Slime,Uncommon,Zone,2,,,
-039,Stalactite Slime,Uncommon,Zone,2,,,
-040,Glowstone Slime,Uncommon,Zone,2,,,
-041,Topaz Slime,Uncommon,Zone,2,,,
-042,Opal Slime,Uncommon,Zone,2,,,
-043,Lapis Slime,Uncommon,Zone,2,,,
-044,Citrine Slime,Uncommon,Zone,2,,,
-045,Obsidian Slime,Uncommon,Zone,2,,,
-046,Prismatic Slime,Rare,Zone,2,,,
-047,Crystal Heart Slime,Rare,Zone,2,,,
-048,Resonance Slime,Rare,Zone,2,,,
-049,Void Crystal Slime,Rare,Zone,2,,,
-050,Spelunker Slime,Rare,Zone,2,,,Zone 2 secret — reach 10000 Goo while in Crystal Caves
-051,Ember Slime,Common,Zone,3,,,
-052,Cinder Slime,Common,Zone,3,,,
-053,Soot Slime,Common,Zone,3,,,
-054,Char Slime,Common,Zone,3,,,
-055,Spark Slime,Common,Zone,3,,,
-056,Scorch Slime,Common,Zone,3,,,
-057,Blaze Slime,Common,Zone,3,,,
-058,Ash Slime,Common,Zone,3,,,
-059,Smolder Slime,Common,Zone,3,,,
-060,Coal Slime,Common,Zone,3,,,
-061,Magma Slime,Uncommon,Zone,3,,,
-062,Lava Slime,Uncommon,Zone,3,,,
-063,Flame Slime,Uncommon,Zone,3,,,
-064,Molten Slime,Uncommon,Zone,3,,,
-065,Crust Slime,Uncommon,Zone,3,,,
-066,Sulfur Slime,Uncommon,Zone,3,,,
-067,Geyser Slime,Uncommon,Zone,3,,,
-068,Forge Slime,Uncommon,Zone,3,,,
-069,Furnace Slime,Uncommon,Zone,3,,,
-070,Inferno Slime,Uncommon,Zone,3,,,
-071,Phoenix Slime,Rare,Zone,3,,,
-072,Magma Core Slime,Rare,Zone,3,,,
-073,Wildfire Slime,Rare,Zone,3,,,
-074,Volcanic Slime,Rare,Zone,3,,,
-075,Fire Drake Slime,Rare,Zone,3,,,Zone 3 secret — survive 60s without spending Goo
-076,Frost Slime,Common,Zone,4,,,
-077,Snowdrift Slime,Common,Zone,4,,,
-078,Flurry Slime,Common,Zone,4,,,
-079,Chill Slime,Common,Zone,4,,,
-080,Icicle Slime,Common,Zone,4,,,
-081,Sleet Slime,Common,Zone,4,,,
-082,Hail Slime,Common,Zone,4,,,
-083,Permafrost Slime,Common,Zone,4,,,
-084,Powder Slime,Common,Zone,4,,,
-085,Glacier Slime,Common,Zone,4,,,
-086,Blizzard Slime,Uncommon,Zone,4,,,
-087,Aurora Slime,Uncommon,Zone,4,,,
-088,Ice Crystal Slime,Uncommon,Zone,4,,,
-089,Tundra Slime,Uncommon,Zone,4,,,
-090,Snowflake Slime,Uncommon,Zone,4,,,
-091,Arctic Slime,Uncommon,Zone,4,,,
-092,Frozen Slime,Uncommon,Zone,4,,,
-093,Polar Slime,Uncommon,Zone,4,,,
-094,Rime Slime,Uncommon,Zone,4,,,
-095,Drift Slime,Uncommon,Zone,4,,,
-096,Absolute Zero Slime,Rare,Zone,4,,,
-097,Winter Wraith Slime,Rare,Zone,4,,,
-098,Ice Sovereign Slime,Rare,Zone,4,,,
-099,Polar Night Slime,Rare,Zone,4,,,
-100,Frostbite Slime,Rare,Zone,4,,,Zone 4 secret — have 5 ice-type slimes active simultaneously
-101,Spore Slime,Common,Zone,5,,,
-102,Tangle Slime,Common,Zone,5,,,
-103,Muck Slime,Common,Zone,5,,,
-104,Canopy Slime,Common,Zone,5,,,
-105,Root Slime,Common,Zone,5,,,
-106,Sap Slime,Common,Zone,5,,,
-107,Fern Slime,Common,Zone,5,,,
-108,Bark Slime,Common,Zone,5,,,
-109,Burrow Slime,Common,Zone,5,,,
-110,Drip Slime,Common,Zone,5,,,
-111,Toxin Slime,Uncommon,Zone,5,,,
-112,Pitcher Slime,Uncommon,Zone,5,,,
-113,Fungus Slime,Uncommon,Zone,5,,,
-114,Cocoon Slime,Uncommon,Zone,5,,,
-115,Silk Slime,Uncommon,Zone,5,,,
-116,Bloom Slime,Uncommon,Zone,5,,,
-117,Seed Slime,Uncommon,Zone,5,,,
-118,Pheromone Slime,Uncommon,Zone,5,,,
-119,Leech Slime,Uncommon,Zone,5,,,
-120,Mimic Slime,Uncommon,Zone,5,,,Disguises as last-tapped slime for 10s
-121,Ancient Grove Slime,Rare,Zone,5,,,
-122,Overgrowth Slime,Rare,Zone,5,,,
-123,Predator Slime,Rare,Zone,5,,,
-124,Mycelium Slime,Rare,Zone,5,,,
-125,Jungle Heart Slime,Rare,Zone,5,,,Zone 5 secret — complete all Zone 5 breeds
-126,Star Slime,Common,Zone,6,,,
-127,Comet Slime,Common,Zone,6,,,
-128,Nebula Slime,Common,Zone,6,,,
-129,Pulsar Slime,Common,Zone,6,,,
-130,Quasar Slime,Common,Zone,6,,,
-131,Orbit Slime,Common,Zone,6,,,
-132,Eclipse Slime,Common,Zone,6,,,
-133,Nova Slime,Common,Zone,6,,,
-134,Lunar Slime,Common,Zone,6,,,
-135,Meteor Slime,Common,Zone,6,,,
-136,Solar Slime,Uncommon,Zone,6,,,
-137,Galactic Slime,Uncommon,Zone,6,,,
-138,Astral Slime,Uncommon,Zone,6,,,
-139,Cosmic Slime,Uncommon,Zone,6,,,
-140,Constellation Slime,Uncommon,Zone,6,,,
-141,Warp Slime,Uncommon,Zone,6,,,
-142,Dark Matter Slime,Uncommon,Zone,6,,,
-143,Photon Slime,Uncommon,Zone,6,,,
-144,Gravity Slime,Uncommon,Zone,6,,,
-145,Void Slime,Uncommon,Zone,6,,,
-146,Supernova Slime,Rare,Zone,6,,,
-147,Black Hole Slime,Rare,Zone,6,,,
-148,Galaxy Core Slime,Rare,Zone,6,,,
-149,Event Horizon Slime,Rare,Zone,6,,,
-150,Celestial Slime,Rare,Zone,6,,,Zone 6 secret — unlock all 6 biomes
-151,Thornbloom Slime,Uncommon,Breed,,Thorn Slime,Petal Slime,Same-biome: Meadow
-152,Dustdevil Slime,Uncommon,Breed,,Dust Slime,Breeze Slime,Same-biome: Meadow
-153,Goldenrod Slime,Uncommon,Breed,,Pollen Slime,Honey Slime,Same-biome: Meadow
-154,Tanglewood Slime,Uncommon,Breed,,Vine Slime,Mossy Slime,Same-biome: Meadow
-155,Mistveil Slime,Rare,Breed,,Wisp Slime,Dewdrop Slime,Same-biome: Meadow
-156,Stormveil Slime,Uncommon,Breed,,Gale Slime,Brook Slime,Same-biome: Meadow
-157,Granite Slime,Uncommon,Breed,,Sandy Slime,Pebble Slime,Same-biome: Meadow
-158,Flintfire Slime,Uncommon,Breed,,Flint Slime,Sprout Slime,Same-biome: Meadow — first hint of fire
-159,Honeydew Slime,Uncommon,Breed,,Honey Slime,Dewdrop Slime,Same-biome: Meadow
-160,Burrvine Slime,Uncommon,Breed,,Burr Slime,Vine Slime,Same-biome: Meadow
-161,Emerald Guardian Slime,Rare,Breed,,Verdant Slime,Meadow Guardian Slime,Same-biome: Meadow
-162,Meadow Crown Slime,Epic,Breed,,Meadow Guardian Slime,Earthen Sage Slime,Same-biome: Meadow — zone apex
-163,Resonant Quartz Slime,Uncommon,Breed,,Quartz Slime,Echo Slime,Same-biome: Crystal
-164,Obsidian Mirror Slime,Rare,Breed,,Obsidian Slime,Diamond Slime,Same-biome: Crystal
-165,Amber Fossil Slime,Uncommon,Breed,,Amber Slime,Chalk Slime,Same-biome: Crystal
-166,Marbled Onyx Slime,Uncommon,Breed,,Marble Slime,Onyx Slime,Same-biome: Crystal
-167,Opal Dream Slime,Rare,Breed,,Opal Slime,Prismatic Slime,Same-biome: Crystal
-168,Deep Geode Slime,Uncommon,Breed,,Stalactite Slime,Geode Slime,Same-biome: Crystal
-169,Lapis Glow Slime,Uncommon,Breed,,Lapis Slime,Glowstone Slime,Same-biome: Crystal
-170,Ruby Topaz Slime,Uncommon,Breed,,Ruby Slime,Topaz Slime,Same-biome: Crystal
-171,Void Prism Slime,Rare,Breed,,Void Crystal Slime,Prismatic Slime,Same-biome: Crystal
-172,Phantom Echo Slime,Rare,Breed,,Echo Slime,Obsidian Slime,Same-biome: Crystal
-173,Citrine Lantern Slime,Uncommon,Breed,,Citrine Slime,Glowstone Slime,Same-biome: Crystal
-174,Sapphire Heart Slime,Epic,Breed,,Sapphire Slime,Crystal Heart Slime,Same-biome: Crystal — zone apex
-175,Firefang Slime,Uncommon,Breed,,Blaze Slime,Cinder Slime,Same-biome: Ember
-176,Pyroclast Slime,Rare,Breed,,Magma Core Slime,Volcanic Slime,Same-biome: Ember
-177,Hellfire Slime,Epic,Breed,,Inferno Slime,Wildfire Slime,Same-biome: Ember
-178,Obsidian Flame Slime,Rare,Breed,,Char Slime,Molten Slime,Same-biome: Ember
-179,Steam Vent Slime,Uncommon,Breed,,Geyser Slime,Ash Slime,Same-biome: Ember
-180,Ember Drake Slime,Rare,Breed,,Fire Drake Slime,Ember Slime,Same-biome: Ember
-181,Forge Master Slime,Rare,Breed,,Forge Slime,Furnace Slime,Same-biome: Ember
-182,Sulfur Cloud Slime,Uncommon,Breed,,Sulfur Slime,Ash Slime,Same-biome: Ember
-183,Lava Flow Slime,Uncommon,Breed,,Lava Slime,Magma Slime,Same-biome: Ember
-184,Cinder Phoenix Slime,Epic,Breed,,Phoenix Slime,Cinder Slime,Same-biome: Ember
-185,Scorched Earth Slime,Uncommon,Breed,,Scorch Slime,Soot Slime,Same-biome: Ember
-186,Volcano Lord Slime,Epic,Breed,,Volcanic Slime,Fire Drake Slime,Same-biome: Ember — zone apex
-187,Permablizzard Slime,Rare,Breed,,Permafrost Slime,Blizzard Slime,Same-biome: Frost
-188,Crystal Snow Slime,Uncommon,Breed,,Snowflake Slime,Ice Crystal Slime,Same-biome: Frost
-189,Arctic Flurry Slime,Uncommon,Breed,,Arctic Slime,Flurry Slime,Same-biome: Frost
-190,Frozen Aurora Slime,Rare,Breed,,Aurora Slime,Frozen Slime,Same-biome: Frost
-191,Tundra Wolf Slime,Rare,Breed,,Tundra Slime,Polar Slime,Same-biome: Frost
-192,Winter Storm Slime,Uncommon,Breed,,Blizzard Slime,Sleet Slime,Same-biome: Frost
-193,Hailstorm Slime,Rare,Breed,,Hail Slime,Winter Wraith Slime,Same-biome: Frost
-194,Rime Frost Slime,Common,Breed,,Rime Slime,Frost Slime,Same-biome: Frost
-195,Ice Sculpture Slime,Uncommon,Breed,,Ice Crystal Slime,Glacier Slime,Same-biome: Frost
-196,Absolute Blizzard Slime,Epic,Breed,,Absolute Zero Slime,Blizzard Slime,Same-biome: Frost
-197,Polar Specter Slime,Epic,Breed,,Polar Night Slime,Winter Wraith Slime,Same-biome: Frost
-198,Frostbite Sovereign Slime,Epic,Breed,,Frostbite Slime,Ice Sovereign Slime,Same-biome: Frost — zone apex
-199,Spore Cloud Slime,Uncommon,Breed,,Spore Slime,Fungus Slime,Same-biome: Verdant
-200,Silk Web Slime,Uncommon,Breed,,Silk Slime,Cocoon Slime,Same-biome: Verdant
-201,Root Network Slime,Rare,Breed,,Root Slime,Mycelium Slime,Same-biome: Verdant
-202,Predatory Bloom Slime,Rare,Breed,,Predator Slime,Bloom Slime,Same-biome: Verdant
-203,Toxic Pitcher Slime,Uncommon,Breed,,Toxin Slime,Pitcher Slime,Same-biome: Verdant
-204,Canopy Hunter Slime,Rare,Breed,,Canopy Slime,Predator Slime,Same-biome: Verdant
-205,Spore Mind Slime,Rare,Breed,,Mycelium Slime,Spore Slime,Same-biome: Verdant
-206,Bark Spider Slime,Uncommon,Breed,,Bark Slime,Silk Slime,Same-biome: Verdant
-207,Leech Vine Slime,Uncommon,Breed,,Leech Slime,Tangle Slime,Same-biome: Verdant
-208,Drip Root Slime,Common,Breed,,Drip Slime,Root Slime,Same-biome: Verdant
-209,Jungle Sovereign Slime,Epic,Breed,,Jungle Heart Slime,Ancient Grove Slime,Same-biome: Verdant
-210,Overmind Slime,Epic,Breed,,Overgrowth Slime,Mycelium Slime,Same-biome: Verdant — zone apex
-211,Pulsar Nova Slime,Uncommon,Breed,,Pulsar Slime,Nova Slime,Same-biome: Starfall
-212,Void Comet Slime,Uncommon,Breed,,Void Slime,Comet Slime,Same-biome: Starfall
-213,Nebula Dream Slime,Rare,Breed,,Nebula Slime,Astral Slime,Same-biome: Starfall
-214,Dark Star Slime,Rare,Breed,,Dark Matter Slime,Star Slime,Same-biome: Starfall
-215,Warp Gate Slime,Rare,Breed,,Warp Slime,Event Horizon Slime,Same-biome: Starfall
-216,Photon Pulsar Slime,Uncommon,Breed,,Photon Slime,Pulsar Slime,Same-biome: Starfall
-217,Gravity Well Slime,Rare,Breed,,Gravity Slime,Black Hole Slime,Same-biome: Starfall
-218,Solar Corona Slime,Uncommon,Breed,,Solar Slime,Nova Slime,Same-biome: Starfall
-219,Constellation Dreamer Slime,Uncommon,Breed,,Constellation Slime,Astral Slime,Same-biome: Starfall
-220,Eclipse Void Slime,Rare,Breed,,Eclipse Slime,Void Slime,Same-biome: Starfall
-221,Cosmic Singularity Slime,Epic,Breed,,Black Hole Slime,Galaxy Core Slime,Same-biome: Starfall
-222,Celestial Sovereign Slime,Epic,Breed,,Celestial Slime,Galaxy Core Slime,Same-biome: Starfall — zone apex
-223,Quartz Bloom Slime,Rare,Breed,,Sprout Slime,Quartz Slime,Cross-biome: Meadow x Crystal
-224,Gemstone Vine Slime,Rare,Breed,,Vine Slime,Geode Slime,Cross-biome: Meadow x Crystal
-225,Crystal Dew Slime,Rare,Breed,,Dewdrop Slime,Crystal Heart Slime,Cross-biome: Meadow x Crystal
-226,Diamond Petal Slime,Rare,Breed,,Petal Slime,Diamond Slime,Cross-biome: Meadow x Crystal
-227,Mossy Stalactite Slime,Uncommon,Breed,,Mossy Slime,Stalactite Slime,Cross-biome: Meadow x Crystal
-228,Echoing Wisp Slime,Rare,Breed,,Wisp Slime,Echo Slime,Cross-biome: Meadow x Crystal
-229,Opal Clover Slime,Uncommon,Breed,,Clover Slime,Opal Slime,Cross-biome: Meadow x Crystal
-230,Amber Honey Slime,Uncommon,Breed,,Amber Slime,Honey Slime,Cross-biome: Meadow x Crystal
-231,Sapphire Rain Slime,Rare,Breed,,Raindrop Slime,Sapphire Slime,Cross-biome: Meadow x Crystal
-232,Thorncrystal Slime,Rare,Breed,,Thorn Slime,Obsidian Slime,Cross-biome: Meadow x Crystal
-233,Glowing Pollen Slime,Rare,Breed,,Pollen Slime,Glowstone Slime,Cross-biome: Meadow x Crystal
-234,Verdant Prismatic Slime,Epic,Breed,,Verdant Slime,Prismatic Slime,Cross-biome: Meadow x Crystal
-235,Flint Quartz Slime,Uncommon,Breed,,Flint Slime,Quartz Slime,Cross-biome: Meadow x Crystal
-236,Marble Meadow Slime,Uncommon,Breed,,Marble Slime,Meadow Guardian Slime,Cross-biome: Meadow x Crystal
-237,Void Gale Slime,Epic,Breed,,Void Crystal Slime,Gale Slime,Cross-biome: Meadow x Crystal
-238,Ruby Thorn Slime,Rare,Breed,,Ruby Slime,Thorn Slime,Cross-biome: Meadow x Crystal
-239,Earthen Gem Slime,Uncommon,Breed,,Sandy Slime,Geode Slime,Cross-biome: Meadow x Crystal
-240,Lapis Brook Slime,Uncommon,Breed,,Lapis Slime,Brook Slime,Cross-biome: Meadow x Crystal
-241,Resonant Meadow Slime,Rare,Breed,,Resonance Slime,Earthen Sage Slime,Cross-biome: Meadow x Crystal
-242,Spelunker Scout Slime,Rare,Breed,,Spelunker Slime,Gale Slime,Cross-biome: Meadow x Crystal
-243,Scorched Bloom Slime,Rare,Breed,,Sprout Slime,Ember Slime,Cross-biome: Meadow x Ember
-244,Ash Petal Slime,Uncommon,Breed,,Ash Slime,Petal Slime,Cross-biome: Meadow x Ember
-245,Lava Brook Slime,Rare,Breed,,Lava Slime,Brook Slime,Cross-biome: Meadow x Ember
-246,Char Vine Slime,Uncommon,Breed,,Char Slime,Vine Slime,Cross-biome: Meadow x Ember
-247,Smoldering Clover Slime,Uncommon,Breed,,Smolder Slime,Clover Slime,Cross-biome: Meadow x Ember
-248,Flaming Thorn Slime,Rare,Breed,,Flame Slime,Thorn Slime,Cross-biome: Meadow x Ember
-249,Magma Moss Slime,Uncommon,Breed,,Magma Slime,Mossy Slime,Cross-biome: Meadow x Ember
-250,Forge Stone Slime,Uncommon,Breed,,Forge Slime,Pebble Slime,Cross-biome: Meadow x Ember
-251,Soot Honey Slime,Uncommon,Breed,,Soot Slime,Honey Slime,Cross-biome: Meadow x Ember
-252,Firebloom Slime,Epic,Breed,,Wildfire Slime,Petal Slime,Cross-biome: Meadow x Ember
-253,Volcanic Meadow Slime,Rare,Breed,,Volcanic Slime,Verdant Slime,Cross-biome: Meadow x Ember
-254,Phoenix Petal Slime,Epic,Breed,,Phoenix Slime,Petal Slime,Cross-biome: Meadow x Ember
-255,Drake Vine Slime,Rare,Breed,,Fire Drake Slime,Vine Slime,Cross-biome: Meadow x Ember
-256,Ember Rain Slime,Rare,Breed,,Ember Slime,Raindrop Slime,Cross-biome: Meadow x Ember
-257,Magma Sandy Slime,Uncommon,Breed,,Magma Slime,Sandy Slime,Cross-biome: Meadow x Ember
-258,Geyser Brook Slime,Rare,Breed,,Geyser Slime,Brook Slime,Cross-biome: Meadow x Ember
-259,Inferno Wisp Slime,Epic,Breed,,Inferno Slime,Wisp Slime,Cross-biome: Meadow x Ember
-260,Coal Pebble Slime,Uncommon,Breed,,Coal Slime,Pebble Slime,Cross-biome: Meadow x Ember
-261,Sulfur Gale Slime,Rare,Breed,,Sulfur Slime,Gale Slime,Cross-biome: Meadow x Ember
-262,Molten Mud Slime,Uncommon,Breed,,Molten Slime,Muddy Slime,Cross-biome: Meadow x Ember
-263,Frozen Petal Slime,Rare,Breed,,Frost Slime,Petal Slime,Cross-biome: Meadow x Frost
-264,Snowdrift Meadow Slime,Uncommon,Breed,,Snowdrift Slime,Clover Slime,Cross-biome: Meadow x Frost
-265,Ice Vine Slime,Rare,Breed,,Icicle Slime,Vine Slime,Cross-biome: Meadow x Frost
-266,Blizzard Gale Slime,Rare,Breed,,Blizzard Slime,Gale Slime,Cross-biome: Meadow x Frost
-267,Aurora Wisp Slime,Epic,Breed,,Aurora Slime,Wisp Slime,Cross-biome: Meadow x Frost
-268,Hail Pebble Slime,Uncommon,Breed,,Hail Slime,Pebble Slime,Cross-biome: Meadow x Frost
-269,Polar Verdant Slime,Rare,Breed,,Polar Slime,Verdant Slime,Cross-biome: Meadow x Frost
-270,Frost Honey Slime,Uncommon,Breed,,Frost Slime,Honey Slime,Cross-biome: Meadow x Frost
-271,Tundra Sage Slime,Rare,Breed,,Tundra Slime,Earthen Sage Slime,Cross-biome: Meadow x Frost
-272,Rime Sprout Slime,Uncommon,Breed,,Rime Slime,Sprout Slime,Cross-biome: Meadow x Frost
-273,Jungle Meadow Slime,Rare,Breed,,Jungle Heart Slime,Meadow Guardian Slime,Cross-biome: Meadow x Verdant
-274,Spore Pollen Slime,Uncommon,Breed,,Spore Slime,Pollen Slime,Cross-biome: Meadow x Verdant
-275,Toxic Honey Slime,Rare,Breed,,Toxin Slime,Honey Slime,Cross-biome: Meadow x Verdant
-276,Canopy Vine Slime,Uncommon,Breed,,Canopy Slime,Vine Slime,Cross-biome: Meadow x Verdant
-277,Leech Clover Slime,Uncommon,Breed,,Leech Slime,Clover Slime,Cross-biome: Meadow x Verdant
-278,Bark Flint Slime,Uncommon,Breed,,Bark Slime,Flint Slime,Cross-biome: Meadow x Verdant
-279,Root Pebble Slime,Common,Breed,,Root Slime,Pebble Slime,Cross-biome: Meadow x Verdant
-280,Mycelium Meadow Slime,Rare,Breed,,Mycelium Slime,Verdant Slime,Cross-biome: Meadow x Verdant
-281,Predator Gale Slime,Epic,Breed,,Predator Slime,Gale Slime,Cross-biome: Meadow x Verdant
-282,Tangle Brook Slime,Uncommon,Breed,,Tangle Slime,Brook Slime,Cross-biome: Meadow x Verdant
-283,Star Petal Slime,Rare,Breed,,Star Slime,Petal Slime,Cross-biome: Meadow x Starfall
-284,Cosmic Clover Slime,Uncommon,Breed,,Cosmic Slime,Clover Slime,Cross-biome: Meadow x Starfall
-285,Nebula Sprout Slime,Rare,Breed,,Nebula Slime,Sprout Slime,Cross-biome: Meadow x Starfall
-286,Gravity Pebble Slime,Uncommon,Breed,,Gravity Slime,Pebble Slime,Cross-biome: Meadow x Starfall
-287,Void Meadow Slime,Epic,Breed,,Void Slime,Meadow Guardian Slime,Cross-biome: Meadow x Starfall
-288,Stardust Slime,Uncommon,Breed,,Star Slime,Dust Slime,Cross-biome: Meadow x Starfall
-289,Comet Breeze Slime,Uncommon,Breed,,Comet Slime,Breeze Slime,Cross-biome: Meadow x Starfall
-290,Lunar Dewdrop Slime,Rare,Breed,,Lunar Slime,Dewdrop Slime,Cross-biome: Meadow x Starfall
-291,Galaxy Vine Slime,Epic,Breed,,Galactic Slime,Vine Slime,Cross-biome: Meadow x Starfall
-292,Nova Honey Slime,Rare,Breed,,Nova Slime,Honey Slime,Cross-biome: Meadow x Starfall
-293,Obsidian Lava Slime,Rare,Breed,,Obsidian Slime,Lava Slime,Cross-biome: Crystal x Ember
-294,Ruby Flame Slime,Rare,Breed,,Ruby Slime,Flame Slime,Cross-biome: Crystal x Ember
-295,Crystal Forge Slime,Rare,Breed,,Crystal Heart Slime,Forge Slime,Cross-biome: Crystal x Ember
-296,Magma Gem Slime,Uncommon,Breed,,Magma Slime,Geode Slime,Cross-biome: Crystal x Ember
-297,Glowing Ember Slime,Uncommon,Breed,,Glowstone Slime,Ember Slime,Cross-biome: Crystal x Ember
-298,Sapphire Inferno Slime,Epic,Breed,,Sapphire Slime,Inferno Slime,Cross-biome: Crystal x Ember
-299,Topaz Forge Slime,Uncommon,Breed,,Topaz Slime,Forge Slime,Cross-biome: Crystal x Ember
-300,Diamond Ash Slime,Rare,Breed,,Diamond Slime,Ash Slime,Cross-biome: Crystal x Ember
-301,Volcanic Crystal Slime,Rare,Breed,,Volcanic Slime,Prismatic Slime,Cross-biome: Crystal x Ember
-302,Phoenix Crystal Slime,Epic,Breed,,Phoenix Slime,Crystal Heart Slime,Cross-biome: Crystal x Ember
-303,Ice Quartz Slime,Uncommon,Breed,,Ice Crystal Slime,Quartz Slime,Cross-biome: Crystal x Frost
-304,Frozen Diamond Slime,Rare,Breed,,Frozen Slime,Diamond Slime,Cross-biome: Crystal x Frost
-305,Glacier Marble Slime,Uncommon,Breed,,Glacier Slime,Marble Slime,Cross-biome: Crystal x Frost
-306,Aurora Prismatic Slime,Rare,Breed,,Aurora Slime,Prismatic Slime,Cross-biome: Crystal x Frost
-307,Frost Obsidian Slime,Rare,Breed,,Frost Slime,Obsidian Slime,Cross-biome: Crystal x Frost
-308,Blizzard Prism Slime,Rare,Breed,,Blizzard Slime,Prismatic Slime,Cross-biome: Crystal x Frost
-309,Ice Sovereign Crystal Slime,Epic,Breed,,Ice Sovereign Slime,Crystal Heart Slime,Cross-biome: Crystal x Frost
-310,Opal Flurry Slime,Uncommon,Breed,,Opal Slime,Flurry Slime,Cross-biome: Crystal x Frost
-311,Polar Night Gem Slime,Epic,Breed,,Polar Night Slime,Void Crystal Slime,Cross-biome: Crystal x Frost
-312,Rime Echo Slime,Uncommon,Breed,,Rime Slime,Echo Slime,Cross-biome: Crystal x Frost
-313,Crystal Root Slime,Uncommon,Breed,,Quartz Slime,Root Slime,Cross-biome: Crystal x Verdant
-314,Gem Spore Slime,Rare,Breed,,Geode Slime,Spore Slime,Cross-biome: Crystal x Verdant
-315,Opal Fungus Slime,Uncommon,Breed,,Opal Slime,Fungus Slime,Cross-biome: Crystal x Verdant
-316,Glowing Mycelium Slime,Rare,Breed,,Glowstone Slime,Mycelium Slime,Cross-biome: Crystal x Verdant
-317,Crystal Bark Slime,Uncommon,Breed,,Chalk Slime,Bark Slime,Cross-biome: Crystal x Verdant
-318,Topaz Toxin Slime,Rare,Breed,,Topaz Slime,Toxin Slime,Cross-biome: Crystal x Verdant
-319,Echo Canopy Slime,Rare,Breed,,Echo Slime,Canopy Slime,Cross-biome: Crystal x Verdant
-320,Amber Sap Slime,Uncommon,Breed,,Amber Slime,Sap Slime,Cross-biome: Crystal x Verdant
-321,Sapphire Bloom Slime,Rare,Breed,,Sapphire Slime,Bloom Slime,Cross-biome: Crystal x Verdant
-322,Ancient Crystal Slime,Epic,Breed,,Ancient Grove Slime,Spelunker Slime,Cross-biome: Crystal x Verdant
-323,Star Crystal Slime,Rare,Breed,,Star Slime,Crystal Heart Slime,Cross-biome: Crystal x Starfall
-324,Nebula Prism Slime,Rare,Breed,,Nebula Slime,Prismatic Slime,Cross-biome: Crystal x Starfall
-325,Quasar Quartz Slime,Uncommon,Breed,,Quasar Slime,Quartz Slime,Cross-biome: Crystal x Starfall
-326,Void Obsidian Slime,Rare,Breed,,Void Slime,Obsidian Slime,Cross-biome: Crystal x Starfall
-327,Galaxy Gem Slime,Rare,Breed,,Galactic Slime,Geode Slime,Cross-biome: Crystal x Starfall
-328,Echo Star Slime,Uncommon,Breed,,Echo Slime,Star Slime,Cross-biome: Crystal x Starfall
-329,Dark Matter Crystal Slime,Epic,Breed,,Dark Matter Slime,Void Crystal Slime,Cross-biome: Crystal x Starfall
-330,Photon Prism Slime,Rare,Breed,,Photon Slime,Prismatic Slime,Cross-biome: Crystal x Starfall
-331,Event Horizon Crystal Slime,Epic,Breed,,Event Horizon Slime,Crystal Heart Slime,Cross-biome: Crystal x Starfall
-332,Cosmic Echo Slime,Uncommon,Breed,,Cosmic Slime,Echo Slime,Cross-biome: Crystal x Starfall
-333,Steam Slime,Rare,Breed,,Ember Slime,Frost Slime,Cross-biome: Ember x Frost — fire+ice = steam
-334,Slush Slime,Uncommon,Breed,,Ash Slime,Snowdrift Slime,Cross-biome: Ember x Frost
-335,Meltwater Slime,Uncommon,Breed,,Lava Slime,Glacier Slime,Cross-biome: Ember x Frost
-336,Ice Fire Slime,Epic,Breed,,Inferno Slime,Absolute Zero Slime,Cross-biome: Ember x Frost
-337,Tempest Slime,Rare,Breed,,Wildfire Slime,Blizzard Slime,Cross-biome: Ember x Frost
-338,Cracked Earth Slime,Uncommon,Breed,,Magma Slime,Permafrost Slime,Cross-biome: Ember x Frost
-339,Obsidian Ice Slime,Rare,Breed,,Volcanic Slime,Ice Sovereign Slime,Cross-biome: Ember x Frost
-340,Steaming Geyser Slime,Uncommon,Breed,,Geyser Slime,Flurry Slime,Cross-biome: Ember x Frost
-341,Fire Aurora Slime,Epic,Breed,,Fire Drake Slime,Aurora Slime,Cross-biome: Ember x Frost
-342,Frost Drake Slime,Legendary,Breed,,Fire Drake Slime,Ice Sovereign Slime,Cross-biome: Ember x Frost — biome apex cross
-343,Scorched Jungle Slime,Rare,Breed,,Scorch Slime,Canopy Slime,Cross-biome: Ember x Verdant
-344,Magma Root Slime,Rare,Breed,,Magma Slime,Root Slime,Cross-biome: Ember x Verdant
-345,Ash Spore Slime,Uncommon,Breed,,Ash Slime,Spore Slime,Cross-biome: Ember x Verdant
-346,Ember Bloom Slime,Rare,Breed,,Ember Slime,Bloom Slime,Cross-biome: Ember x Verdant
-347,Flame Toxin Slime,Rare,Breed,,Flame Slime,Toxin Slime,Cross-biome: Ember x Verdant
-348,Char Bark Slime,Uncommon,Breed,,Char Slime,Bark Slime,Cross-biome: Ember x Verdant
-349,Wildfire Canopy Slime,Epic,Breed,,Wildfire Slime,Jungle Heart Slime,Cross-biome: Ember x Verdant
-350,Forge Root Slime,Uncommon,Breed,,Forge Slime,Root Slime,Cross-biome: Ember x Verdant
-351,Phoenix Fern Slime,Epic,Breed,,Phoenix Slime,Ancient Grove Slime,Cross-biome: Ember x Verdant
-352,Volcanic Mycelium Slime,Legendary,Breed,,Fire Drake Slime,Mycelium Slime,Cross-biome: Ember x Verdant — biome apex cross
-353,Solar Flare Slime,Rare,Breed,,Solar Slime,Flame Slime,Cross-biome: Ember x Starfall
-354,Nova Ember Slime,Rare,Breed,,Nova Slime,Ember Slime,Cross-biome: Ember x Starfall
-355,Supernova Inferno Slime,Epic,Breed,,Supernova Slime,Inferno Slime,Cross-biome: Ember x Starfall
-356,Cosmic Fire Slime,Rare,Breed,,Cosmic Slime,Blaze Slime,Cross-biome: Ember x Starfall
-357,Photon Spark Slime,Uncommon,Breed,,Photon Slime,Spark Slime,Cross-biome: Ember x Starfall
-358,Meteor Magma Slime,Rare,Breed,,Meteor Slime,Magma Slime,Cross-biome: Ember x Starfall
-359,Stellar Forge Slime,Rare,Breed,,Star Slime,Forge Slime,Cross-biome: Ember x Starfall
-360,Gravity Magma Slime,Rare,Breed,,Gravity Slime,Magma Core Slime,Cross-biome: Ember x Starfall
-361,Dark Matter Ash Slime,Epic,Breed,,Dark Matter Slime,Ash Slime,Cross-biome: Ember x Starfall
-362,Celestial Fire Drake Slime,Legendary,Breed,,Fire Drake Slime,Celestial Slime,Cross-biome: Ember x Starfall — biome apex cross
-363,Frozen Fern Slime,Uncommon,Breed,,Frost Slime,Fern Slime,Cross-biome: Frost x Verdant
-364,Tundra Root Slime,Uncommon,Breed,,Tundra Slime,Root Slime,Cross-biome: Frost x Verdant
-365,Ice Canopy Slime,Rare,Breed,,Ice Crystal Slime,Canopy Slime,Cross-biome: Frost x Verdant
-366,Blizzard Spore Slime,Rare,Breed,,Blizzard Slime,Spore Slime,Cross-biome: Frost x Verdant
-367,Frozen Mycelium Slime,Rare,Breed,,Frozen Slime,Mycelium Slime,Cross-biome: Frost x Verdant
-368,Arctic Bloom Slime,Rare,Breed,,Arctic Slime,Bloom Slime,Cross-biome: Frost x Verdant
-369,Winter Bark Slime,Uncommon,Breed,,Winter Wraith Slime,Bark Slime,Cross-biome: Frost x Verdant
-370,Polar Predator Slime,Epic,Breed,,Polar Night Slime,Predator Slime,Cross-biome: Frost x Verdant
-371,Rime Toxin Slime,Rare,Breed,,Rime Slime,Toxin Slime,Cross-biome: Frost x Verdant
-372,Glacier Jungle Slime,Legendary,Breed,,Ice Sovereign Slime,Jungle Heart Slime,Cross-biome: Frost x Verdant — biome apex cross
-373,Aurora Star Slime,Rare,Breed,,Aurora Slime,Star Slime,Cross-biome: Frost x Starfall
-374,Frozen Comet Slime,Rare,Breed,,Frozen Slime,Comet Slime,Cross-biome: Frost x Starfall
-375,Cosmic Frost Slime,Rare,Breed,,Cosmic Slime,Frost Slime,Cross-biome: Frost x Starfall
-376,Dark Matter Ice Slime,Rare,Breed,,Dark Matter Slime,Permafrost Slime,Cross-biome: Frost x Starfall
-377,Blizzard Nebula Slime,Rare,Breed,,Blizzard Slime,Nebula Slime,Cross-biome: Frost x Starfall
-378,Polar Void Slime,Epic,Breed,,Polar Night Slime,Void Slime,Cross-biome: Frost x Starfall
-379,Icicle Meteor Slime,Uncommon,Breed,,Icicle Slime,Meteor Slime,Cross-biome: Frost x Starfall
-380,Tundra Star Slime,Uncommon,Breed,,Tundra Slime,Star Slime,Cross-biome: Frost x Starfall
-381,Absolute Void Slime,Epic,Breed,,Absolute Zero Slime,Black Hole Slime,Cross-biome: Frost x Starfall
-382,Ice Sovereign Celestial Slime,Legendary,Breed,,Ice Sovereign Slime,Celestial Slime,Cross-biome: Frost x Starfall — biome apex cross
-383,Cosmic Spore Slime,Rare,Breed,,Cosmic Slime,Spore Slime,Cross-biome: Verdant x Starfall
-384,Star Bloom Slime,Rare,Breed,,Star Slime,Bloom Slime,Cross-biome: Verdant x Starfall
-385,Nebula Fungus Slime,Rare,Breed,,Nebula Slime,Fungus Slime,Cross-biome: Verdant x Starfall
-386,Void Root Slime,Rare,Breed,,Void Slime,Root Slime,Cross-biome: Verdant x Starfall
-387,Gravity Canopy Slime,Epic,Breed,,Gravity Slime,Canopy Slime,Cross-biome: Verdant x Starfall
-388,Dark Matter Mycelium Slime,Epic,Breed,,Dark Matter Slime,Mycelium Slime,Cross-biome: Verdant x Starfall
-389,Astral Predator Slime,Epic,Breed,,Astral Slime,Predator Slime,Cross-biome: Verdant x Starfall
-390,Photon Bloom Slime,Rare,Breed,,Photon Slime,Bloom Slime,Cross-biome: Verdant x Starfall
-391,Warp Jungle Slime,Rare,Breed,,Warp Slime,Jungle Heart Slime,Cross-biome: Verdant x Starfall
-392,Celestial Grove Slime,Legendary,Breed,,Celestial Slime,Ancient Grove Slime,Cross-biome: Verdant x Starfall — biome apex cross
-393,Thornbloom Guardian Slime,Epic,Breed,,Thornbloom Slime,Meadow Guardian Slime,Chain Breed — Gen 2
-394,Dustdevil Gale Slime,Epic,Breed,,Dustdevil Slime,Gale Slime,Chain Breed — Gen 2
-395,Volcanic Pyroclast Slime,Epic,Breed,,Volcanic Slime,Pyroclast Slime,Chain Breed — Gen 2
-396,Hellfire Phoenix Slime,Legendary,Breed,,Hellfire Slime,Phoenix Slime,Chain Breed — Gen 2
-397,Absolute Permablizzard Slime,Epic,Breed,,Absolute Zero Slime,Permablizzard Slime,Chain Breed — Gen 2
-398,Winter Frozen Aurora Slime,Legendary,Breed,,Frozen Aurora Slime,Winter Wraith Slime,Chain Breed — Gen 2
-399,Overmind Jungle Slime,Epic,Breed,,Overmind Slime,Jungle Heart Slime,Chain Breed — Gen 2
-400,Jungle Sovereign Star Slime,Legendary,Breed,,Jungle Sovereign Slime,Star Slime,Chain Breed — Gen 2
-401,Singularity Horizon Slime,Legendary,Breed,,Cosmic Singularity Slime,Event Horizon Slime,Chain Breed — Gen 2
-402,Celestial Galaxy Slime,Legendary,Breed,,Celestial Sovereign Slime,Galaxy Core Slime,Chain Breed — Gen 2
-403,Meadow Crown Ancient Slime,Epic,Breed,,Meadow Crown Slime,Earthen Sage Slime,Chain Breed — Gen 2
-404,Sapphire Void Slime,Epic,Breed,,Sapphire Heart Slime,Void Crystal Slime,Chain Breed — Gen 2
-405,Volcano Drake Lord Slime,Legendary,Breed,,Volcano Lord Slime,Fire Drake Slime,Chain Breed — Gen 2
-406,Polar Wraith King Slime,Legendary,Breed,,Polar Specter Slime,Winter Wraith Slime,Chain Breed — Gen 2
-407,Frostbite Crystal Slime,Epic,Breed,,Frostbite Sovereign Slime,Ice Sovereign Slime,Chain Breed — Gen 2
-408,Spore Mind Ancient Slime,Epic,Breed,,Spore Mind Slime,Ancient Grove Slime,Chain Breed — Gen 2
-409,Canopy Jungle Apex Slime,Legendary,Breed,,Canopy Hunter Slime,Jungle Heart Slime,Chain Breed — Gen 2
-410,Eclipse Singularity Slime,Legendary,Breed,,Eclipse Void Slime,Black Hole Slime,Chain Breed — Gen 2
-411,Opal Crystal Dreamer Slime,Rare,Breed,,Opal Dream Slime,Crystal Heart Slime,Chain Breed — Gen 2
-412,Deep Resonant Slime,Rare,Breed,,Deep Geode Slime,Resonance Slime,Chain Breed — Gen 2
-413,Thornbloom Dustdevil Slime,Rare,Breed,,Thornbloom Slime,Dustdevil Slime,Chain Breed — two same-biome
-414,Goldenrod Mistveil Slime,Epic,Breed,,Goldenrod Slime,Mistveil Slime,Chain Breed — two same-biome
-415,Resonant Phantom Slime,Rare,Breed,,Resonant Quartz Slime,Phantom Echo Slime,Chain Breed — two same-biome
-416,Void Opal Slime,Epic,Breed,,Void Prism Slime,Opal Dream Slime,Chain Breed — two same-biome
-417,Firefang Lava Flow Slime,Rare,Breed,,Firefang Slime,Lava Flow Slime,Chain Breed — two same-biome
-418,Hellfire Volcano Slime,Legendary,Breed,,Hellfire Slime,Volcano Lord Slime,Chain Breed — two same-biome
-419,Crystal Snow Storm Slime,Rare,Breed,,Crystal Snow Slime,Arctic Flurry Slime,Chain Breed — two same-biome
-420,Polar Aurora Specter Slime,Legendary,Breed,,Polar Specter Slime,Frozen Aurora Slime,Chain Breed — two same-biome
-421,Root Spore Mind Slime,Epic,Breed,,Root Network Slime,Spore Mind Slime,Chain Breed — two same-biome
-422,Jungle Overmind Slime,Legendary,Breed,,Jungle Sovereign Slime,Overmind Slime,Chain Breed — two same-biome — zone 5 pinnacle
-423,Pulsar Dark Nova Slime,Rare,Breed,,Pulsar Nova Slime,Dark Star Slime,Chain Breed — two same-biome
-424,Celestial Singularity Slime,Legendary,Breed,,Celestial Sovereign Slime,Cosmic Singularity Slime,Chain Breed — two same-biome — zone 6 pinnacle
-425,Emerald Crown Slime,Epic,Breed,,Emerald Guardian Slime,Meadow Crown Slime,Chain Breed — two same-biome
-426,Sapphire Opal Dream Slime,Epic,Breed,,Sapphire Heart Slime,Opal Dream Slime,Chain Breed — two same-biome
-427,Cinder Phoenix Volcano Slime,Epic,Breed,,Cinder Phoenix Slime,Volcano Lord Slime,Chain Breed — two same-biome
-428,Forge Master Pyroclast Slime,Legendary,Breed,,Forge Master Slime,Pyroclast Slime,Chain Breed — two same-biome
-429,Tundra Wolf Specter Slime,Epic,Breed,,Tundra Wolf Slime,Polar Specter Slime,Chain Breed — two same-biome
-430,Absolute Winter Blizzard Slime,Legendary,Breed,,Absolute Blizzard Slime,Winter Storm Slime,Chain Breed — two same-biome
-431,Predatory Root Bloom Slime,Epic,Breed,,Predatory Bloom Slime,Root Network Slime,Chain Breed — two same-biome
-432,Warp Gate Singularity Slime,Legendary,Breed,,Warp Gate Slime,Cosmic Singularity Slime,Chain Breed — two same-biome
-433,Steam Gale Slime,Rare,Breed,,Steam Slime,Gale Slime,Chain Breed — cross-biome + zone
-434,Ice Fire Void Slime,Epic,Breed,,Ice Fire Slime,Void Slime,Chain Breed — cross-biome + zone
-435,Tempest Comet Slime,Rare,Breed,,Tempest Slime,Comet Slime,Chain Breed — cross-biome + zone
-436,Scorched Jungle Bloom Slime,Epic,Breed,,Scorched Jungle Slime,Bloom Slime,Chain Breed — cross-biome + zone
-437,Solar Flare Forge Slime,Rare,Breed,,Solar Flare Slime,Forge Slime,Chain Breed — cross-biome + zone
-438,Frost Drake Glacier Slime,Legendary,Breed,,Frost Drake Slime,Glacier Slime,Chain Breed — cross-biome + zone
-439,Dark Matter Singularity Slime,Legendary,Breed,,Cosmic Singularity Slime,Dark Matter Slime,Chain Breed — cross-biome + zone
-440,Frozen Mycelium Root Slime,Epic,Breed,,Frozen Mycelium Slime,Root Slime,Chain Breed — cross-biome + zone
-441,Aurora Star Crystal Slime,Rare,Breed,,Aurora Star Slime,Crystal Heart Slime,Chain Breed — cross-biome + zone
-442,Volcanic Jungle Cosmos Slime,Epic,Breed,,Volcanic Mycelium Slime,Jungle Heart Slime,Chain Breed — cross-biome + zone
-443,Ruby Flame Forge Slime,Rare,Breed,,Ruby Flame Slime,Forge Slime,Chain Breed — cross-biome + zone
-444,Nebula Prism Star Slime,Rare,Breed,,Nebula Prism Slime,Star Slime,Chain Breed — cross-biome + zone
-445,Celestial Drake Star Slime,Legendary,Breed,,Celestial Fire Drake Slime,Star Slime,Chain Breed — cross-biome + zone
-446,Steam Void Slime,Epic,Breed,,Steam Slime,Void Slime,Chain Breed — cross-biome + zone
-447,Ice Fire Inferno Slime,Legendary,Breed,,Ice Fire Slime,Inferno Slime,Chain Breed — cross-biome + zone
-448,Meltwater Aurora Slime,Rare,Breed,,Meltwater Slime,Aurora Slime,Chain Breed — cross-biome + zone
-449,Supernova Inferno Phoenix Slime,Legendary,Breed,,Supernova Inferno Slime,Phoenix Slime,Chain Breed — cross-biome + zone
-450,Gravity Well Void Slime,Epic,Breed,,Gravity Well Slime,Black Hole Slime,Chain Breed — cross-biome + zone
-451,Star Bloom Nebula Slime,Rare,Breed,,Star Bloom Slime,Nebula Slime,Chain Breed — cross-biome + zone
-452,Frozen Aurora Star Slime,Epic,Breed,,Frozen Aurora Slime,Aurora Star Slime,Chain Breed — cross-biome + zone
-453,Steam Ice Fire Slime,Epic,Breed,,Steam Slime,Ice Fire Slime,Chain Breed — two cross-biome tier 1
-454,Quartz Bloom Frost Slime,Rare,Breed,,Quartz Bloom Slime,Crystal Snow Slime,Chain Breed — two cross-biome tier 1
-455,Solar Nova Flare Slime,Rare,Breed,,Solar Flare Slime,Nova Ember Slime,Chain Breed — two cross-biome tier 1
-456,Aurora Cosmic Frost Slime,Rare,Breed,,Aurora Star Slime,Cosmic Frost Slime,Chain Breed — two cross-biome tier 1
-457,Scorched Firebloom Slime,Epic,Breed,,Scorched Bloom Slime,Firebloom Slime,Chain Breed — two cross-biome tier 1
-458,Obsidian Lava Ice Slime,Legendary,Breed,,Obsidian Lava Slime,Frost Drake Slime,Chain Breed — two cross-biome tier 1
-459,Sapphire Rain Frost Slime,Rare,Breed,,Sapphire Rain Slime,Crystal Snow Slime,Chain Breed — two cross-biome tier 1
-460,Void Dark Comet Slime,Epic,Breed,,Void Comet Slime,Dark Star Slime,Chain Breed — two cross-biome tier 1
-461,Cosmic Spore Star Slime,Rare,Breed,,Cosmic Spore Slime,Star Bloom Slime,Chain Breed — two cross-biome tier 1
-462,Frozen Jungle Star Slime,Epic,Breed,,Glacier Jungle Slime,Star Bloom Slime,Chain Breed — two cross-biome tier 1
-463,Photon Prism Star Slime,Rare,Breed,,Photon Prism Slime,Star Crystal Slime,Chain Breed — two cross-biome tier 1
-464,Ruby Flame Frost Slime,Legendary,Breed,,Ruby Flame Slime,Frost Drake Slime,Chain Breed — two cross-biome tier 1
-465,Amber Honey Sap Slime,Rare,Breed,,Amber Honey Slime,Sap Slime,Chain Breed — two cross-biome tier 1
-466,Scorched Jungle Tempest Slime,Legendary,Breed,,Scorched Jungle Slime,Tempest Slime,Chain Breed — two cross-biome tier 1
-467,Diamond Ash Ice Slime,Epic,Breed,,Diamond Ash Slime,Ice Quartz Slime,Chain Breed — two cross-biome tier 1
-468,Sapphire Inferno Frost Slime,Legendary,Breed,,Sapphire Inferno Slime,Frost Drake Slime,Chain Breed — two cross-biome tier 1
-469,Nebula Fungus Root Slime,Rare,Breed,,Nebula Fungus Slime,Root Network Slime,Chain Breed — two cross-biome tier 1
-470,Dark Matter Ice Void Slime,Epic,Breed,,Dark Matter Ice Slime,Polar Void Slime,Chain Breed — two cross-biome tier 1
-471,Celestial Fire Star Slime,Legendary,Breed,,Celestial Fire Drake Slime,Solar Corona Slime,Chain Breed — two cross-biome tier 1
-472,Solar Corona Singularity Slime,Legendary,Breed,,Solar Corona Slime,Celestial Sovereign Slime,Chain Breed — two cross-biome tier 1
-473,Thornbloom Inferno Slime,Legendary,Breed,,Thornbloom Slime,Hellfire Slime,Deep Chain — Gen 3+
-474,Meadow Crown Volcano Slime,Legendary,Breed,,Meadow Crown Slime,Volcano Lord Slime,Deep Chain — Gen 3+
-475,Sapphire Absolute Slime,Legendary,Breed,,Sapphire Heart Slime,Absolute Blizzard Slime,Deep Chain — Gen 3+
-476,Forge Master Drake Slime,Legendary,Breed,,Forge Master Slime,Ember Drake Slime,Deep Chain — Gen 3+
-477,Cinder Phoenix Ice Slime,Legendary,Breed,,Cinder Phoenix Slime,Ice Sovereign Crystal Slime,Deep Chain — Gen 3+
-478,Phantom Aurora Echo Slime,Legendary,Breed,,Phantom Echo Slime,Frozen Aurora Slime,Deep Chain — Gen 3+
-479,Overmind Predatory Slime,Legendary,Breed,,Overmind Slime,Predatory Bloom Slime,Deep Chain — Gen 3+
-480,Singularity Celestial Slime,Legendary,Breed,,Cosmic Singularity Slime,Celestial Sovereign Slime,Deep Chain — Gen 3+
-481,Jungle Crown Slime,Legendary,Breed,,Jungle Sovereign Slime,Meadow Crown Slime,Deep Chain — Gen 3+
-482,Steam Dragon Slime,Legendary,Breed,,Steam Slime,Frost Drake Slime,Deep Chain — Gen 3+
-483,Hellfire Blizzard Slime,Legendary,Breed,,Hellfire Slime,Absolute Blizzard Slime,Deep Chain — Gen 3+
-484,Volcanic Cosmos Slime,Legendary,Breed,,Volcanic Mycelium Slime,Cosmic Spore Slime,Deep Chain — Gen 3+
-485,Root Gravity Slime,Legendary,Breed,,Root Network Slime,Gravity Well Slime,Deep Chain — Gen 3+
-486,Ice Fire Galaxy Slime,Legendary,Breed,,Ice Fire Slime,Galaxy Core Slime,Deep Chain — Gen 3+
-487,Void Prism Cosmos Slime,Legendary,Breed,,Void Prism Slime,Cosmic Frost Slime,Deep Chain — Gen 3+
-488,Ruby Polar Flame Slime,Legendary,Breed,,Ruby Flame Slime,Polar Specter Slime,Deep Chain — Gen 3+
-489,Solar Wildfire Slime,Legendary,Breed,,Solar Flare Slime,Hellfire Slime,Deep Chain — Gen 3+
-490,Opal Dream Galaxy Slime,Legendary,Breed,,Opal Dream Slime,Nebula Dream Slime,Deep Chain — Gen 3+
-491,Warp Jungle Gate Slime,Legendary,Breed,,Warp Gate Slime,Jungle Sovereign Slime,Deep Chain — Gen 3+
-492,Frozen Galaxy Vine Slime,Legendary,Breed,,Frozen Fern Slime,Galaxy Vine Slime,Deep Chain — Gen 3+
-493,Dark Star Overmind Slime,Legendary,Breed,,Dark Star Slime,Overmind Slime,Deep Chain — Gen 3+
-494,Polar Void Mycelium Slime,Legendary,Breed,,Polar Void Slime,Mycelium Slime,Deep Chain — Gen 3+
-495,Crystal Snow Bloom Star Slime,Legendary,Breed,,Crystal Snow Slime,Star Bloom Slime,Deep Chain — Gen 3+
-496,Thornbloom Galaxy Slime,Legendary,Breed,,Thornbloom Slime,Galaxy Core Slime,Deep Chain — Gen 3+
-497,Aurora Crystal Cosmos Slime,Legendary,Breed,,Aurora Prismatic Slime,Cosmic Echo Slime,Deep Chain — Gen 3+
-498,Prismatic Sovereign Slime,Mythic,Breed,,Celestial Sovereign Slime,Prismatic Slime,Mythic chain — requires zone 6 apex
-499,Eternal Phoenix Slime,Mythic,Breed,,Cinder Phoenix Slime,Celestial Fire Drake Slime,Mythic chain — fire pinnacle
-500,World Slime,Mythic,Breed,,Jungle Sovereign Slime,Volcano Lord Slime,Mythic — ID 500 milestone
-501,Void Eternal Slime,Mythic,Breed,,Cosmic Singularity Slime,Hellfire Slime,Mythic chain
-502,Primordial Slime,Mythic,Breed,,Earthen Sage Slime,Celestial Sovereign Slime,Mythic chain — oldest and newest
-503,Chromatic Slime,Mythic,Breed,,Prismatic Sovereign Slime,Aurora Prismatic Slime,Mythic chain — requires 498
-504,Infinite Slime,Mythic,Breed,,World Slime,Void Eternal Slime,Mythic chain — requires 500+501
-505,Apex Slime,Mythic,Breed,,Hellfire Blizzard Slime,Ice Fire Galaxy Slime,Mythic chain
-506,Cataclysm Slime,Mythic,Breed,,Solar Wildfire Slime,Absolute Winter Blizzard Slime,Mythic chain
-507,Harmonic Slime,Mythic,Breed,,Resonance Slime,Constellation Dreamer Slime,Mythic chain — harmony of sound and stars
-508,Ouroboros Slime,Mythic,Breed,,Primordial Slime,Eternal Phoenix Slime,Mythic chain — the cycle
-509,Goo Titan Slime,Mythic,Breed,,Apex Slime,Cataclysm Slime,Mythic chain — requires 505+506
-510,Genesis Slime,Mythic,Breed,,Infinite Slime,Primordial Slime,Mythic chain — requires 504+502
-511,Rainbow Slime,Mythic,Breed,,Chromatic Slime,Prismatic Slime,Mythic chain — visible from anywhere
-512,The Great Slime,Mythic,Breed,,Genesis Slime,Goo Titan Slime,Mythic pinnacle — final breed in the game
-513,Mudslime,Common,Special,,,,"Failed breed result — incompatible parents produce this"
-514,Mirror Slime,Rare,Special,,,,"Breed a slime with the result of breeding that slime — self-reflective chain"
-515,Glitch Slime,Epic,Special,,,,"Tap the main blob exactly 999 times without spending any Goo"
-516,Lucky Slime,Rare,Special,,,,"0.1% chance to appear on any successful breed"
-517,Oversized Slime,Uncommon,Special,,,,"Triggered by having 100+ slimes in collection simultaneously"
-518,Miniature Slime,Uncommon,Special,,,,"Triggered when any slime reaches level 10 for the first time"
-519,Elder Slime,Rare,Special,,,,"A single slime remains at max level for 24 real-world hours"
-520,Haunted Slime,Epic,Special,,,,"Discovered in Frostmere — breed any two slimes after midnight local time"
-521,Curious Slime,Rare,Special,,,,"Tap the same slime 50 consecutive times without tapping anything else"
-522,Slime King,Epic,Special,,,,"Unlock all 25 Zone 3 slimes (all of Ember Wastes)"
-523,Slime Queen,Epic,Special,,,,"Unlock all 25 Zone 4 slimes (all of Frostmere)"
-524,Ancient Slime,Legendary,Special,,,,"Complete 100 total successful breed operations"
-525,Cosmic Jester Slime,Rare,Special,,,,"Breed any slime with a Mudslime"
-526,Primordial Goo,Mythic,Special,,,,"Collect all 6 zone apex Epics: Meadow Crown + Sapphire Heart + Hellfire + Frostbite Sovereign + Jungle Sovereign + Cosmic Singularity"
-527,The Great Slime (True Form),Mythic,Special,,,,"Complete the Slimepedia — collect all 526 other slimes. This is the true ending."
+001,Meadow Slime,Common,Zone,1,,,Zone 1 — Gooey Meadow
+002,Verdant Blob,Common,Zone,1,,,Zone 1 — Gooey Meadow
+003,Mossy Ooze,Common,Zone,1,,,Zone 1 — Gooey Meadow
+004,Earthen Puddle,Common,Zone,1,,,Zone 1 — Gooey Meadow
+005,Petal Sprout,Common,Zone,1,,,Zone 1 — Gooey Meadow
+006,Dewdrop Wisp,Common,Zone,1,,,Zone 1 — Gooey Meadow
+007,Clover Crawler,Common,Zone,1,,,Zone 1 — Gooey Meadow
+008,Root Drifter,Common,Zone,1,,,Zone 1 — Gooey Meadow
+009,Bloom Creeper,Common,Zone,1,,,Zone 1 — Gooey Meadow
+010,Glade Warden,Common,Zone,1,,,Zone 1 — Gooey Meadow
+011,Sprout Keeper,Common,Zone,1,,,Zone 1 — Gooey Meadow
+012,Vine Tender,Common,Zone,1,,,Zone 1 — Gooey Meadow
+013,Earthen Wisp,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+014,Petal Crawler,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+015,Dewdrop Drifter,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+016,Clover Creeper,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+017,Root Warden,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+018,Bloom Keeper,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+019,Glade Tender,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+020,Sprout Grazer,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+021,Vine Lurker,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+022,Fern Wanderer,Uncommon,Zone,1,,,Zone 1 — Gooey Meadow
+023,Greater Meadow Ooze,Rare,Zone,1,,,Zone 1 — Gooey Meadow — rare summon
+024,Elder Earthen Wisp,Rare,Zone,1,,,Zone 1 — Gooey Meadow — rare summon
+025,Ancient Clover Creeper,Rare,Zone,1,,,Zone 1 — Gooey Meadow — rare summon
+026,Primal Glade Tender,Rare,Zone,1,,,Zone 1 — Gooey Meadow — rare summon
+027,Apex Fern Wanderer,Rare,Zone,1,,,Zone 1 — Gooey Meadow — rare summon
+028,Sovereign Burrow Binder,Rare,Zone,1,,,Zone 1 — Gooey Meadow — rare summon
+029,Radiant Meadow Puddle,Epic,Zone,1,,,Zone 1 — Gooey Meadow — epic apex (0.6% summon weight)
+030,Exalted Root Keeper,Epic,Zone,1,,,Zone 1 — Gooey Meadow — epic apex (0.6% summon weight)
+031,Gooey Crown Tender,Legendary,Zone,1,,,Zone 1 — Gooey Meadow — legendary crown (0.18% summon weight)
+032,Eternal Brook Binder,Mythic,Zone,1,,,Zone 1 — Gooey Meadow — mythic (0.04% summon weight)
+033,Merged Clover Creeper,Uncommon,Merge,1,Meadow Slime,,Zone 1 — Gooey Meadow — merge 3× Meadow Slime
+034,Merged Root Warden,Uncommon,Merge,1,Verdant Blob,,Zone 1 — Gooey Meadow — merge 3× Verdant Blob
+035,Merged Bloom Keeper,Uncommon,Merge,1,Mossy Ooze,,Zone 1 — Gooey Meadow — merge 3× Mossy Ooze
+036,Merged Glade Tender,Uncommon,Merge,1,Earthen Puddle,,Zone 1 — Gooey Meadow — merge 3× Earthen Puddle
+037,Merged Sprout Grazer,Uncommon,Merge,1,Petal Sprout,,Zone 1 — Gooey Meadow — merge 3× Petal Sprout
+038,Merged Vine Lurker,Uncommon,Merge,1,Dewdrop Wisp,,Zone 1 — Gooey Meadow — merge 3× Dewdrop Wisp
+039,Merged Fern Wanderer,Uncommon,Merge,1,Clover Crawler,,Zone 1 — Gooey Meadow — merge 3× Clover Crawler
+040,Merged Thorn Sentinel,Uncommon,Merge,1,Root Drifter,,Zone 1 — Gooey Meadow — merge 3× Root Drifter
+041,Fused Glade Tender,Rare,Merge,1,Earthen Wisp,,Zone 1 — Gooey Meadow — merge 3× Earthen Wisp
+042,Fused Sprout Grazer,Rare,Merge,1,Petal Crawler,,Zone 1 — Gooey Meadow — merge 3× Petal Crawler
+043,Fused Vine Lurker,Rare,Merge,1,Dewdrop Drifter,,Zone 1 — Gooey Meadow — merge 3× Dewdrop Drifter
+044,Fused Fern Wanderer,Rare,Merge,1,Clover Creeper,,Zone 1 — Gooey Meadow — merge 3× Clover Creeper
+045,Fused Thorn Sentinel,Rare,Merge,1,Root Warden,,Zone 1 — Gooey Meadow — merge 3× Root Warden
+046,Fused Blossom Seeker,Rare,Merge,1,Bloom Keeper,,Zone 1 — Gooey Meadow — merge 3× Bloom Keeper
+047,Fused Burrow Binder,Rare,Merge,1,Glade Tender,,Zone 1 — Gooey Meadow — merge 3× Glade Tender
+048,Fused Pebble Shaper,Rare,Merge,1,Sprout Grazer,,Zone 1 — Gooey Meadow — merge 3× Sprout Grazer
+049,Crystallized Thorn Sentinel,Epic,Merge,1,Greater Meadow Ooze,,Zone 1 — Gooey Meadow — merge 3× Greater Meadow Ooze
+050,Crystallized Blossom Seeker,Epic,Merge,1,Elder Earthen Wisp,,Zone 1 — Gooey Meadow — merge 3× Elder Earthen Wisp
+051,Crystallized Burrow Binder,Epic,Merge,1,Ancient Clover Creeper,,Zone 1 — Gooey Meadow — merge 3× Ancient Clover Creeper
+052,Crystallized Pebble Shaper,Epic,Merge,1,Primal Glade Tender,,Zone 1 — Gooey Meadow — merge 3× Primal Glade Tender
+053,Crystallized Brook Sage,Epic,Merge,1,Apex Fern Wanderer,,Zone 1 — Gooey Meadow — merge 3× Apex Fern Wanderer
+054,Crystallized Mire Slime,Epic,Merge,1,Sovereign Burrow Binder,,Zone 1 — Gooey Meadow — merge 3× Sovereign Burrow Binder
+055,Ascended Pebble Shaper,Legendary,Merge,1,Radiant Meadow Puddle,,Zone 1 — Gooey Meadow — merge 3× Radiant Meadow Puddle
+056,Ascended Brook Sage,Legendary,Merge,1,Exalted Root Keeper,,Zone 1 — Gooey Meadow — merge 3× Exalted Root Keeper
+057,Ascended Mire Slime,Legendary,Merge,1,Crystallized Thorn Sentinel,,Zone 1 — Gooey Meadow — merge 3× Crystallized Thorn Sentinel
+058,Ascended Sap Blob,Legendary,Merge,1,Crystallized Blossom Seeker,,Zone 1 — Gooey Meadow — merge 3× Crystallized Blossom Seeker
+059,Hybrid Mossy Sprout,Rare,Breed,1,Meadow Slime,Verdant Blob,Zone 1 — Gooey Meadow — breed Meadow Slime + Verdant Blob
+060,Hybrid Earthen Wisp,Rare,Breed,1,Mossy Ooze,Earthen Puddle,Zone 1 — Gooey Meadow — breed Mossy Ooze + Earthen Puddle
+061,Hybrid Petal Crawler,Rare,Breed,1,Petal Sprout,Earthen Wisp,Zone 1 — Gooey Meadow — breed Petal Sprout + Earthen Wisp
+062,Hybrid Dewdrop Drifter,Rare,Breed,1,Dewdrop Wisp,Petal Crawler,Zone 1 — Gooey Meadow — breed Dewdrop Wisp + Petal Crawler
+063,Hybrid Clover Creeper,Rare,Breed,1,Earthen Wisp,Petal Crawler,Zone 1 — Gooey Meadow — breed Earthen Wisp + Petal Crawler
+064,Hybrid Root Warden,Rare,Breed,1,Dewdrop Drifter,Clover Creeper,Zone 1 — Gooey Meadow — breed Dewdrop Drifter + Clover Creeper
+065,Hybrid Bloom Keeper,Rare,Breed,1,Clover Crawler,Root Warden,Zone 1 — Gooey Meadow — breed Clover Crawler + Root Warden
+066,Hybrid Glade Tender,Rare,Breed,1,Root Warden,Bloom Keeper,Zone 1 — Gooey Meadow — breed Root Warden + Bloom Keeper
+067,Apex Dewdrop Drifter,Epic,Breed,1,Greater Meadow Ooze,Elder Earthen Wisp,Zone 1 — Gooey Meadow — breed Greater Meadow Ooze + Elder Earthen Wisp
+068,Apex Clover Creeper,Epic,Breed,1,Ancient Clover Creeper,Primal Glade Tender,Zone 1 — Gooey Meadow — breed Ancient Clover Creeper + Primal Glade Tender
+069,Apex Root Warden,Epic,Breed,1,Apex Fern Wanderer,Sovereign Burrow Binder,Zone 1 — Gooey Meadow — breed Apex Fern Wanderer + Sovereign Burrow Binder
+070,Apex Bloom Keeper,Epic,Breed,1,Fused Glade Tender,Glade Tender,Zone 1 — Gooey Meadow — breed Fused Glade Tender + Glade Tender
+071,Apex Glade Tender,Epic,Breed,1,Greater Meadow Ooze,Fused Glade Tender,Zone 1 — Gooey Meadow — breed Greater Meadow Ooze + Fused Glade Tender
+072,Apex Sprout Grazer,Epic,Breed,1,Elder Earthen Wisp,Hybrid Mossy Sprout,Zone 1 — Gooey Meadow — breed Elder Earthen Wisp + Hybrid Mossy Sprout
+073,Apex Vine Lurker,Epic,Breed,1,Fused Sprout Grazer,Hybrid Earthen Wisp,Zone 1 — Gooey Meadow — breed Fused Sprout Grazer + Hybrid Earthen Wisp
+074,Apex Fern Wanderer II,Epic,Breed,1,Ancient Clover Creeper,Primal Glade Tender,Zone 1 — Gooey Meadow — breed Ancient Clover Creeper + Primal Glade Tender
+075,Supreme Bloom Keeper,Legendary,Breed,1,Radiant Meadow Puddle,Exalted Root Keeper,Zone 1 — Gooey Meadow — breed Radiant Meadow Puddle + Exalted Root Keeper
+076,Supreme Glade Tender,Legendary,Breed,1,Crystallized Thorn Sentinel,Crystallized Blossom Seeker,Zone 1 — Gooey Meadow — breed Crystallized Thorn Sentinel + Crystallized Blossom Seeker
+077,Supreme Sprout Grazer,Legendary,Breed,1,Crystallized Burrow Binder,Crystallized Pebble Shaper,Zone 1 — Gooey Meadow — breed Crystallized Burrow Binder + Crystallized Pebble Shaper
+078,Supreme Vine Lurker,Legendary,Breed,1,Radiant Meadow Puddle,Crystallized Thorn Sentinel,Zone 1 — Gooey Meadow — breed Radiant Meadow Puddle + Crystallized Thorn Sentinel
+079,Supreme Fern Wanderer,Legendary,Breed,1,Crystallized Blossom Seeker,Apex Dewdrop Drifter,Zone 1 — Gooey Meadow — breed Crystallized Blossom Seeker + Apex Dewdrop Drifter
+080,Supreme Thorn Sentinel,Legendary,Breed,1,Apex Clover Creeper,Apex Root Warden,Zone 1 — Gooey Meadow — breed Apex Clover Creeper + Apex Root Warden
+081,Transcendent Blossom Seeker,Mythic,Breed,1,Gooey Crown Tender,Ascended Pebble Shaper,Zone 1 — Gooey Meadow — breed Gooey Crown Tender + Ascended Pebble Shaper — zone mythic pinnacle
+082,Transcendent Burrow Binder,Mythic,Breed,1,Ascended Brook Sage,Ascended Mire Slime,Zone 1 — Gooey Meadow — breed Ascended Brook Sage + Ascended Mire Slime — zone mythic pinnacle
+083,Crystal Slime,Common,Zone,2,,,Zone 2 — Crystal Caves
+084,Sapphire Shard,Common,Zone,2,,,Zone 2 — Crystal Caves
+085,Quartz Golem,Common,Zone,2,,,Zone 2 — Crystal Caves
+086,Gem Specter,Common,Zone,2,,,Zone 2 — Crystal Caves
+087,Prism Crawler,Common,Zone,2,,,Zone 2 — Crystal Caves
+088,Opal Warden,Common,Zone,2,,,Zone 2 — Crystal Caves
+089,Mineral Drifter,Common,Zone,2,,,Zone 2 — Crystal Caves
+090,Resonant Resonator,Common,Zone,2,,,Zone 2 — Crystal Caves
+091,Faceted Keeper,Common,Zone,2,,,Zone 2 — Crystal Caves
+092,Glint Tender,Common,Zone,2,,,Zone 2 — Crystal Caves
+093,Shard Lurker,Common,Zone,2,,,Zone 2 — Crystal Caves
+094,Glimmer Sentinel,Common,Zone,2,,,Zone 2 — Crystal Caves
+095,Gem Warden,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+096,Prism Drifter,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+097,Opal Resonator,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+098,Mineral Keeper,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+099,Resonant Tender,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+100,Faceted Lurker,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+101,Glint Sentinel,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+102,Shard Seeker,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+103,Glimmer Binder,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+104,Refract Shaper,Uncommon,Zone,2,,,Zone 2 — Crystal Caves
+105,Greater Crystal Golem,Rare,Zone,2,,,Zone 2 — Crystal Caves — rare summon
+106,Elder Gem Warden,Rare,Zone,2,,,Zone 2 — Crystal Caves — rare summon
+107,Ancient Mineral Keeper,Rare,Zone,2,,,Zone 2 — Crystal Caves — rare summon
+108,Primal Glint Sentinel,Rare,Zone,2,,,Zone 2 — Crystal Caves — rare summon
+109,Apex Refract Shaper,Rare,Zone,2,,,Zone 2 — Crystal Caves — rare summon
+110,Sovereign Cavern Grazer,Rare,Zone,2,,,Zone 2 — Crystal Caves — rare summon
+111,Radiant Crystal Specter,Epic,Zone,2,,,Zone 2 — Crystal Caves — epic apex (0.6% summon weight)
+112,Exalted Resonant Lurker,Epic,Zone,2,,,Zone 2 — Crystal Caves — epic apex (0.6% summon weight)
+113,Crystal Crown Sentinel,Legendary,Zone,2,,,Zone 2 — Crystal Caves — legendary crown (0.18% summon weight)
+114,Eternal Chime Grazer,Mythic,Zone,2,,,Zone 2 — Crystal Caves — mythic (0.04% summon weight)
+115,Merged Mineral Keeper,Uncommon,Merge,2,Crystal Slime,,Zone 2 — Crystal Caves — merge 3× Crystal Slime
+116,Merged Resonant Tender,Uncommon,Merge,2,Sapphire Shard,,Zone 2 — Crystal Caves — merge 3× Sapphire Shard
+117,Merged Faceted Lurker,Uncommon,Merge,2,Quartz Golem,,Zone 2 — Crystal Caves — merge 3× Quartz Golem
+118,Merged Glint Sentinel,Uncommon,Merge,2,Gem Specter,,Zone 2 — Crystal Caves — merge 3× Gem Specter
+119,Merged Shard Seeker,Uncommon,Merge,2,Prism Crawler,,Zone 2 — Crystal Caves — merge 3× Prism Crawler
+120,Merged Glimmer Binder,Uncommon,Merge,2,Opal Warden,,Zone 2 — Crystal Caves — merge 3× Opal Warden
+121,Merged Refract Shaper,Uncommon,Merge,2,Mineral Drifter,,Zone 2 — Crystal Caves — merge 3× Mineral Drifter
+122,Merged Luster Sage,Uncommon,Merge,2,Resonant Resonator,,Zone 2 — Crystal Caves — merge 3× Resonant Resonator
+123,Fused Glint Sentinel,Rare,Merge,2,Gem Warden,,Zone 2 — Crystal Caves — merge 3× Gem Warden
+124,Fused Shard Seeker,Rare,Merge,2,Prism Drifter,,Zone 2 — Crystal Caves — merge 3× Prism Drifter
+125,Fused Glimmer Binder,Rare,Merge,2,Opal Resonator,,Zone 2 — Crystal Caves — merge 3× Opal Resonator
+126,Fused Refract Shaper,Rare,Merge,2,Mineral Keeper,,Zone 2 — Crystal Caves — merge 3× Mineral Keeper
+127,Fused Luster Sage,Rare,Merge,2,Resonant Tender,,Zone 2 — Crystal Caves — merge 3× Resonant Tender
+128,Fused Vein Wanderer,Rare,Merge,2,Faceted Lurker,,Zone 2 — Crystal Caves — merge 3× Faceted Lurker
+129,Fused Cavern Grazer,Rare,Merge,2,Glint Sentinel,,Zone 2 — Crystal Caves — merge 3× Glint Sentinel
+130,Fused Echo Wisp,Rare,Merge,2,Shard Seeker,,Zone 2 — Crystal Caves — merge 3× Shard Seeker
+131,Crystallized Luster Sage,Epic,Merge,2,Greater Crystal Golem,,Zone 2 — Crystal Caves — merge 3× Greater Crystal Golem
+132,Crystallized Vein Wanderer,Epic,Merge,2,Elder Gem Warden,,Zone 2 — Crystal Caves — merge 3× Elder Gem Warden
+133,Crystallized Cavern Grazer,Epic,Merge,2,Ancient Mineral Keeper,,Zone 2 — Crystal Caves — merge 3× Ancient Mineral Keeper
+134,Crystallized Echo Wisp,Epic,Merge,2,Primal Glint Sentinel,,Zone 2 — Crystal Caves — merge 3× Primal Glint Sentinel
+135,Crystallized Chime Prism,Epic,Merge,2,Apex Refract Shaper,,Zone 2 — Crystal Caves — merge 3× Apex Refract Shaper
+136,Crystallized Spark Slime,Epic,Merge,2,Sovereign Cavern Grazer,,Zone 2 — Crystal Caves — merge 3× Sovereign Cavern Grazer
+137,Ascended Echo Wisp,Legendary,Merge,2,Radiant Crystal Specter,,Zone 2 — Crystal Caves — merge 3× Radiant Crystal Specter
+138,Ascended Chime Prism,Legendary,Merge,2,Exalted Resonant Lurker,,Zone 2 — Crystal Caves — merge 3× Exalted Resonant Lurker
+139,Ascended Spark Slime,Legendary,Merge,2,Crystallized Luster Sage,,Zone 2 — Crystal Caves — merge 3× Crystallized Luster Sage
+140,Ascended Gleam Shard,Legendary,Merge,2,Crystallized Vein Wanderer,,Zone 2 — Crystal Caves — merge 3× Crystallized Vein Wanderer
+141,Hybrid Quartz Crawler,Rare,Breed,2,Crystal Slime,Sapphire Shard,Zone 2 — Crystal Caves — breed Crystal Slime + Sapphire Shard
+142,Hybrid Gem Warden,Rare,Breed,2,Quartz Golem,Gem Specter,Zone 2 — Crystal Caves — breed Quartz Golem + Gem Specter
+143,Hybrid Prism Drifter,Rare,Breed,2,Prism Crawler,Gem Warden,Zone 2 — Crystal Caves — breed Prism Crawler + Gem Warden
+144,Hybrid Opal Resonator,Rare,Breed,2,Opal Warden,Prism Drifter,Zone 2 — Crystal Caves — breed Opal Warden + Prism Drifter
+145,Hybrid Mineral Keeper,Rare,Breed,2,Gem Warden,Prism Drifter,Zone 2 — Crystal Caves — breed Gem Warden + Prism Drifter
+146,Hybrid Resonant Tender,Rare,Breed,2,Opal Resonator,Mineral Keeper,Zone 2 — Crystal Caves — breed Opal Resonator + Mineral Keeper
+147,Hybrid Faceted Lurker,Rare,Breed,2,Mineral Drifter,Resonant Tender,Zone 2 — Crystal Caves — breed Mineral Drifter + Resonant Tender
+148,Hybrid Glint Sentinel,Rare,Breed,2,Resonant Tender,Faceted Lurker,Zone 2 — Crystal Caves — breed Resonant Tender + Faceted Lurker
+149,Apex Opal Resonator,Epic,Breed,2,Greater Crystal Golem,Elder Gem Warden,Zone 2 — Crystal Caves — breed Greater Crystal Golem + Elder Gem Warden
+150,Apex Mineral Keeper,Epic,Breed,2,Ancient Mineral Keeper,Primal Glint Sentinel,Zone 2 — Crystal Caves — breed Ancient Mineral Keeper + Primal Glint Sentinel
+151,Apex Resonant Tender,Epic,Breed,2,Apex Refract Shaper,Sovereign Cavern Grazer,Zone 2 — Crystal Caves — breed Apex Refract Shaper + Sovereign Cavern Grazer
+152,Apex Faceted Lurker,Epic,Breed,2,Fused Glint Sentinel,Glint Sentinel,Zone 2 — Crystal Caves — breed Fused Glint Sentinel + Glint Sentinel
+153,Apex Glint Sentinel,Epic,Breed,2,Greater Crystal Golem,Fused Glint Sentinel,Zone 2 — Crystal Caves — breed Greater Crystal Golem + Fused Glint Sentinel
+154,Apex Shard Seeker,Epic,Breed,2,Elder Gem Warden,Hybrid Quartz Crawler,Zone 2 — Crystal Caves — breed Elder Gem Warden + Hybrid Quartz Crawler
+155,Apex Glimmer Binder,Epic,Breed,2,Fused Shard Seeker,Hybrid Gem Warden,Zone 2 — Crystal Caves — breed Fused Shard Seeker + Hybrid Gem Warden
+156,Apex Refract Shaper II,Epic,Breed,2,Ancient Mineral Keeper,Primal Glint Sentinel,Zone 2 — Crystal Caves — breed Ancient Mineral Keeper + Primal Glint Sentinel
+157,Supreme Faceted Lurker,Legendary,Breed,2,Radiant Crystal Specter,Exalted Resonant Lurker,Zone 2 — Crystal Caves — breed Radiant Crystal Specter + Exalted Resonant Lurker
+158,Supreme Glint Sentinel,Legendary,Breed,2,Crystallized Luster Sage,Crystallized Vein Wanderer,Zone 2 — Crystal Caves — breed Crystallized Luster Sage + Crystallized Vein Wanderer
+159,Supreme Shard Seeker,Legendary,Breed,2,Crystallized Cavern Grazer,Crystallized Echo Wisp,Zone 2 — Crystal Caves — breed Crystallized Cavern Grazer + Crystallized Echo Wisp
+160,Supreme Glimmer Binder,Legendary,Breed,2,Radiant Crystal Specter,Crystallized Luster Sage,Zone 2 — Crystal Caves — breed Radiant Crystal Specter + Crystallized Luster Sage
+161,Supreme Refract Shaper,Legendary,Breed,2,Crystallized Vein Wanderer,Apex Opal Resonator,Zone 2 — Crystal Caves — breed Crystallized Vein Wanderer + Apex Opal Resonator
+162,Supreme Luster Sage,Legendary,Breed,2,Apex Mineral Keeper,Apex Resonant Tender,Zone 2 — Crystal Caves — breed Apex Mineral Keeper + Apex Resonant Tender
+163,Transcendent Vein Wanderer,Mythic,Breed,2,Crystal Crown Sentinel,Ascended Echo Wisp,Zone 2 — Crystal Caves — breed Crystal Crown Sentinel + Ascended Echo Wisp — zone mythic pinnacle
+164,Transcendent Cavern Grazer,Mythic,Breed,2,Ascended Chime Prism,Ascended Spark Slime,Zone 2 — Crystal Caves — breed Ascended Chime Prism + Ascended Spark Slime — zone mythic pinnacle
+165,Ember Slime,Common,Zone,3,,,Zone 3 — Ember Wastes
+166,Cinder Drake,Common,Zone,3,,,Zone 3 — Ember Wastes
+167,Inferno Wyrm,Common,Zone,3,,,Zone 3 — Ember Wastes
+168,Magma Salamander,Common,Zone,3,,,Zone 3 — Ember Wastes
+169,Volcanic Crawler,Common,Zone,3,,,Zone 3 — Ember Wastes
+170,Flame Warden,Common,Zone,3,,,Zone 3 — Ember Wastes
+171,Scorch Drifter,Common,Zone,3,,,Zone 3 — Ember Wastes
+172,Ash Keeper,Common,Zone,3,,,Zone 3 — Ember Wastes
+173,Blaze Tender,Common,Zone,3,,,Zone 3 — Ember Wastes
+174,Sear Lurker,Common,Zone,3,,,Zone 3 — Ember Wastes
+175,Char Sentinel,Common,Zone,3,,,Zone 3 — Ember Wastes
+176,Smolder Seeker,Common,Zone,3,,,Zone 3 — Ember Wastes
+177,Magma Warden,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+178,Volcanic Drifter,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+179,Flame Keeper,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+180,Scorch Tender,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+181,Ash Lurker,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+182,Blaze Sentinel,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+183,Sear Seeker,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+184,Char Binder,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+185,Smolder Shaper,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+186,Ignite Sage,Uncommon,Zone,3,,,Zone 3 — Ember Wastes
+187,Greater Ember Wyrm,Rare,Zone,3,,,Zone 3 — Ember Wastes — rare summon
+188,Elder Magma Warden,Rare,Zone,3,,,Zone 3 — Ember Wastes — rare summon
+189,Ancient Scorch Tender,Rare,Zone,3,,,Zone 3 — Ember Wastes — rare summon
+190,Primal Sear Seeker,Rare,Zone,3,,,Zone 3 — Ember Wastes — rare summon
+191,Apex Ignite Sage,Rare,Zone,3,,,Zone 3 — Ember Wastes — rare summon
+192,Sovereign Forge Wisp,Rare,Zone,3,,,Zone 3 — Ember Wastes — rare summon
+193,Radiant Ember Salamander,Epic,Zone,3,,,Zone 3 — Ember Wastes — epic apex (0.6% summon weight)
+194,Exalted Ash Sentinel,Epic,Zone,3,,,Zone 3 — Ember Wastes — epic apex (0.6% summon weight)
+195,Ember Crown Seeker,Legendary,Zone,3,,,Zone 3 — Ember Wastes — legendary crown (0.18% summon weight)
+196,Eternal Flare Wisp,Mythic,Zone,3,,,Zone 3 — Ember Wastes — mythic (0.04% summon weight)
+197,Merged Scorch Tender,Uncommon,Merge,3,Ember Slime,,Zone 3 — Ember Wastes — merge 3× Ember Slime
+198,Merged Ash Lurker,Uncommon,Merge,3,Cinder Drake,,Zone 3 — Ember Wastes — merge 3× Cinder Drake
+199,Merged Blaze Sentinel,Uncommon,Merge,3,Inferno Wyrm,,Zone 3 — Ember Wastes — merge 3× Inferno Wyrm
+200,Merged Sear Seeker,Uncommon,Merge,3,Magma Salamander,,Zone 3 — Ember Wastes — merge 3× Magma Salamander
+201,Merged Char Binder,Uncommon,Merge,3,Volcanic Crawler,,Zone 3 — Ember Wastes — merge 3× Volcanic Crawler
+202,Merged Smolder Shaper,Uncommon,Merge,3,Flame Warden,,Zone 3 — Ember Wastes — merge 3× Flame Warden
+203,Merged Ignite Sage,Uncommon,Merge,3,Scorch Drifter,,Zone 3 — Ember Wastes — merge 3× Scorch Drifter
+204,Merged Pyro Wanderer,Uncommon,Merge,3,Ash Keeper,,Zone 3 — Ember Wastes — merge 3× Ash Keeper
+205,Fused Sear Seeker,Rare,Merge,3,Magma Warden,,Zone 3 — Ember Wastes — merge 3× Magma Warden
+206,Fused Char Binder,Rare,Merge,3,Volcanic Drifter,,Zone 3 — Ember Wastes — merge 3× Volcanic Drifter
+207,Fused Smolder Shaper,Rare,Merge,3,Flame Keeper,,Zone 3 — Ember Wastes — merge 3× Flame Keeper
+208,Fused Ignite Sage,Rare,Merge,3,Scorch Tender,,Zone 3 — Ember Wastes — merge 3× Scorch Tender
+209,Fused Pyro Wanderer,Rare,Merge,3,Ash Lurker,,Zone 3 — Ember Wastes — merge 3× Ash Lurker
+210,Fused Lava Grazer,Rare,Merge,3,Blaze Sentinel,,Zone 3 — Ember Wastes — merge 3× Blaze Sentinel
+211,Fused Forge Wisp,Rare,Merge,3,Sear Seeker,,Zone 3 — Ember Wastes — merge 3× Sear Seeker
+212,Fused Kindle Golem,Rare,Merge,3,Char Binder,,Zone 3 — Ember Wastes — merge 3× Char Binder
+213,Crystallized Pyro Wanderer,Epic,Merge,3,Greater Ember Wyrm,,Zone 3 — Ember Wastes — merge 3× Greater Ember Wyrm
+214,Crystallized Lava Grazer,Epic,Merge,3,Elder Magma Warden,,Zone 3 — Ember Wastes — merge 3× Elder Magma Warden
+215,Crystallized Forge Wisp,Epic,Merge,3,Ancient Scorch Tender,,Zone 3 — Ember Wastes — merge 3× Ancient Scorch Tender
+216,Crystallized Kindle Golem,Epic,Merge,3,Primal Sear Seeker,,Zone 3 — Ember Wastes — merge 3× Primal Sear Seeker
+217,Crystallized Flare Fiend,Epic,Merge,3,Apex Ignite Sage,,Zone 3 — Ember Wastes — merge 3× Apex Ignite Sage
+218,Crystallized Brand Slime,Epic,Merge,3,Sovereign Forge Wisp,,Zone 3 — Ember Wastes — merge 3× Sovereign Forge Wisp
+219,Ascended Kindle Golem,Legendary,Merge,3,Radiant Ember Salamander,,Zone 3 — Ember Wastes — merge 3× Radiant Ember Salamander
+220,Ascended Flare Fiend,Legendary,Merge,3,Exalted Ash Sentinel,,Zone 3 — Ember Wastes — merge 3× Exalted Ash Sentinel
+221,Ascended Brand Slime,Legendary,Merge,3,Crystallized Pyro Wanderer,,Zone 3 — Ember Wastes — merge 3× Crystallized Pyro Wanderer
+222,Ascended Fume Drake,Legendary,Merge,3,Crystallized Lava Grazer,,Zone 3 — Ember Wastes — merge 3× Crystallized Lava Grazer
+223,Hybrid Inferno Crawler,Rare,Breed,3,Ember Slime,Cinder Drake,Zone 3 — Ember Wastes — breed Ember Slime + Cinder Drake
+224,Hybrid Magma Warden,Rare,Breed,3,Inferno Wyrm,Magma Salamander,Zone 3 — Ember Wastes — breed Inferno Wyrm + Magma Salamander
+225,Hybrid Volcanic Drifter,Rare,Breed,3,Volcanic Crawler,Magma Warden,Zone 3 — Ember Wastes — breed Volcanic Crawler + Magma Warden
+226,Hybrid Flame Keeper,Rare,Breed,3,Flame Warden,Volcanic Drifter,Zone 3 — Ember Wastes — breed Flame Warden + Volcanic Drifter
+227,Hybrid Scorch Tender,Rare,Breed,3,Magma Warden,Volcanic Drifter,Zone 3 — Ember Wastes — breed Magma Warden + Volcanic Drifter
+228,Hybrid Ash Lurker,Rare,Breed,3,Flame Keeper,Scorch Tender,Zone 3 — Ember Wastes — breed Flame Keeper + Scorch Tender
+229,Hybrid Blaze Sentinel,Rare,Breed,3,Scorch Drifter,Ash Lurker,Zone 3 — Ember Wastes — breed Scorch Drifter + Ash Lurker
+230,Hybrid Sear Seeker,Rare,Breed,3,Ash Lurker,Blaze Sentinel,Zone 3 — Ember Wastes — breed Ash Lurker + Blaze Sentinel
+231,Apex Flame Keeper,Epic,Breed,3,Greater Ember Wyrm,Elder Magma Warden,Zone 3 — Ember Wastes — breed Greater Ember Wyrm + Elder Magma Warden
+232,Apex Scorch Tender,Epic,Breed,3,Ancient Scorch Tender,Primal Sear Seeker,Zone 3 — Ember Wastes — breed Ancient Scorch Tender + Primal Sear Seeker
+233,Apex Ash Lurker,Epic,Breed,3,Apex Ignite Sage,Sovereign Forge Wisp,Zone 3 — Ember Wastes — breed Apex Ignite Sage + Sovereign Forge Wisp
+234,Apex Blaze Sentinel,Epic,Breed,3,Fused Sear Seeker,Sear Seeker,Zone 3 — Ember Wastes — breed Fused Sear Seeker + Sear Seeker
+235,Apex Sear Seeker,Epic,Breed,3,Greater Ember Wyrm,Fused Sear Seeker,Zone 3 — Ember Wastes — breed Greater Ember Wyrm + Fused Sear Seeker
+236,Apex Char Binder,Epic,Breed,3,Elder Magma Warden,Hybrid Inferno Crawler,Zone 3 — Ember Wastes — breed Elder Magma Warden + Hybrid Inferno Crawler
+237,Apex Smolder Shaper,Epic,Breed,3,Fused Char Binder,Hybrid Magma Warden,Zone 3 — Ember Wastes — breed Fused Char Binder + Hybrid Magma Warden
+238,Apex Ignite Sage II,Epic,Breed,3,Ancient Scorch Tender,Primal Sear Seeker,Zone 3 — Ember Wastes — breed Ancient Scorch Tender + Primal Sear Seeker
+239,Supreme Blaze Sentinel,Legendary,Breed,3,Radiant Ember Salamander,Exalted Ash Sentinel,Zone 3 — Ember Wastes — breed Radiant Ember Salamander + Exalted Ash Sentinel
+240,Supreme Sear Seeker,Legendary,Breed,3,Crystallized Pyro Wanderer,Crystallized Lava Grazer,Zone 3 — Ember Wastes — breed Crystallized Pyro Wanderer + Crystallized Lava Grazer
+241,Supreme Char Binder,Legendary,Breed,3,Crystallized Forge Wisp,Crystallized Kindle Golem,Zone 3 — Ember Wastes — breed Crystallized Forge Wisp + Crystallized Kindle Golem
+242,Supreme Smolder Shaper,Legendary,Breed,3,Radiant Ember Salamander,Crystallized Pyro Wanderer,Zone 3 — Ember Wastes — breed Radiant Ember Salamander + Crystallized Pyro Wanderer
+243,Supreme Ignite Sage,Legendary,Breed,3,Crystallized Lava Grazer,Apex Flame Keeper,Zone 3 — Ember Wastes — breed Crystallized Lava Grazer + Apex Flame Keeper
+244,Supreme Pyro Wanderer,Legendary,Breed,3,Apex Scorch Tender,Apex Ash Lurker,Zone 3 — Ember Wastes — breed Apex Scorch Tender + Apex Ash Lurker
+245,Transcendent Lava Grazer,Mythic,Breed,3,Ember Crown Seeker,Ascended Kindle Golem,Zone 3 — Ember Wastes — breed Ember Crown Seeker + Ascended Kindle Golem — zone mythic pinnacle
+246,Transcendent Forge Wisp,Mythic,Breed,3,Ascended Flare Fiend,Ascended Brand Slime,Zone 3 — Ember Wastes — breed Ascended Flare Fiend + Ascended Brand Slime — zone mythic pinnacle
+247,Frost Slime,Common,Zone,4,,,Zone 4 — Frostmere
+248,Glacial Specter,Common,Zone,4,,,Zone 4 — Frostmere
+249,Polar Revenant,Common,Zone,4,,,Zone 4 — Frostmere
+250,Arctic Crawler,Common,Zone,4,,,Zone 4 — Frostmere
+251,Blizzard Warden,Common,Zone,4,,,Zone 4 — Frostmere
+252,Tundra Drifter,Common,Zone,4,,,Zone 4 — Frostmere
+253,Rime Keeper,Common,Zone,4,,,Zone 4 — Frostmere
+254,Sleet Tender,Common,Zone,4,,,Zone 4 — Frostmere
+255,Hail Lurker,Common,Zone,4,,,Zone 4 — Frostmere
+256,Permafrost Sentinel,Common,Zone,4,,,Zone 4 — Frostmere
+257,Snowdrift Seeker,Common,Zone,4,,,Zone 4 — Frostmere
+258,Iceberg Binder,Common,Zone,4,,,Zone 4 — Frostmere
+259,Arctic Drifter,Uncommon,Zone,4,,,Zone 4 — Frostmere
+260,Blizzard Keeper,Uncommon,Zone,4,,,Zone 4 — Frostmere
+261,Tundra Tender,Uncommon,Zone,4,,,Zone 4 — Frostmere
+262,Rime Lurker,Uncommon,Zone,4,,,Zone 4 — Frostmere
+263,Sleet Sentinel,Uncommon,Zone,4,,,Zone 4 — Frostmere
+264,Hail Seeker,Uncommon,Zone,4,,,Zone 4 — Frostmere
+265,Permafrost Binder,Uncommon,Zone,4,,,Zone 4 — Frostmere
+266,Snowdrift Shaper,Uncommon,Zone,4,,,Zone 4 — Frostmere
+267,Iceberg Sage,Uncommon,Zone,4,,,Zone 4 — Frostmere
+268,Chill Wanderer,Uncommon,Zone,4,,,Zone 4 — Frostmere
+269,Greater Frost Revenant,Rare,Zone,4,,,Zone 4 — Frostmere — rare summon
+270,Elder Arctic Drifter,Rare,Zone,4,,,Zone 4 — Frostmere — rare summon
+271,Ancient Rime Lurker,Rare,Zone,4,,,Zone 4 — Frostmere — rare summon
+272,Primal Permafrost Binder,Rare,Zone,4,,,Zone 4 — Frostmere — rare summon
+273,Apex Chill Wanderer,Rare,Zone,4,,,Zone 4 — Frostmere — rare summon
+274,Sovereign Winter Golem,Rare,Zone,4,,,Zone 4 — Frostmere — rare summon
+275,Radiant Frost Crawler,Epic,Zone,4,,,Zone 4 — Frostmere — epic apex (0.6% summon weight)
+276,Exalted Sleet Seeker,Epic,Zone,4,,,Zone 4 — Frostmere — epic apex (0.6% summon weight)
+277,Frostmere Crown Binder,Legendary,Zone,4,,,Zone 4 — Frostmere — legendary crown (0.18% summon weight)
+278,Eternal Boreal Golem,Mythic,Zone,4,,,Zone 4 — Frostmere — mythic (0.04% summon weight)
+279,Merged Rime Lurker,Uncommon,Merge,4,Frost Slime,,Zone 4 — Frostmere — merge 3× Frost Slime
+280,Merged Sleet Sentinel,Uncommon,Merge,4,Glacial Specter,,Zone 4 — Frostmere — merge 3× Glacial Specter
+281,Merged Hail Seeker,Uncommon,Merge,4,Polar Revenant,,Zone 4 — Frostmere — merge 3× Polar Revenant
+282,Merged Permafrost Binder,Uncommon,Merge,4,Arctic Crawler,,Zone 4 — Frostmere — merge 3× Arctic Crawler
+283,Merged Snowdrift Shaper,Uncommon,Merge,4,Blizzard Warden,,Zone 4 — Frostmere — merge 3× Blizzard Warden
+284,Merged Iceberg Sage,Uncommon,Merge,4,Tundra Drifter,,Zone 4 — Frostmere — merge 3× Tundra Drifter
+285,Merged Chill Wanderer,Uncommon,Merge,4,Rime Keeper,,Zone 4 — Frostmere — merge 3× Rime Keeper
+286,Merged Frozen Grazer,Uncommon,Merge,4,Sleet Tender,,Zone 4 — Frostmere — merge 3× Sleet Tender
+287,Fused Permafrost Binder,Rare,Merge,4,Arctic Drifter,,Zone 4 — Frostmere — merge 3× Arctic Drifter
+288,Fused Snowdrift Shaper,Rare,Merge,4,Blizzard Keeper,,Zone 4 — Frostmere — merge 3× Blizzard Keeper
+289,Fused Iceberg Sage,Rare,Merge,4,Tundra Tender,,Zone 4 — Frostmere — merge 3× Tundra Tender
+290,Fused Chill Wanderer,Rare,Merge,4,Rime Lurker,,Zone 4 — Frostmere — merge 3× Rime Lurker
+291,Fused Frozen Grazer,Rare,Merge,4,Sleet Sentinel,,Zone 4 — Frostmere — merge 3× Sleet Sentinel
+292,Fused Subzero Wisp,Rare,Merge,4,Hail Seeker,,Zone 4 — Frostmere — merge 3× Hail Seeker
+293,Fused Winter Golem,Rare,Merge,4,Permafrost Binder,,Zone 4 — Frostmere — merge 3× Permafrost Binder
+294,Fused Cryo Wraith,Rare,Merge,4,Snowdrift Shaper,,Zone 4 — Frostmere — merge 3× Snowdrift Shaper
+295,Crystallized Frozen Grazer,Epic,Merge,4,Greater Frost Revenant,,Zone 4 — Frostmere — merge 3× Greater Frost Revenant
+296,Crystallized Subzero Wisp,Epic,Merge,4,Elder Arctic Drifter,,Zone 4 — Frostmere — merge 3× Elder Arctic Drifter
+297,Crystallized Winter Golem,Epic,Merge,4,Ancient Rime Lurker,,Zone 4 — Frostmere — merge 3× Ancient Rime Lurker
+298,Crystallized Cryo Wraith,Epic,Merge,4,Primal Permafrost Binder,,Zone 4 — Frostmere — merge 3× Primal Permafrost Binder
+299,Crystallized Boreal Phantom,Epic,Merge,4,Apex Chill Wanderer,,Zone 4 — Frostmere — merge 3× Apex Chill Wanderer
+300,Crystallized Hoarfrost Slime,Epic,Merge,4,Sovereign Winter Golem,,Zone 4 — Frostmere — merge 3× Sovereign Winter Golem
+301,Ascended Cryo Wraith,Legendary,Merge,4,Radiant Frost Crawler,,Zone 4 — Frostmere — merge 3× Radiant Frost Crawler
+302,Ascended Boreal Phantom,Legendary,Merge,4,Exalted Sleet Seeker,,Zone 4 — Frostmere — merge 3× Exalted Sleet Seeker
+303,Ascended Hoarfrost Slime,Legendary,Merge,4,Crystallized Frozen Grazer,,Zone 4 — Frostmere — merge 3× Crystallized Frozen Grazer
+304,Ascended Avalanche Specter,Legendary,Merge,4,Crystallized Subzero Wisp,,Zone 4 — Frostmere — merge 3× Crystallized Subzero Wisp
+305,Hybrid Polar Warden,Rare,Breed,4,Frost Slime,Glacial Specter,Zone 4 — Frostmere — breed Frost Slime + Glacial Specter
+306,Hybrid Arctic Drifter,Rare,Breed,4,Polar Revenant,Arctic Crawler,Zone 4 — Frostmere — breed Polar Revenant + Arctic Crawler
+307,Hybrid Blizzard Keeper,Rare,Breed,4,Blizzard Warden,Arctic Drifter,Zone 4 — Frostmere — breed Blizzard Warden + Arctic Drifter
+308,Hybrid Tundra Tender,Rare,Breed,4,Tundra Drifter,Blizzard Keeper,Zone 4 — Frostmere — breed Tundra Drifter + Blizzard Keeper
+309,Hybrid Rime Lurker,Rare,Breed,4,Arctic Drifter,Blizzard Keeper,Zone 4 — Frostmere — breed Arctic Drifter + Blizzard Keeper
+310,Hybrid Sleet Sentinel,Rare,Breed,4,Tundra Tender,Rime Lurker,Zone 4 — Frostmere — breed Tundra Tender + Rime Lurker
+311,Hybrid Hail Seeker,Rare,Breed,4,Rime Keeper,Sleet Sentinel,Zone 4 — Frostmere — breed Rime Keeper + Sleet Sentinel
+312,Hybrid Permafrost Binder,Rare,Breed,4,Sleet Sentinel,Hail Seeker,Zone 4 — Frostmere — breed Sleet Sentinel + Hail Seeker
+313,Apex Tundra Tender,Epic,Breed,4,Greater Frost Revenant,Elder Arctic Drifter,Zone 4 — Frostmere — breed Greater Frost Revenant + Elder Arctic Drifter
+314,Apex Rime Lurker,Epic,Breed,4,Ancient Rime Lurker,Primal Permafrost Binder,Zone 4 — Frostmere — breed Ancient Rime Lurker + Primal Permafrost Binder
+315,Apex Sleet Sentinel,Epic,Breed,4,Apex Chill Wanderer,Sovereign Winter Golem,Zone 4 — Frostmere — breed Apex Chill Wanderer + Sovereign Winter Golem
+316,Apex Hail Seeker,Epic,Breed,4,Fused Permafrost Binder,Permafrost Binder,Zone 4 — Frostmere — breed Fused Permafrost Binder + Permafrost Binder
+317,Apex Permafrost Binder,Epic,Breed,4,Greater Frost Revenant,Fused Permafrost Binder,Zone 4 — Frostmere — breed Greater Frost Revenant + Fused Permafrost Binder
+318,Apex Snowdrift Shaper,Epic,Breed,4,Elder Arctic Drifter,Hybrid Polar Warden,Zone 4 — Frostmere — breed Elder Arctic Drifter + Hybrid Polar Warden
+319,Apex Iceberg Sage,Epic,Breed,4,Fused Snowdrift Shaper,Hybrid Arctic Drifter,Zone 4 — Frostmere — breed Fused Snowdrift Shaper + Hybrid Arctic Drifter
+320,Apex Chill Wanderer II,Epic,Breed,4,Ancient Rime Lurker,Primal Permafrost Binder,Zone 4 — Frostmere — breed Ancient Rime Lurker + Primal Permafrost Binder
+321,Supreme Hail Seeker,Legendary,Breed,4,Radiant Frost Crawler,Exalted Sleet Seeker,Zone 4 — Frostmere — breed Radiant Frost Crawler + Exalted Sleet Seeker
+322,Supreme Permafrost Binder,Legendary,Breed,4,Crystallized Frozen Grazer,Crystallized Subzero Wisp,Zone 4 — Frostmere — breed Crystallized Frozen Grazer + Crystallized Subzero Wisp
+323,Supreme Snowdrift Shaper,Legendary,Breed,4,Crystallized Winter Golem,Crystallized Cryo Wraith,Zone 4 — Frostmere — breed Crystallized Winter Golem + Crystallized Cryo Wraith
+324,Supreme Iceberg Sage,Legendary,Breed,4,Radiant Frost Crawler,Crystallized Frozen Grazer,Zone 4 — Frostmere — breed Radiant Frost Crawler + Crystallized Frozen Grazer
+325,Supreme Chill Wanderer,Legendary,Breed,4,Crystallized Subzero Wisp,Apex Tundra Tender,Zone 4 — Frostmere — breed Crystallized Subzero Wisp + Apex Tundra Tender
+326,Supreme Frozen Grazer,Legendary,Breed,4,Apex Rime Lurker,Apex Sleet Sentinel,Zone 4 — Frostmere — breed Apex Rime Lurker + Apex Sleet Sentinel
+327,Transcendent Subzero Wisp,Mythic,Breed,4,Frostmere Crown Binder,Ascended Cryo Wraith,Zone 4 — Frostmere — breed Frostmere Crown Binder + Ascended Cryo Wraith — zone mythic pinnacle
+328,Transcendent Winter Golem,Mythic,Breed,4,Ascended Boreal Phantom,Ascended Hoarfrost Slime,Zone 4 — Frostmere — breed Ascended Boreal Phantom + Ascended Hoarfrost Slime — zone mythic pinnacle
+329,Jungle Slime,Common,Zone,5,,,Zone 5 — Verdant Deep
+330,Mycelium Creeper,Common,Zone,5,,,Zone 5 — Verdant Deep
+331,Spore Stalker,Common,Zone,5,,,Zone 5 — Verdant Deep
+332,Toxic Lurker,Common,Zone,5,,,Zone 5 — Verdant Deep
+333,Overgrown Warden,Common,Zone,5,,,Zone 5 — Verdant Deep
+334,Canopy Drifter,Common,Zone,5,,,Zone 5 — Verdant Deep
+335,Fungal Keeper,Common,Zone,5,,,Zone 5 — Verdant Deep
+336,Predatory Tender,Common,Zone,5,,,Zone 5 — Verdant Deep
+337,Verdant Sentinel,Common,Zone,5,,,Zone 5 — Verdant Deep
+338,Tangle Seeker,Common,Zone,5,,,Zone 5 — Verdant Deep
+339,Creep Binder,Common,Zone,5,,,Zone 5 — Verdant Deep
+340,Rot Shaper,Common,Zone,5,,,Zone 5 — Verdant Deep
+341,Toxic Drifter,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+342,Overgrown Keeper,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+343,Canopy Tender,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+344,Fungal Sentinel,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+345,Predatory Seeker,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+346,Verdant Binder,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+347,Tangle Shaper,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+348,Creep Sage,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+349,Rot Wanderer,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+350,Bloom Grazer,Uncommon,Zone,5,,,Zone 5 — Verdant Deep
+351,Greater Jungle Stalker,Rare,Zone,5,,,Zone 5 — Verdant Deep — rare summon
+352,Elder Toxic Drifter,Rare,Zone,5,,,Zone 5 — Verdant Deep — rare summon
+353,Ancient Fungal Sentinel,Rare,Zone,5,,,Zone 5 — Verdant Deep — rare summon
+354,Primal Tangle Shaper,Rare,Zone,5,,,Zone 5 — Verdant Deep — rare summon
+355,Apex Bloom Grazer,Rare,Zone,5,,,Zone 5 — Verdant Deep — rare summon
+356,Sovereign Spore Phantom,Rare,Zone,5,,,Zone 5 — Verdant Deep — rare summon
+357,Radiant Jungle Lurker,Epic,Zone,5,,,Zone 5 — Verdant Deep — epic apex (0.6% summon weight)
+358,Exalted Predatory Binder,Epic,Zone,5,,,Zone 5 — Verdant Deep — epic apex (0.6% summon weight)
+359,Verdant Crown Shaper,Legendary,Zone,5,,,Zone 5 — Verdant Deep — legendary crown (0.18% summon weight)
+360,Eternal Moss Phantom,Mythic,Zone,5,,,Zone 5 — Verdant Deep — mythic (0.04% summon weight)
+361,Merged Fungal Sentinel,Uncommon,Merge,5,Jungle Slime,,Zone 5 — Verdant Deep — merge 3× Jungle Slime
+362,Merged Predatory Seeker,Uncommon,Merge,5,Mycelium Creeper,,Zone 5 — Verdant Deep — merge 3× Mycelium Creeper
+363,Merged Verdant Binder,Uncommon,Merge,5,Spore Stalker,,Zone 5 — Verdant Deep — merge 3× Spore Stalker
+364,Merged Tangle Shaper,Uncommon,Merge,5,Toxic Lurker,,Zone 5 — Verdant Deep — merge 3× Toxic Lurker
+365,Merged Creep Sage,Uncommon,Merge,5,Overgrown Warden,,Zone 5 — Verdant Deep — merge 3× Overgrown Warden
+366,Merged Rot Wanderer,Uncommon,Merge,5,Canopy Drifter,,Zone 5 — Verdant Deep — merge 3× Canopy Drifter
+367,Merged Bloom Grazer,Uncommon,Merge,5,Fungal Keeper,,Zone 5 — Verdant Deep — merge 3× Fungal Keeper
+368,Merged Blight Wisp,Uncommon,Merge,5,Predatory Tender,,Zone 5 — Verdant Deep — merge 3× Predatory Tender
+369,Fused Tangle Shaper,Rare,Merge,5,Toxic Drifter,,Zone 5 — Verdant Deep — merge 3× Toxic Drifter
+370,Fused Creep Sage,Rare,Merge,5,Overgrown Keeper,,Zone 5 — Verdant Deep — merge 3× Overgrown Keeper
+371,Fused Rot Wanderer,Rare,Merge,5,Canopy Tender,,Zone 5 — Verdant Deep — merge 3× Canopy Tender
+372,Fused Bloom Grazer,Rare,Merge,5,Fungal Sentinel,,Zone 5 — Verdant Deep — merge 3× Fungal Sentinel
+373,Fused Blight Wisp,Rare,Merge,5,Predatory Seeker,,Zone 5 — Verdant Deep — merge 3× Predatory Seeker
+374,Fused Mold Golem,Rare,Merge,5,Verdant Binder,,Zone 5 — Verdant Deep — merge 3× Verdant Binder
+375,Fused Spore Phantom,Rare,Merge,5,Tangle Shaper,,Zone 5 — Verdant Deep — merge 3× Tangle Shaper
+376,Fused Lichen Wraith,Rare,Merge,5,Creep Sage,,Zone 5 — Verdant Deep — merge 3× Creep Sage
+377,Crystallized Blight Wisp,Epic,Merge,5,Greater Jungle Stalker,,Zone 5 — Verdant Deep — merge 3× Greater Jungle Stalker
+378,Crystallized Mold Golem,Epic,Merge,5,Elder Toxic Drifter,,Zone 5 — Verdant Deep — merge 3× Elder Toxic Drifter
+379,Crystallized Spore Phantom,Epic,Merge,5,Ancient Fungal Sentinel,,Zone 5 — Verdant Deep — merge 3× Ancient Fungal Sentinel
+380,Crystallized Lichen Wraith,Epic,Merge,5,Primal Tangle Shaper,,Zone 5 — Verdant Deep — merge 3× Primal Tangle Shaper
+381,Crystallized Moss Specter,Epic,Merge,5,Apex Bloom Grazer,,Zone 5 — Verdant Deep — merge 3× Apex Bloom Grazer
+382,Crystallized Vine Slime,Epic,Merge,5,Sovereign Spore Phantom,,Zone 5 — Verdant Deep — merge 3× Sovereign Spore Phantom
+383,Ascended Lichen Wraith,Legendary,Merge,5,Radiant Jungle Lurker,,Zone 5 — Verdant Deep — merge 3× Radiant Jungle Lurker
+384,Ascended Moss Specter,Legendary,Merge,5,Exalted Predatory Binder,,Zone 5 — Verdant Deep — merge 3× Exalted Predatory Binder
+385,Ascended Vine Slime,Legendary,Merge,5,Crystallized Blight Wisp,,Zone 5 — Verdant Deep — merge 3× Crystallized Blight Wisp
+386,Ascended Feral Creeper,Legendary,Merge,5,Crystallized Mold Golem,,Zone 5 — Verdant Deep — merge 3× Crystallized Mold Golem
+387,Hybrid Spore Warden,Rare,Breed,5,Jungle Slime,Mycelium Creeper,Zone 5 — Verdant Deep — breed Jungle Slime + Mycelium Creeper
+388,Hybrid Toxic Drifter,Rare,Breed,5,Spore Stalker,Toxic Lurker,Zone 5 — Verdant Deep — breed Spore Stalker + Toxic Lurker
+389,Hybrid Overgrown Keeper,Rare,Breed,5,Overgrown Warden,Toxic Drifter,Zone 5 — Verdant Deep — breed Overgrown Warden + Toxic Drifter
+390,Hybrid Canopy Tender,Rare,Breed,5,Canopy Drifter,Overgrown Keeper,Zone 5 — Verdant Deep — breed Canopy Drifter + Overgrown Keeper
+391,Hybrid Fungal Sentinel,Rare,Breed,5,Toxic Drifter,Overgrown Keeper,Zone 5 — Verdant Deep — breed Toxic Drifter + Overgrown Keeper
+392,Hybrid Predatory Seeker,Rare,Breed,5,Canopy Tender,Fungal Sentinel,Zone 5 — Verdant Deep — breed Canopy Tender + Fungal Sentinel
+393,Hybrid Verdant Binder,Rare,Breed,5,Fungal Keeper,Predatory Seeker,Zone 5 — Verdant Deep — breed Fungal Keeper + Predatory Seeker
+394,Hybrid Tangle Shaper,Rare,Breed,5,Predatory Seeker,Verdant Binder,Zone 5 — Verdant Deep — breed Predatory Seeker + Verdant Binder
+395,Apex Canopy Tender,Epic,Breed,5,Greater Jungle Stalker,Elder Toxic Drifter,Zone 5 — Verdant Deep — breed Greater Jungle Stalker + Elder Toxic Drifter
+396,Apex Fungal Sentinel,Epic,Breed,5,Ancient Fungal Sentinel,Primal Tangle Shaper,Zone 5 — Verdant Deep — breed Ancient Fungal Sentinel + Primal Tangle Shaper
+397,Apex Predatory Seeker,Epic,Breed,5,Apex Bloom Grazer,Sovereign Spore Phantom,Zone 5 — Verdant Deep — breed Apex Bloom Grazer + Sovereign Spore Phantom
+398,Apex Verdant Binder,Epic,Breed,5,Fused Tangle Shaper,Tangle Shaper,Zone 5 — Verdant Deep — breed Fused Tangle Shaper + Tangle Shaper
+399,Apex Tangle Shaper,Epic,Breed,5,Greater Jungle Stalker,Fused Tangle Shaper,Zone 5 — Verdant Deep — breed Greater Jungle Stalker + Fused Tangle Shaper
+400,Apex Creep Sage,Epic,Breed,5,Elder Toxic Drifter,Hybrid Spore Warden,Zone 5 — Verdant Deep — breed Elder Toxic Drifter + Hybrid Spore Warden
+401,Apex Rot Wanderer,Epic,Breed,5,Fused Creep Sage,Hybrid Toxic Drifter,Zone 5 — Verdant Deep — breed Fused Creep Sage + Hybrid Toxic Drifter
+402,Apex Bloom Grazer II,Epic,Breed,5,Ancient Fungal Sentinel,Primal Tangle Shaper,Zone 5 — Verdant Deep — breed Ancient Fungal Sentinel + Primal Tangle Shaper
+403,Supreme Verdant Binder,Legendary,Breed,5,Radiant Jungle Lurker,Exalted Predatory Binder,Zone 5 — Verdant Deep — breed Radiant Jungle Lurker + Exalted Predatory Binder
+404,Supreme Tangle Shaper,Legendary,Breed,5,Crystallized Blight Wisp,Crystallized Mold Golem,Zone 5 — Verdant Deep — breed Crystallized Blight Wisp + Crystallized Mold Golem
+405,Supreme Creep Sage,Legendary,Breed,5,Crystallized Spore Phantom,Crystallized Lichen Wraith,Zone 5 — Verdant Deep — breed Crystallized Spore Phantom + Crystallized Lichen Wraith
+406,Supreme Rot Wanderer,Legendary,Breed,5,Radiant Jungle Lurker,Crystallized Blight Wisp,Zone 5 — Verdant Deep — breed Radiant Jungle Lurker + Crystallized Blight Wisp
+407,Supreme Bloom Grazer,Legendary,Breed,5,Crystallized Mold Golem,Apex Canopy Tender,Zone 5 — Verdant Deep — breed Crystallized Mold Golem + Apex Canopy Tender
+408,Supreme Blight Wisp,Legendary,Breed,5,Apex Fungal Sentinel,Apex Predatory Seeker,Zone 5 — Verdant Deep — breed Apex Fungal Sentinel + Apex Predatory Seeker
+409,Transcendent Mold Golem,Mythic,Breed,5,Verdant Crown Shaper,Ascended Lichen Wraith,Zone 5 — Verdant Deep — breed Verdant Crown Shaper + Ascended Lichen Wraith — zone mythic pinnacle
+410,Transcendent Spore Phantom,Mythic,Breed,5,Ascended Moss Specter,Ascended Vine Slime,Zone 5 — Verdant Deep — breed Ascended Moss Specter + Ascended Vine Slime — zone mythic pinnacle
+411,Cosmic Slime,Common,Zone,6,,,Zone 6 — Starfall Isle
+412,Void Entity,Common,Zone,6,,,Zone 6 — Starfall Isle
+413,Stellar Specter,Common,Zone,6,,,Zone 6 — Starfall Isle
+414,Nebula Sovereign,Common,Zone,6,,,Zone 6 — Starfall Isle
+415,Astral Warden,Common,Zone,6,,,Zone 6 — Starfall Isle
+416,Celestial Drifter,Common,Zone,6,,,Zone 6 — Starfall Isle
+417,Galactic Keeper,Common,Zone,6,,,Zone 6 — Starfall Isle
+418,Quantum Tender,Common,Zone,6,,,Zone 6 — Starfall Isle
+419,Singularity Lurker,Common,Zone,6,,,Zone 6 — Starfall Isle
+420,Pulsar Sentinel,Common,Zone,6,,,Zone 6 — Starfall Isle
+421,Quasar Seeker,Common,Zone,6,,,Zone 6 — Starfall Isle
+422,Dark Binder,Common,Zone,6,,,Zone 6 — Starfall Isle
+423,Nebula Drifter,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+424,Astral Keeper,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+425,Celestial Tender,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+426,Galactic Lurker,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+427,Quantum Sentinel,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+428,Singularity Seeker,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+429,Pulsar Binder,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+430,Quasar Shaper,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+431,Dark Sage,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+432,Radiant Wanderer,Uncommon,Zone,6,,,Zone 6 — Starfall Isle
+433,Greater Cosmic Specter,Rare,Zone,6,,,Zone 6 — Starfall Isle — rare summon
+434,Elder Nebula Drifter,Rare,Zone,6,,,Zone 6 — Starfall Isle — rare summon
+435,Ancient Galactic Lurker,Rare,Zone,6,,,Zone 6 — Starfall Isle — rare summon
+436,Primal Pulsar Binder,Rare,Zone,6,,,Zone 6 — Starfall Isle — rare summon
+437,Apex Radiant Wanderer,Rare,Zone,6,,,Zone 6 — Starfall Isle — rare summon
+438,Sovereign Event Golem,Rare,Zone,6,,,Zone 6 — Starfall Isle — rare summon
+439,Radiant Cosmic Sovereign,Epic,Zone,6,,,Zone 6 — Starfall Isle — epic apex (0.6% summon weight)
+440,Exalted Quantum Seeker,Epic,Zone,6,,,Zone 6 — Starfall Isle — epic apex (0.6% summon weight)
+441,Starfall Crown Binder,Legendary,Zone,6,,,Zone 6 — Starfall Isle — legendary crown (0.18% summon weight)
+442,Eternal Gravity Golem,Mythic,Zone,6,,,Zone 6 — Starfall Isle — mythic (0.04% summon weight)
+443,Merged Galactic Lurker,Uncommon,Merge,6,Cosmic Slime,,Zone 6 — Starfall Isle — merge 3× Cosmic Slime
+444,Merged Quantum Sentinel,Uncommon,Merge,6,Void Entity,,Zone 6 — Starfall Isle — merge 3× Void Entity
+445,Merged Singularity Seeker,Uncommon,Merge,6,Stellar Specter,,Zone 6 — Starfall Isle — merge 3× Stellar Specter
+446,Merged Pulsar Binder,Uncommon,Merge,6,Nebula Sovereign,,Zone 6 — Starfall Isle — merge 3× Nebula Sovereign
+447,Merged Quasar Shaper,Uncommon,Merge,6,Astral Warden,,Zone 6 — Starfall Isle — merge 3× Astral Warden
+448,Merged Dark Sage,Uncommon,Merge,6,Celestial Drifter,,Zone 6 — Starfall Isle — merge 3× Celestial Drifter
+449,Merged Radiant Wanderer,Uncommon,Merge,6,Galactic Keeper,,Zone 6 — Starfall Isle — merge 3× Galactic Keeper
+450,Merged Supernova Grazer,Uncommon,Merge,6,Quantum Tender,,Zone 6 — Starfall Isle — merge 3× Quantum Tender
+451,Fused Pulsar Binder,Rare,Merge,6,Nebula Drifter,,Zone 6 — Starfall Isle — merge 3× Nebula Drifter
+452,Fused Quasar Shaper,Rare,Merge,6,Astral Keeper,,Zone 6 — Starfall Isle — merge 3× Astral Keeper
+453,Fused Dark Sage,Rare,Merge,6,Celestial Tender,,Zone 6 — Starfall Isle — merge 3× Celestial Tender
+454,Fused Radiant Wanderer,Rare,Merge,6,Galactic Lurker,,Zone 6 — Starfall Isle — merge 3× Galactic Lurker
+455,Fused Supernova Grazer,Rare,Merge,6,Quantum Sentinel,,Zone 6 — Starfall Isle — merge 3× Quantum Sentinel
+456,Fused Warp Wisp,Rare,Merge,6,Singularity Seeker,,Zone 6 — Starfall Isle — merge 3× Singularity Seeker
+457,Fused Event Golem,Rare,Merge,6,Pulsar Binder,,Zone 6 — Starfall Isle — merge 3× Pulsar Binder
+458,Fused Horizon Phantom,Rare,Merge,6,Quasar Shaper,,Zone 6 — Starfall Isle — merge 3× Quasar Shaper
+459,Crystallized Supernova Grazer,Epic,Merge,6,Greater Cosmic Specter,,Zone 6 — Starfall Isle — merge 3× Greater Cosmic Specter
+460,Crystallized Warp Wisp,Epic,Merge,6,Elder Nebula Drifter,,Zone 6 — Starfall Isle — merge 3× Elder Nebula Drifter
+461,Crystallized Event Golem,Epic,Merge,6,Ancient Galactic Lurker,,Zone 6 — Starfall Isle — merge 3× Ancient Galactic Lurker
+462,Crystallized Horizon Phantom,Epic,Merge,6,Primal Pulsar Binder,,Zone 6 — Starfall Isle — merge 3× Primal Pulsar Binder
+463,Crystallized Gravity Wraith,Epic,Merge,6,Apex Radiant Wanderer,,Zone 6 — Starfall Isle — merge 3× Apex Radiant Wanderer
+464,Crystallized Flux Slime,Epic,Merge,6,Sovereign Event Golem,,Zone 6 — Starfall Isle — merge 3× Sovereign Event Golem
+465,Ascended Horizon Phantom,Legendary,Merge,6,Radiant Cosmic Sovereign,,Zone 6 — Starfall Isle — merge 3× Radiant Cosmic Sovereign
+466,Ascended Gravity Wraith,Legendary,Merge,6,Exalted Quantum Seeker,,Zone 6 — Starfall Isle — merge 3× Exalted Quantum Seeker
+467,Ascended Flux Slime,Legendary,Merge,6,Crystallized Supernova Grazer,,Zone 6 — Starfall Isle — merge 3× Crystallized Supernova Grazer
+468,Ascended Rift Entity,Legendary,Merge,6,Crystallized Warp Wisp,,Zone 6 — Starfall Isle — merge 3× Crystallized Warp Wisp
+469,Hybrid Stellar Warden,Rare,Breed,6,Cosmic Slime,Void Entity,Zone 6 — Starfall Isle — breed Cosmic Slime + Void Entity
+470,Hybrid Nebula Drifter,Rare,Breed,6,Stellar Specter,Nebula Sovereign,Zone 6 — Starfall Isle — breed Stellar Specter + Nebula Sovereign
+471,Hybrid Astral Keeper,Rare,Breed,6,Astral Warden,Nebula Drifter,Zone 6 — Starfall Isle — breed Astral Warden + Nebula Drifter
+472,Hybrid Celestial Tender,Rare,Breed,6,Celestial Drifter,Astral Keeper,Zone 6 — Starfall Isle — breed Celestial Drifter + Astral Keeper
+473,Hybrid Galactic Lurker,Rare,Breed,6,Nebula Drifter,Astral Keeper,Zone 6 — Starfall Isle — breed Nebula Drifter + Astral Keeper
+474,Hybrid Quantum Sentinel,Rare,Breed,6,Celestial Tender,Galactic Lurker,Zone 6 — Starfall Isle — breed Celestial Tender + Galactic Lurker
+475,Hybrid Singularity Seeker,Rare,Breed,6,Galactic Keeper,Quantum Sentinel,Zone 6 — Starfall Isle — breed Galactic Keeper + Quantum Sentinel
+476,Hybrid Pulsar Binder,Rare,Breed,6,Quantum Sentinel,Singularity Seeker,Zone 6 — Starfall Isle — breed Quantum Sentinel + Singularity Seeker
+477,Apex Celestial Tender,Epic,Breed,6,Greater Cosmic Specter,Elder Nebula Drifter,Zone 6 — Starfall Isle — breed Greater Cosmic Specter + Elder Nebula Drifter
+478,Apex Galactic Lurker,Epic,Breed,6,Ancient Galactic Lurker,Primal Pulsar Binder,Zone 6 — Starfall Isle — breed Ancient Galactic Lurker + Primal Pulsar Binder
+479,Apex Quantum Sentinel,Epic,Breed,6,Apex Radiant Wanderer,Sovereign Event Golem,Zone 6 — Starfall Isle — breed Apex Radiant Wanderer + Sovereign Event Golem
+480,Apex Singularity Seeker,Epic,Breed,6,Fused Pulsar Binder,Pulsar Binder,Zone 6 — Starfall Isle — breed Fused Pulsar Binder + Pulsar Binder
+481,Apex Pulsar Binder,Epic,Breed,6,Greater Cosmic Specter,Fused Pulsar Binder,Zone 6 — Starfall Isle — breed Greater Cosmic Specter + Fused Pulsar Binder
+482,Apex Quasar Shaper,Epic,Breed,6,Elder Nebula Drifter,Hybrid Stellar Warden,Zone 6 — Starfall Isle — breed Elder Nebula Drifter + Hybrid Stellar Warden
+483,Apex Dark Sage,Epic,Breed,6,Fused Quasar Shaper,Hybrid Nebula Drifter,Zone 6 — Starfall Isle — breed Fused Quasar Shaper + Hybrid Nebula Drifter
+484,Apex Radiant Wanderer II,Epic,Breed,6,Ancient Galactic Lurker,Primal Pulsar Binder,Zone 6 — Starfall Isle — breed Ancient Galactic Lurker + Primal Pulsar Binder
+485,Supreme Singularity Seeker,Legendary,Breed,6,Radiant Cosmic Sovereign,Exalted Quantum Seeker,Zone 6 — Starfall Isle — breed Radiant Cosmic Sovereign + Exalted Quantum Seeker
+486,Supreme Pulsar Binder,Legendary,Breed,6,Crystallized Supernova Grazer,Crystallized Warp Wisp,Zone 6 — Starfall Isle — breed Crystallized Supernova Grazer + Crystallized Warp Wisp
+487,Supreme Quasar Shaper,Legendary,Breed,6,Crystallized Event Golem,Crystallized Horizon Phantom,Zone 6 — Starfall Isle — breed Crystallized Event Golem + Crystallized Horizon Phantom
+488,Supreme Dark Sage,Legendary,Breed,6,Radiant Cosmic Sovereign,Crystallized Supernova Grazer,Zone 6 — Starfall Isle — breed Radiant Cosmic Sovereign + Crystallized Supernova Grazer
+489,Supreme Radiant Wanderer,Legendary,Breed,6,Crystallized Warp Wisp,Apex Celestial Tender,Zone 6 — Starfall Isle — breed Crystallized Warp Wisp + Apex Celestial Tender
+490,Supreme Supernova Grazer,Legendary,Breed,6,Apex Galactic Lurker,Apex Quantum Sentinel,Zone 6 — Starfall Isle — breed Apex Galactic Lurker + Apex Quantum Sentinel
+491,Transcendent Warp Wisp,Mythic,Breed,6,Starfall Crown Binder,Ascended Horizon Phantom,Zone 6 — Starfall Isle — breed Starfall Crown Binder + Ascended Horizon Phantom — zone mythic pinnacle
+492,Transcendent Event Golem,Mythic,Breed,6,Ascended Gravity Wraith,Ascended Flux Slime,Zone 6 — Starfall Isle — breed Ascended Gravity Wraith + Ascended Flux Slime — zone mythic pinnacle
+493,Meadow Crystal Slime,Uncommon,Breed,,Meadow Slime,Crystal Slime,Cross-zone breed — Meadow Slime + Crystal Slime
+494,Meadow Frost Slime,Uncommon,Breed,,Verdant Blob,Ember Slime,Cross-zone breed — Verdant Blob + Ember Slime
+495,Meadow Jungle Slime,Uncommon,Breed,,Mossy Ooze,Frost Slime,Cross-zone breed — Mossy Ooze + Frost Slime
+496,Meadow Void Slime,Uncommon,Breed,,Earthen Puddle,Jungle Slime,Cross-zone breed — Earthen Puddle + Jungle Slime
+497,Crystal Frost Slime,Uncommon,Breed,,Crystal Slime,Ember Slime,Cross-zone breed — Crystal Slime + Ember Slime
+498,Crystal Jungle Slime,Uncommon,Breed,,Sapphire Shard,Frost Slime,Cross-zone breed — Sapphire Shard + Frost Slime
+499,Crystal Void Slime,Uncommon,Breed,,Quartz Golem,Jungle Slime,Cross-zone breed — Quartz Golem + Jungle Slime
+500,Ember Jungle Slime,Uncommon,Breed,,Ember Slime,Frost Slime,Cross-zone breed — Ember Slime + Frost Slime
+501,Ember Void Slime,Uncommon,Breed,,Cinder Drake,Jungle Slime,Cross-zone breed — Cinder Drake + Jungle Slime
+502,Frost Void Slime,Uncommon,Breed,,Frost Slime,Jungle Slime,Cross-zone breed — Frost Slime + Jungle Slime
+503,Meadow Cosmic Slime,Uncommon,Breed,,Petal Sprout,Cosmic Slime,Cross-zone breed — Petal Sprout + Cosmic Slime
+504,Crystal Cosmic Slime,Uncommon,Breed,,Gem Specter,Cosmic Slime,Cross-zone breed — Gem Specter + Cosmic Slime
+505,Ember Cosmic Slime,Uncommon,Breed,,Inferno Wyrm,Cosmic Slime,Cross-zone breed — Inferno Wyrm + Cosmic Slime
+506,Frost Cosmic Slime,Uncommon,Breed,,Glacial Specter,Cosmic Slime,Cross-zone breed — Glacial Specter + Cosmic Slime
+507,Jungle Cosmic Slime,Uncommon,Breed,,Mycelium Creeper,Cosmic Slime,Cross-zone breed — Mycelium Creeper + Cosmic Slime
+508,Drifting Meadow Slime,Rare,Breed,,Meadow Crystal Slime,Earthen Wisp,Cross-zone breed Gen 2
+509,Drifting Sapphire Slime,Rare,Breed,,Meadow Frost Slime,Prism Drifter,Cross-zone breed Gen 2
+510,Drifting Inferno Slime,Rare,Breed,,Meadow Jungle Slime,Flame Keeper,Cross-zone breed Gen 2
+511,Drifting Arctic Slime,Rare,Breed,,Meadow Void Slime,Rime Lurker,Cross-zone breed Gen 2
+512,Drifting Overgrown Slime,Rare,Breed,,Crystal Frost Slime,Predatory Seeker,Cross-zone breed Gen 2
+513,Drifting Celestial Slime,Rare,Breed,,Crystal Jungle Slime,Singularity Seeker,Cross-zone breed Gen 2
+514,Drifting Clover Slime,Rare,Breed,,Crystal Void Slime,Glade Tender,Cross-zone breed Gen 2
+515,Drifting Resonant Slime,Rare,Breed,,Ember Jungle Slime,Shard Seeker,Cross-zone breed Gen 2
+516,Drifting Blaze Slime,Rare,Breed,,Ember Void Slime,Smolder Shaper,Cross-zone breed Gen 2
+517,Drifting Permafrost Slime,Rare,Breed,,Frost Void Slime,Chill Wanderer,Cross-zone breed Gen 2
+518,Drifting Creep Slime,Rare,Breed,,Meadow Cosmic Slime,Toxic Drifter,Cross-zone breed Gen 2
+519,Drifting Dark Slime,Rare,Breed,,Crystal Cosmic Slime,Astral Keeper,Cross-zone breed Gen 2
+520,Drifting Fern Slime,Rare,Breed,,Ember Cosmic Slime,Dewdrop Drifter,Cross-zone breed Gen 2
+521,Drifting Luster Slime,Rare,Breed,,Frost Cosmic Slime,Mineral Keeper,Cross-zone breed Gen 2
+522,Drifting Lava Slime,Rare,Breed,,Jungle Cosmic Slime,Ash Lurker,Cross-zone breed Gen 2
+523,Drifting Winter Slime,Rare,Breed,,Meadow Crystal Slime,Hail Seeker,Cross-zone breed Gen 2
+524,Drifting Lichen Slime,Rare,Breed,,Meadow Frost Slime,Tangle Shaper,Cross-zone breed Gen 2
+525,Drifting Gravity Slime,Rare,Breed,,Meadow Jungle Slime,Quasar Shaper,Cross-zone breed Gen 2
+526,Drifting Mire Slime,Rare,Breed,,Meadow Void Slime,Vine Lurker,Cross-zone breed Gen 2
+527,Drifting Gleam Slime,Rare,Breed,,Crystal Frost Slime,Refract Shaper,Cross-zone breed Gen 2
+528,Meadow Ember Slime,Epic,Breed,,Drifting Meadow Slime,Greater Meadow Ooze,Cross-zone breed Gen 3
+529,Quartz Arctic Slime,Epic,Breed,,Drifting Sapphire Slime,Elder Gem Warden,Cross-zone breed Gen 3
+530,Volcanic Fungal Slime,Epic,Breed,,Drifting Inferno Slime,Ancient Scorch Tender,Cross-zone breed Gen 3
+531,Rime Pulsar Slime,Epic,Breed,,Drifting Arctic Slime,Primal Permafrost Binder,Cross-zone breed Gen 3
+532,Verdant Fern Slime,Epic,Breed,,Drifting Overgrown Slime,Apex Bloom Grazer,Cross-zone breed Gen 3
+533,Quasar Cavern Slime,Epic,Breed,,Drifting Celestial Slime,Sovereign Event Golem,Cross-zone breed Gen 3
+534,Fern Brand Slime,Epic,Breed,,Drifting Clover Slime,Greater Meadow Ooze,Cross-zone breed Gen 3
+535,Vein Glacial Slime,Epic,Breed,,Drifting Resonant Slime,Elder Gem Warden,Cross-zone breed Gen 3
+536,Kindle Overgrown Slime,Epic,Breed,,Drifting Blaze Slime,Ancient Scorch Tender,Cross-zone breed Gen 3
+537,Hoarfrost Quantum Slime,Epic,Breed,,Drifting Permafrost Slime,Primal Permafrost Binder,Cross-zone breed Gen 3
+538,Jungle Sprout Slime,Epic,Breed,,Drifting Creep Slime,Apex Bloom Grazer,Cross-zone breed Gen 3
+539,Stellar Luster Slime,Epic,Breed,,Drifting Dark Slime,Sovereign Event Golem,Cross-zone breed Gen 3
+540,Petal Kindle Slime,Epic,Breed,,Drifting Fern Slime,Greater Meadow Ooze,Cross-zone breed Gen 3
+541,Mineral Avalanche Slime,Epic,Breed,,Drifting Luster Slime,Elder Gem Warden,Cross-zone breed Gen 3
+542,Blaze Spore Slime,Epic,Breed,,Drifting Lava Slime,Ancient Scorch Tender,Cross-zone breed Gen 3
+543,Snowdrift Celestial Slime,Epic,Breed,,Drifting Winter Slime,Primal Permafrost Binder,Cross-zone breed Gen 3
+544,Bloom Bloom Slime,Epic,Breed,,Drifting Lichen Slime,Apex Bloom Grazer,Cross-zone breed Gen 3
+545,Warp Glimmer Slime,Epic,Breed,,Drifting Gravity Slime,Sovereign Event Golem,Cross-zone breed Gen 3
+546,Pebble Lava Slime,Epic,Breed,,Drifting Mire Slime,Greater Meadow Ooze,Cross-zone breed Gen 3
+547,Spark Boreal Slime,Epic,Breed,,Drifting Gleam Slime,Elder Gem Warden,Cross-zone breed Gen 3
+548,Ember Jungle Slime II,Epic,Breed,,Drifting Meadow Slime,Ancient Scorch Tender,Cross-zone breed Gen 3
+549,Polar Nebula Slime,Epic,Breed,,Drifting Sapphire Slime,Primal Permafrost Binder,Cross-zone breed Gen 3
+550,Overgrown Clover Slime,Epic,Breed,,Drifting Inferno Slime,Apex Bloom Grazer,Cross-zone breed Gen 3
+551,Galactic Glint Slime,Epic,Breed,,Drifting Arctic Slime,Sovereign Event Golem,Cross-zone breed Gen 3
+552,Bloom Ignite Slime,Epic,Breed,,Drifting Overgrown Slime,Greater Meadow Ooze,Cross-zone breed Gen 3
+553,Meadow Frost Sovereign Slime,Legendary,Breed,,Meadow Ember Slime,Radiant Meadow Puddle,Cross-zone breed Gen 4
+554,Prism Canopy Sovereign Slime,Legendary,Breed,,Quartz Arctic Slime,Exalted Resonant Lurker,Cross-zone breed Gen 4
+555,Blaze Quasar Sovereign Slime,Legendary,Breed,,Volcanic Fungal Slime,Radiant Ember Salamander,Cross-zone breed Gen 4
+556,Chill Burrow Sovereign Slime,Legendary,Breed,,Rime Pulsar Slime,Exalted Sleet Seeker,Cross-zone breed Gen 4
+557,Lichen Crystal Sovereign Slime,Legendary,Breed,,Verdant Fern Slime,Radiant Jungle Lurker,Cross-zone breed Gen 4
+558,Cosmic Flame Sovereign Slime,Legendary,Breed,,Quasar Cavern Slime,Exalted Quantum Seeker,Cross-zone breed Gen 4
+559,Petal Snowdrift Sovereign Slime,Legendary,Breed,,Fern Brand Slime,Radiant Meadow Puddle,Cross-zone breed Gen 4
+560,Faceted Spore Sovereign Slime,Legendary,Breed,,Vein Glacial Slime,Exalted Resonant Lurker,Cross-zone breed Gen 4
+561,Ignite Cosmic Sovereign Slime,Legendary,Breed,,Kindle Overgrown Slime,Radiant Ember Salamander,Cross-zone breed Gen 4
+562,Cryo Dewdrop Sovereign Slime,Legendary,Breed,,Hoarfrost Quantum Slime,Exalted Sleet Seeker,Cross-zone breed Gen 4
+563,Jungle Shard Sovereign Slime,Legendary,Breed,,Jungle Sprout Slime,Radiant Jungle Lurker,Cross-zone breed Gen 4
+564,Astral Forge Sovereign Slime,Legendary,Breed,,Stellar Luster Slime,Exalted Quantum Seeker,Cross-zone breed Gen 4
+565,Bloom Frost Sovereign Slime,Legendary,Breed,,Petal Kindle Slime,Radiant Meadow Puddle,Cross-zone breed Gen 4
+566,Refract Canopy Sovereign Slime,Legendary,Breed,,Mineral Avalanche Slime,Exalted Resonant Lurker,Cross-zone breed Gen 4
+567,Kindle Quasar Sovereign Slime,Legendary,Breed,,Blaze Spore Slime,Radiant Ember Salamander,Cross-zone breed Gen 4
+568,Frost Burrow Sovereign Slime,Legendary,Breed,,Snowdrift Celestial Slime,Exalted Sleet Seeker,Cross-zone breed Gen 4
+569,Overgrown Crystal Sovereign Slime,Legendary,Breed,,Bloom Bloom Slime,Radiant Jungle Lurker,Cross-zone breed Gen 4
+570,Singularity Flame Sovereign Slime,Legendary,Breed,,Warp Glimmer Slime,Exalted Quantum Seeker,Cross-zone breed Gen 4
+571,Fern Snowdrift Sovereign Slime,Legendary,Breed,,Pebble Lava Slime,Radiant Meadow Puddle,Cross-zone breed Gen 4
+572,Echo Spore Sovereign Slime,Legendary,Breed,,Spark Boreal Slime,Exalted Resonant Lurker,Cross-zone breed Gen 4
+573,Ember Cosmic Sovereign Slime,Legendary,Breed,,Ember Jungle Slime II,Radiant Ember Salamander,Cross-zone breed Gen 4
+574,Blizzard Dewdrop Sovereign Slime,Legendary,Breed,,Polar Nebula Slime,Exalted Sleet Seeker,Cross-zone breed Gen 4
+575,Verdant Shard Sovereign Slime,Legendary,Breed,,Overgrown Clover Slime,Radiant Jungle Lurker,Cross-zone breed Gen 4
+576,Radiant Forge Sovereign Slime,Legendary,Breed,,Galactic Glint Slime,Exalted Quantum Seeker,Cross-zone breed Gen 4
+577,Pebble Frost Sovereign Slime,Legendary,Breed,,Bloom Ignite Slime,Radiant Meadow Puddle,Cross-zone breed Gen 4
+578,Crystal Canopy Sovereign Slime,Legendary,Breed,,Meadow Ember Slime,Exalted Resonant Lurker,Cross-zone breed Gen 4
+579,Volcanic Quasar Sovereign Slime,Legendary,Breed,,Quartz Arctic Slime,Radiant Ember Salamander,Cross-zone breed Gen 4
+580,Hail Burrow Sovereign Slime,Legendary,Breed,,Volcanic Fungal Slime,Exalted Sleet Seeker,Cross-zone breed Gen 4
+581,Bloom Crystal Sovereign Slime,Legendary,Breed,,Rime Pulsar Slime,Radiant Jungle Lurker,Cross-zone breed Gen 4
+582,Horizon Flame Sovereign Slime,Legendary,Breed,,Verdant Fern Slime,Exalted Quantum Seeker,Cross-zone breed Gen 4
+583,Meadow Jungle Overlord Slime,Legendary,Breed,,Meadow Frost Sovereign Slime,Cosmic Flame Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+584,Mineral Quantum Overlord Slime,Legendary,Breed,,Prism Canopy Sovereign Slime,Petal Snowdrift Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+585,Ignite Blossom Overlord Slime,Legendary,Breed,,Blaze Quasar Sovereign Slime,Faceted Spore Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+586,Hoarfrost Sapphire Overlord Slime,Legendary,Breed,,Chill Burrow Sovereign Slime,Ignite Cosmic Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+587,Overgrown Blaze Overlord Slime,Legendary,Breed,,Lichen Crystal Sovereign Slime,Cryo Dewdrop Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+588,Quasar Winter Overlord Slime,Legendary,Breed,,Cosmic Flame Sovereign Slime,Jungle Shard Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+589,Pebble Spore Overlord Slime,Legendary,Breed,,Petal Snowdrift Sovereign Slime,Astral Forge Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+590,Quartz Pulsar Overlord Slime,Legendary,Breed,,Faceted Spore Sovereign Slime,Bloom Frost Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+591,Blaze Pebble Overlord Slime,Legendary,Breed,,Ignite Cosmic Sovereign Slime,Refract Canopy Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+592,Subzero Gem Overlord Slime,Legendary,Breed,,Cryo Dewdrop Sovereign Slime,Kindle Quasar Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+593,Jungle Char Overlord Slime,Legendary,Breed,,Jungle Shard Sovereign Slime,Frost Burrow Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+594,Galactic Boreal Overlord Slime,Legendary,Breed,,Astral Forge Sovereign Slime,Overgrown Crystal Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+595,Fern Overgrown Overlord Slime,Legendary,Breed,,Bloom Frost Sovereign Slime,Singularity Flame Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+596,Spark Dark Overlord Slime,Legendary,Breed,,Refract Canopy Sovereign Slime,Fern Snowdrift Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+597,Volcanic Mire Overlord Slime,Legendary,Breed,,Kindle Quasar Sovereign Slime,Echo Spore Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+598,Snowdrift Opal Overlord Slime,Legendary,Breed,,Frost Burrow Sovereign Slime,Ember Cosmic Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+599,Lichen Ignite Overlord Slime,Legendary,Breed,,Overgrown Crystal Sovereign Slime,Blizzard Dewdrop Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+600,Stellar Avalanche Overlord Slime,Legendary,Breed,,Singularity Flame Sovereign Slime,Verdant Shard Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+601,Bloom Fungal Overlord Slime,Legendary,Breed,,Fern Snowdrift Sovereign Slime,Radiant Forge Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+602,Vein Supernova Overlord Slime,Legendary,Breed,,Echo Spore Sovereign Slime,Pebble Frost Sovereign Slime,Cross-zone breed Gen 5 — Deep Chain
+603,Meadow Cosmic Eternal Slime,Mythic,Breed,,Meadow Jungle Overlord Slime,Gooey Crown Tender,Cross-zone Mythic chain
+604,Faceted Glade Eternal Slime,Mythic,Breed,,Mineral Quantum Overlord Slime,Crystal Crown Sentinel,Cross-zone Mythic chain
+605,Kindle Spark Eternal Slime,Mythic,Breed,,Ignite Blossom Overlord Slime,Ember Crown Seeker,Cross-zone Mythic chain
+606,Blizzard Ash Eternal Slime,Mythic,Breed,,Hoarfrost Sapphire Overlord Slime,Frostmere Crown Binder,Cross-zone Mythic chain
+607,Bloom Cryo Eternal Slime,Mythic,Breed,,Overgrown Blaze Overlord Slime,Verdant Crown Shaper,Cross-zone Mythic chain
+608,Cosmic Canopy Eternal Slime,Mythic,Breed,,Quasar Winter Overlord Slime,Starfall Crown Binder,Cross-zone Mythic chain
+609,Bloom Warp Eternal Slime,Mythic,Breed,,Pebble Spore Overlord Slime,Gooey Crown Tender,Cross-zone Mythic chain
+610,Echo Earthen Eternal Slime,Mythic,Breed,,Quartz Pulsar Overlord Slime,Crystal Crown Sentinel,Cross-zone Mythic chain
+611,Volcanic Refract Eternal Slime,Mythic,Breed,,Blaze Pebble Overlord Slime,Ember Crown Seeker,Cross-zone Mythic chain
+612,Chill Cinder Eternal Slime,Mythic,Breed,,Subzero Gem Overlord Slime,Frostmere Crown Binder,Cross-zone Mythic chain
+613,Jungle Snowdrift Eternal Slime,Mythic,Breed,,Jungle Char Overlord Slime,Verdant Crown Shaper,Cross-zone Mythic chain
+614,Singularity Feral Eternal Slime,Mythic,Breed,,Galactic Boreal Overlord Slime,Starfall Crown Binder,Cross-zone Mythic chain
+615,Pebble Singularity Eternal Slime,Mythic,Breed,,Fern Overgrown Overlord Slime,Gooey Crown Tender,Cross-zone Mythic chain
+616,Prism Brook Eternal Slime,Mythic,Breed,,Spark Dark Overlord Slime,Crystal Crown Sentinel,Cross-zone Mythic chain
+617,Ignite Mineral Eternal Slime,Mythic,Breed,,Volcanic Mire Overlord Slime,Ember Crown Seeker,Cross-zone Mythic chain
+618,Meadow Ember Primordial Slime,Mythic,Breed,,Meadow Cosmic Eternal Slime,Blizzard Ash Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+619,Shard Iceberg Primordial Slime,Mythic,Breed,,Faceted Glade Eternal Slime,Bloom Cryo Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+620,Ember Spore Primordial Slime,Mythic,Breed,,Kindle Spark Eternal Slime,Cosmic Canopy Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+621,Snowdrift Supernova Primordial Slime,Mythic,Breed,,Blizzard Ash Eternal Slime,Bloom Warp Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+622,Jungle Petal Primordial Slime,Mythic,Breed,,Bloom Cryo Eternal Slime,Echo Earthen Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+623,Quasar Cavern Primordial Slime,Mythic,Breed,,Cosmic Canopy Eternal Slime,Volcanic Refract Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+624,Meadow Scorch Primordial Slime,Mythic,Breed,,Bloom Warp Eternal Slime,Chill Cinder Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+625,Shard Boreal Primordial Slime,Mythic,Breed,,Echo Earthen Eternal Slime,Jungle Snowdrift Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+626,Ember Verdant Primordial Slime,Mythic,Breed,,Volcanic Refract Eternal Slime,Singularity Feral Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+627,Snowdrift Rift Primordial Slime,Mythic,Breed,,Chill Cinder Eternal Slime,Pebble Singularity Eternal Slime,Cross-zone Mythic pinnacle — Deep Chain Gen 7+
+900,Mudslime,Common,Special,,,,Failed breed result — incompatible parents produce this
+901,Mirror Slime,Rare,Special,,,,Breed a slime with the result of breeding that slime — self-reflective chain
+902,Glitch Slime,Epic,Special,,,,Tap the main blob exactly 999 times without spending any Goo
+903,Lucky Slime,Rare,Special,,,,0.1% chance to appear on any successful breed
+904,Oversized Slime,Uncommon,Special,,,,Triggered by having 100+ slimes in collection simultaneously
+905,Miniature Slime,Uncommon,Special,,,,Triggered when any slime reaches level 10 for the first time
+906,Elder Slime,Rare,Special,,,,A single slime remains at max level for 24 real-world hours
+907,Haunted Slime,Epic,Special,,,,Discovered in Frostmere — breed any two slimes after midnight local time
+908,Curious Slime,Rare,Special,,,,Tap the same slime 50 consecutive times without tapping anything else
+909,Slime King,Epic,Special,,,,Unlock all Zone 3 slimes (all of Ember Wastes)
+910,Slime Queen,Epic,Special,,,,Unlock all Zone 4 slimes (all of Frostmere)
+911,Ancient Slime,Legendary,Special,,,,Complete 100 total successful breed operations
+912,Cosmic Jester Slime,Rare,Special,,,,Breed any slime with a Mudslime
+913,Primordial Goo,Mythic,Special,,,,Collect all 6 zone apex Epics
+914,The Great Slime (True Form),Mythic,Special,,,,Complete the Slimepedia — collect all other slimes. This is the true ending.
+916,Meadow Phantom Slime,Rare,Special,1,,,Zone 1 secret — summon 200 total Zone 1 slimes
+917,Crystal Specter Slime,Rare,Special,2,,,Zone 2 secret — merge 10 Zone 2 slimes in a single session
+918,Ember Wraith Slime,Epic,Special,3,,,Zone 3 secret — have 3 Zone 3 slimes all at level 10 simultaneously
+919,Frost Revenant Slime,Epic,Special,4,,,Zone 4 secret — breed in Zone 4 after the device has been idle for 1 hour
+920,Jungle Phantom Slime,Legendary,Special,5,,,Zone 5 secret — discover all Zone 5 Breed slimes
+921,Void Specter Slime,Legendary,Special,6,,,Zone 6 secret — collect all Zone 6 Legendary slimes

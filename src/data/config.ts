@@ -36,13 +36,49 @@ export const PASSIVE_GOO_BASE: Record<string, number> = {
   Mythic: 2000.0,
 }
 
-// --- Summon costs ---
+// --- Summon costs (legacy flat — used as Zone 1 baseline) ---
+// Per-zone costs are in ZONE_SUMMON_COST below.
 export const SUMMON_COST: Record<string, number> = {
   Common: 25,
   Uncommon: 100,
   Rare: 500,
+  Epic: 5_000,
+  Legendary: 50_000,
+  Mythic: 500_000,
 }
-export const PITY_SUMMON_THRESHOLD = 10
+
+// Per-zone summon costs — scales with zone goo production (~10× per zone).
+// Zone 1 matches the legacy flat costs for backward compatibility.
+export const ZONE_SUMMON_COST: Record<number, Record<string, number>> = {
+  1: { Common: 25,       Uncommon: 100,       Rare: 500,         Epic: 5_000,       Legendary: 50_000,       Mythic: 500_000 },
+  2: { Common: 150,      Uncommon: 600,       Rare: 3_000,       Epic: 30_000,      Legendary: 300_000,      Mythic: 3_000_000 },
+  3: { Common: 1_000,    Uncommon: 4_000,     Rare: 20_000,      Epic: 200_000,     Legendary: 2_000_000,    Mythic: 20_000_000 },
+  4: { Common: 8_000,    Uncommon: 32_000,    Rare: 160_000,     Epic: 1_600_000,   Legendary: 16_000_000,   Mythic: 160_000_000 },
+  5: { Common: 60_000,   Uncommon: 240_000,   Rare: 1_200_000,   Epic: 12_000_000,  Legendary: 120_000_000,  Mythic: 1_200_000_000 },
+  6: { Common: 500_000,  Uncommon: 2_000_000, Rare: 10_000_000,  Epic: 100_000_000, Legendary: 1_000_000_000,Mythic: 10_000_000_000 },
+}
+
+// Rarity weights for the summon pool.
+// Epic/Legendary/Mythic are now in the pool but at very low weights.
+export const SUMMON_WEIGHTS: Record<string, number> = {
+  Common:    5500,  // ~66.5%
+  Uncommon:  2200,  // ~26.6%
+  Rare:       500,  // ~6.0%
+  Epic:        50,  // ~0.6%
+  Legendary:   15,  // ~0.18%
+  Mythic:       3,  // ~0.04%
+}
+
+// Pity thresholds — after N summons without a slime of that tier or higher,
+// the next summon is guaranteed to be at least that tier.
+export const PITY_UNCOMMON_THRESHOLD = 20   // guarantee Uncommon+ after 20 dry summons
+export const PITY_RARE_THRESHOLD     = 50   // guarantee Rare+ after 50 dry summons
+export const PITY_EPIC_THRESHOLD     = 200  // guarantee Epic+ after 200 dry summons
+export const PITY_LEGENDARY_THRESHOLD= 500  // guarantee Legendary+ after 500 dry summons
+export const PITY_MYTHIC_THRESHOLD   = 2000 // guarantee Mythic after 2000 dry summons
+
+// Legacy single-value pity (used by discovery upgrades level 2 and 13)
+export const PITY_SUMMON_THRESHOLD = 20
 
 // --- Merge ---
 export const MERGE_COUNT_REQUIRED = 3
@@ -54,8 +90,9 @@ export const SHARDS_MAX_RARITY_MERGE = 3
 // --- Breed ---
 export const BREED_COOLDOWN_MS = 45_000
 export const BREED_FAIL_COOLDOWN_MS = 15_000
-export const MUDSLIME_ID = '513'
-export const LUCKY_SLIME_ID = '516'
+// Special slime IDs — updated to match new roster (specials start at 900)
+export const MUDSLIME_ID = '900'
+export const LUCKY_SLIME_ID = '903'
 export const LUCKY_SLIME_CHANCE = 0.001
 
 // --- Zone unlock costs ---

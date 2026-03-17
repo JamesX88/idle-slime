@@ -165,35 +165,29 @@ function handleMerge(): void {
   const id = _currentSlimeId
   if (!id) return
 
+  // mergeSlimes is now fully self-contained: it handles collection mutation,
+  // discovery tracking, and shard grants internally. The UI only reads the
+  // result descriptor to decide how to present feedback.
   let resultId: string | null = null
   let isNew = false
+  let shardsGained = 0
+  let essenceGained = 0
 
   setState(state => {
     const result = mergeSlimes(state, id)
     resultId = result.resultId
-    if (resultId) {
-      isNew = !state.collection[resultId]
-      // Add to collection
-      if (state.collection[resultId]) {
-        state.collection[resultId].count++
-      } else {
-        state.totalDiscoveries++
-        state.collection[resultId] = {
-          id: resultId,
-          count: 1,
-          level: 1,
-          discoveredAt: Date.now(),
-          discoveryNumber: state.totalDiscoveries,
-        }
-        if (isNew) state.prismShards++
-      }
-    }
-    if (result.shardsGained > 0) {
-      showNotif(`💎 Max rarity merge! +${result.essenceGained} ✨ +${result.shardsGained} 💎`)
-    }
+    isNew = result.isNew
+    shardsGained = result.shardsGained
+    essenceGained = result.essenceGained
   })
 
   closePanel()
+
+  if (shardsGained > 0 && !resultId) {
+    // Max-rarity merge — no new slime produced
+    showNotif(`💎 Max rarity merge! +${essenceGained} ✨ +${shardsGained} 💎`)
+    return
+  }
 
   if (resultId) {
     const def = getSlime(resultId)

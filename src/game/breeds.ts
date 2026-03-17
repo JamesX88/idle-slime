@@ -2,12 +2,12 @@
 import breedTableData from '../data/breeds.json'
 import type { SlimeId, GameState } from './state'
 import { MUDSLIME_ID, LUCKY_SLIME_ID, LUCKY_SLIME_CHANCE, BREED_COOLDOWN_MS, BREED_FAIL_COOLDOWN_MS } from '../data/config'
-import { getSlime } from './slimes'
+import { checkBreedSpecials } from './specials'
 
 const breedTable: Record<string, SlimeId> = breedTableData as Record<string, SlimeId>
 
 export function resolveBreed(parent1: SlimeId, parent2: SlimeId): SlimeId {
-  if (parent1 === parent2) return MUDSLIME_ID // same species — should use merge
+  if (parent1 === parent2) return MUDSLIME_ID // same species — should use Merge
   const key = [parent1, parent2].sort().join('+')
   const result = breedTable[key]
   if (!result) return MUDSLIME_ID
@@ -19,7 +19,6 @@ export function resolveBreed(parent1: SlimeId, parent2: SlimeId): SlimeId {
 }
 
 export function getBreedCooldown(state: GameState): number {
-  // Apply Discovery upgrade reductions
   let ms = BREED_COOLDOWN_MS
   if (state.discoveryLevel >= 3) ms = Math.floor(ms * 0.8)   // -20%
   if (state.discoveryLevel >= 7) ms = Math.floor(ms * 0.8)   // -20% again
@@ -42,10 +41,9 @@ export function startBreed(state: GameState, slotId: number, parent1: SlimeId, p
   if (p1Owned.count <= 0) delete state.collection[parent1]
 
   if (parent1 === parent2) {
-    // Re-check after consuming first
     const p2AfterConsume = state.collection[parent2]
     if (!p2AfterConsume || p2AfterConsume.count < 1) {
-      // Restore — shouldn't happen but guard
+      // Restore — guard against edge case
       if (!state.collection[parent1]) {
         state.collection[parent1] = { id: parent1, count: 1, level: 1, discoveredAt: Date.now(), discoveryNumber: 0 }
       } else {
@@ -86,11 +84,26 @@ export function tickBreeds(state: GameState): SlimeId[] {
   return completed
 }
 
-export function collectBreedResult(state: GameState, slotId: number): { resultId: SlimeId; isNew: boolean } | null {
+/**
+ * Collect a completed breed result. Fully self-contained:
+ * - Adds result to collection
+ * - Increments totalBreeds and totalDiscoveries
+ * - Grants a Prism Shard for new discoveries
+ * - Applies failed-breed short cooldown for Mudslime results
+ * - Fires checkBreedSpecials with parent context
+ *
+ * Returns a descriptor for the UI to present feedback.
+ */
+export function collectBreedResult(
+  state: GameState,
+  slotId: number,
+): { resultId: SlimeId; isNew: boolean; parent1: SlimeId | null; parent2: SlimeId | null } | null {
   const slot = state.breedSlots[slotId]
   if (!slot || slot.resultId === null) return null
 
   const resultId = slot.resultId
+  const parent1 = slot.parent1
+  const parent2 = slot.parent2
   const isNew = !state.collection[resultId]
   const isFailed = resultId === MUDSLIME_ID
 
@@ -113,10 +126,9 @@ export function collectBreedResult(state: GameState, slotId: number): { resultId
 
   state.totalBreeds++
 
-  // Apply failed breed cooldown if Mudslime
-  const failCooldown = isFailed ? BREED_FAIL_COOLDOWN_MS : 0
-  if (failCooldown > 0) {
-    slot.startTime = Date.now() - slot.cooldownMs + failCooldown
+  // Apply failed breed short cooldown
+  if (isFailed) {
+    slot.startTime = Date.now() - slot.cooldownMs + BREED_FAIL_COOLDOWN_MS
   }
 
   // Reset slot
@@ -125,39 +137,10 @@ export function collectBreedResult(state: GameState, slotId: number): { resultId
   slot.startTime = null
   slot.resultId = null
 
-  // Check special breed triggers
-  checkBreedSpecials(state, resultId)
+  // Evaluate all breed-triggered special conditions (centralized in specials.ts)
+  checkBreedSpecials(state, resultId, parent1, parent2)
 
-  return { resultId, isNew }
-}
-
-function checkBreedSpecials(state: GameState, resultId: SlimeId): void {
-  // Ancient Slime: 100 total breeds
-  if (!state.ancientSlimeUnlocked && state.totalBreeds >= 100) {
-    state.ancientSlimeUnlocked = true
-    addSpecialSlime(state, '524')
-  }
-
-  // Cosmic Jester: breed any slime with Mudslime
-  if (!state.cosmicJesterUnlocked && resultId === MUDSLIME_ID) {
-    // The result was a mudslime — check if this was intentional (we can't tell, but we award it)
-    // Actually: Cosmic Jester requires breeding WITH a mudslime as parent
-    // This is checked in startBreed context — we'll handle it there
-  }
-}
-
-export function addSpecialSlime(state: GameState, id: SlimeId): boolean {
-  if (state.collection[id]) return false
-  state.totalDiscoveries++
-  state.collection[id] = {
-    id,
-    count: 1,
-    level: 1,
-    discoveredAt: Date.now(),
-    discoveryNumber: state.totalDiscoveries,
-  }
-  state.prismShards++
-  return true
+  return { resultId, isNew, parent1, parent2 }
 }
 
 export function unlockBreedSlot(state: GameState, slotId: number): void {

@@ -14,12 +14,14 @@ let _saveInterval: number | null = null
 let _specialCheckInterval: number | null = null
 let _lastProductionTime = Date.now()
 
-// Callbacks for UI to hook into
+// Multi-subscriber event bus for breed-complete notifications.
+// Returns an unsubscribe function so callers can clean up.
 type BreedCompleteCallback = (resultIds: string[]) => void
-let _onBreedComplete: BreedCompleteCallback | null = null
+const _breedCompleteSubscribers: Set<BreedCompleteCallback> = new Set()
 
-export function onBreedComplete(cb: BreedCompleteCallback): void {
-  _onBreedComplete = cb
+export function onBreedComplete(cb: BreedCompleteCallback): () => void {
+  _breedCompleteSubscribers.add(cb)
+  return () => _breedCompleteSubscribers.delete(cb)
 }
 
 export function startGameLoop(): void {
@@ -37,8 +39,10 @@ export function startGameLoop(): void {
 
       // Breed ticks
       const completed = tickBreeds(state)
-      if (completed.length > 0 && _onBreedComplete) {
-        _onBreedComplete(completed)
+      if (completed.length > 0) {
+        for (const cb of _breedCompleteSubscribers) {
+          try { cb(completed) } catch (e) { console.error('onBreedComplete subscriber error:', e) }
+        }
       }
     })
   }, PRODUCTION_INTERVAL_MS)

@@ -121,6 +121,9 @@ for (let i = 1; i < lines.length; i++) {
   const elements = zoneNum ? elementsByZone[zoneNum] || ['Nature'] : ['Chaos']
   const element = elements[parseInt(id) % elements.length]
 
+  // isSecret: true for zone-secret slimes that should not appear in the normal summon pool
+  const isSecret = notes.toLowerCase().includes('secret')
+
   slimes.push({
     id,
     name,
@@ -136,6 +139,7 @@ for (let i = 1; i < lines.length; i++) {
     lore,
     favoriteFood,
     notes,
+    isSecret,
   })
 }
 

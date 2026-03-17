@@ -186,6 +186,8 @@ function handleTap(e: Event): void {
     state.goo += gpp
     state.tapCount++
     state.tapsSinceSpend++
+    // Track consecutive taps on the main blob (not a specific slime) for Curious Slime trigger
+    state.consecutiveTapCount++
     gooGained = gpp
     checkTapSpecials(state)
   })

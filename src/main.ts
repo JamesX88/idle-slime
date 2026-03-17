@@ -31,10 +31,10 @@ wipeLegacySaves()
 const savedState = loadGame()
 initState(savedState)
 
-// Apply accessibility settings
-if (savedState.reduceMotion) document.body.classList.add('reduce-motion')
-if (savedState.highContrast) document.body.classList.add('high-contrast')
-if (savedState.largeText) document.body.classList.add('large-text')
+// Apply accessibility settings from the grouped settings sub-object
+if (savedState.settings.reduceMotion) document.body.classList.add('reduce-motion')
+if (savedState.settings.highContrast) document.body.classList.add('high-contrast')
+if (savedState.settings.largeText) document.body.classList.add('large-text')
 
 // ---- Build Screens ----
 
@@ -82,11 +82,14 @@ mainEl.classList.add('active')
 
 // ---- Start Game Loop ----
 
+// Subscribe to breed-complete events to show a "ready to collect" notification.
+// The full result (fanfare, collection mutation) is handled in the breed-lab
+// collect step; this is purely a passive ambient ping.
 onBreedComplete((resultIds) => {
   for (const id of resultIds) {
     const def = getSlime(id)
     if (def && id !== '513') {
-      // Breed complete notification is handled in collect step
+      showNotif(`⚗️ Breed ready: ${def.name}!`)
     }
   }
 })

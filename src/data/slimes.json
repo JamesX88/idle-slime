@@ -11,7 +11,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Tutorial slime — always the first encountered",
     "favoriteFood": "Meadow Dew",
-    "notes": "Tutorial slime — always the first encountered"
+    "notes": "Tutorial slime — always the first encountered",
+    "isSecret": false
   },
   {
     "id": "002",
@@ -25,7 +26,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Clover Sprigs",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "003",
@@ -39,7 +41,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Petal Cakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "004",
@@ -53,7 +56,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Gooberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "005",
@@ -67,7 +71,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Meadow Dew",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "006",
@@ -81,7 +86,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Clover Sprigs",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "007",
@@ -95,7 +101,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Petal Cakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "008",
@@ -109,7 +116,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Gooberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "009",
@@ -123,7 +131,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Meadow Dew",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "010",
@@ -137,7 +146,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Clover Sprigs",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "011",
@@ -151,7 +161,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Petal Cakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "012",
@@ -165,7 +176,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gooberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "013",
@@ -179,7 +191,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Meadow Dew",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "014",
@@ -193,7 +206,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Clover Sprigs",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "015",
@@ -207,7 +221,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Petal Cakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "016",
@@ -221,7 +236,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Gooberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "017",
@@ -235,7 +251,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Meadow Dew",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "018",
@@ -249,7 +266,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Clover Sprigs",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "019",
@@ -263,7 +281,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "020",
@@ -277,7 +296,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "021",
@@ -291,7 +311,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "022",
@@ -305,7 +326,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Clover Sprigs",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "023",
@@ -319,7 +341,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "024",
@@ -333,7 +356,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "025",
@@ -347,7 +371,8 @@
     "baseGooPerSec": 10,
     "lore": "Zone 1 secret — tap the ancient oak 30 times",
     "favoriteFood": "Meadow Dew",
-    "notes": "Zone 1 secret — tap the ancient oak 30 times"
+    "notes": "Zone 1 secret — tap the ancient oak 30 times",
+    "isSecret": true
   },
   {
     "id": "026",
@@ -361,7 +386,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Quartz Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "027",
@@ -375,7 +401,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Mineral Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "028",
@@ -389,7 +416,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Crystal Shards",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "029",
@@ -403,7 +431,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Gem Dust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "030",
@@ -417,7 +446,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Quartz Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "031",
@@ -431,7 +461,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Mineral Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "032",
@@ -445,7 +476,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Crystal Shards",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "033",
@@ -459,7 +491,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Gem Dust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "034",
@@ -473,7 +506,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Quartz Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "035",
@@ -487,7 +521,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Mineral Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "036",
@@ -501,7 +536,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Crystal Shards",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "037",
@@ -515,7 +551,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gem Dust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "038",
@@ -529,7 +566,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Quartz Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "039",
@@ -543,7 +581,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Mineral Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "040",
@@ -557,7 +596,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Crystal Shards",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "041",
@@ -571,7 +611,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Gem Dust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "042",
@@ -585,7 +626,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Quartz Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "043",
@@ -599,7 +641,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Mineral Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "044",
@@ -613,7 +656,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Crystal Shards",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "045",
@@ -627,7 +671,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gem Dust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "046",
@@ -641,7 +686,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Quartz Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "047",
@@ -655,7 +701,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Mineral Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "048",
@@ -669,7 +716,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Crystal Shards",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "049",
@@ -683,7 +731,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gem Dust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "050",
@@ -697,7 +746,8 @@
     "baseGooPerSec": 10,
     "lore": "Zone 2 secret — reach 10000 Goo while in Crystal Caves",
     "favoriteFood": "Quartz Drops",
-    "notes": "Zone 2 secret — reach 10000 Goo while in Crystal Caves"
+    "notes": "Zone 2 secret — reach 10000 Goo while in Crystal Caves",
+    "isSecret": true
   },
   {
     "id": "051",
@@ -711,7 +761,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Ash Wafers",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "052",
@@ -725,7 +776,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Embernuts",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "053",
@@ -739,7 +791,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Lava Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "054",
@@ -753,7 +806,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Cinder Crisps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "055",
@@ -767,7 +821,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Ash Wafers",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "056",
@@ -781,7 +836,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Embernuts",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "057",
@@ -795,7 +851,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Lava Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "058",
@@ -809,7 +866,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Cinder Crisps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "059",
@@ -823,7 +881,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Ash Wafers",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "060",
@@ -837,7 +896,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Embernuts",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "061",
@@ -851,7 +911,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Lava Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "062",
@@ -865,7 +926,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Cinder Crisps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "063",
@@ -879,7 +941,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Ash Wafers",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "064",
@@ -893,7 +956,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Embernuts",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "065",
@@ -907,7 +971,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Lava Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "066",
@@ -921,7 +986,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Cinder Crisps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "067",
@@ -935,7 +1001,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Ash Wafers",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "068",
@@ -949,7 +1016,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Embernuts",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "069",
@@ -963,7 +1031,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Lava Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "070",
@@ -977,7 +1046,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Cinder Crisps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "071",
@@ -991,7 +1061,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Ash Wafers",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "072",
@@ -1005,7 +1076,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Embernuts",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "073",
@@ -1019,7 +1091,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Lava Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "074",
@@ -1033,7 +1106,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Cinder Crisps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "075",
@@ -1047,7 +1121,8 @@
     "baseGooPerSec": 10,
     "lore": "Zone 3 secret — survive 60s without spending Goo",
     "favoriteFood": "Ash Wafers",
-    "notes": "Zone 3 secret — survive 60s without spending Goo"
+    "notes": "Zone 3 secret — survive 60s without spending Goo",
+    "isSecret": true
   },
   {
     "id": "076",
@@ -1061,7 +1136,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Frostberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "077",
@@ -1075,7 +1151,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Ice Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "078",
@@ -1089,7 +1166,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Snow Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "079",
@@ -1103,7 +1181,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Glacier Mints",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "080",
@@ -1117,7 +1196,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Frostberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "081",
@@ -1131,7 +1211,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Ice Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "082",
@@ -1145,7 +1226,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Snow Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "083",
@@ -1159,7 +1241,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Glacier Mints",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "084",
@@ -1173,7 +1256,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Frostberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "085",
@@ -1187,7 +1271,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Ice Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "086",
@@ -1201,7 +1286,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Snow Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "087",
@@ -1215,7 +1301,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Glacier Mints",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "088",
@@ -1229,7 +1316,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Frostberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "089",
@@ -1243,7 +1331,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Ice Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "090",
@@ -1257,7 +1346,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Snow Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "091",
@@ -1271,7 +1361,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Glacier Mints",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "092",
@@ -1285,7 +1376,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Frostberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "093",
@@ -1299,7 +1391,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Ice Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "094",
@@ -1313,7 +1406,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Snow Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "095",
@@ -1327,7 +1421,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Glacier Mints",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "096",
@@ -1341,7 +1436,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Frostberries",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "097",
@@ -1355,7 +1451,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Ice Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "098",
@@ -1369,7 +1466,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Snow Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "099",
@@ -1383,7 +1481,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Glacier Mints",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "100",
@@ -1397,7 +1496,8 @@
     "baseGooPerSec": 10,
     "lore": "Zone 4 secret — have 5 ice-type slimes active simultaneously",
     "favoriteFood": "Frostberries",
-    "notes": "Zone 4 secret — have 5 ice-type slimes active simultaneously"
+    "notes": "Zone 4 secret — have 5 ice-type slimes active simultaneously",
+    "isSecret": true
   },
   {
     "id": "101",
@@ -1411,7 +1511,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Jungle Fruit",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "102",
@@ -1425,7 +1526,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Vine Nectar",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "103",
@@ -1439,7 +1541,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Toxic Blooms",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "104",
@@ -1453,7 +1556,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Spore Caps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "105",
@@ -1467,7 +1571,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Jungle Fruit",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "106",
@@ -1481,7 +1586,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Vine Nectar",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "107",
@@ -1495,7 +1601,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Toxic Blooms",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "108",
@@ -1509,7 +1616,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Spore Caps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "109",
@@ -1523,7 +1631,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Jungle Fruit",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "110",
@@ -1537,7 +1646,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Vine Nectar",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "111",
@@ -1551,7 +1661,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Toxic Blooms",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "112",
@@ -1565,7 +1676,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Spore Caps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "113",
@@ -1579,7 +1691,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Jungle Fruit",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "114",
@@ -1593,7 +1706,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Vine Nectar",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "115",
@@ -1607,7 +1721,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Toxic Blooms",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "116",
@@ -1621,7 +1736,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Spore Caps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "117",
@@ -1635,7 +1751,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Jungle Fruit",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "118",
@@ -1649,7 +1766,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Vine Nectar",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "119",
@@ -1663,7 +1781,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Toxic Blooms",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "120",
@@ -1677,7 +1796,8 @@
     "baseGooPerSec": 2,
     "lore": "Disguises as last-tapped slime for 10s",
     "favoriteFood": "Spore Caps",
-    "notes": "Disguises as last-tapped slime for 10s"
+    "notes": "Disguises as last-tapped slime for 10s",
+    "isSecret": false
   },
   {
     "id": "121",
@@ -1691,7 +1811,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Jungle Fruit",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "122",
@@ -1705,7 +1826,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Vine Nectar",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "123",
@@ -1719,7 +1841,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Toxic Blooms",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "124",
@@ -1733,7 +1856,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Spore Caps",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "125",
@@ -1747,7 +1871,8 @@
     "baseGooPerSec": 10,
     "lore": "Zone 5 secret — complete all Zone 5 breeds",
     "favoriteFood": "Jungle Fruit",
-    "notes": "Zone 5 secret — complete all Zone 5 breeds"
+    "notes": "Zone 5 secret — complete all Zone 5 breeds",
+    "isSecret": true
   },
   {
     "id": "126",
@@ -1761,7 +1886,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Void Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "127",
@@ -1775,7 +1901,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Nebula Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "128",
@@ -1789,7 +1916,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Stardust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "129",
@@ -1803,7 +1931,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Cosmic Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "130",
@@ -1817,7 +1946,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Void Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "131",
@@ -1831,7 +1961,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Simple but endearing — the backbone of any slime collection.",
     "favoriteFood": "Nebula Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "132",
@@ -1845,7 +1976,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Humble origins, but every great collection starts somewhere.",
     "favoriteFood": "Stardust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "133",
@@ -1859,7 +1991,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Cosmic Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "134",
@@ -1873,7 +2006,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Void Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "135",
@@ -1887,7 +2021,8 @@
     "baseGooPerSec": 0.5,
     "lore": "A cheerful blob of pure goo.",
     "favoriteFood": "Nebula Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "136",
@@ -1901,7 +2036,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Stardust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "137",
@@ -1915,7 +2051,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Cosmic Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "138",
@@ -1929,7 +2066,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Void Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "139",
@@ -1943,7 +2081,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Nebula Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "140",
@@ -1957,7 +2096,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Stardust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "141",
@@ -1971,7 +2111,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Cosmic Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "142",
@@ -1985,7 +2126,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Void Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "143",
@@ -1999,7 +2141,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Nebula Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "144",
@@ -2013,7 +2156,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Stardust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "145",
@@ -2027,7 +2171,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Cosmic Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "146",
@@ -2041,7 +2186,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Void Crystals",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "147",
@@ -2055,7 +2201,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Nebula Drops",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "148",
@@ -2069,7 +2216,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Stardust",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "149",
@@ -2083,7 +2231,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Cosmic Flakes",
-    "notes": ""
+    "notes": "",
+    "isSecret": false
   },
   {
     "id": "150",
@@ -2097,7 +2246,8 @@
     "baseGooPerSec": 10,
     "lore": "Zone 6 secret — unlock all 6 biomes",
     "favoriteFood": "Void Crystals",
-    "notes": "Zone 6 secret — unlock all 6 biomes"
+    "notes": "Zone 6 secret — unlock all 6 biomes",
+    "isSecret": true
   },
   {
     "id": "151",
@@ -2111,7 +2261,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "152",
@@ -2125,7 +2276,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "153",
@@ -2139,7 +2291,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "154",
@@ -2153,7 +2306,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "155",
@@ -2167,7 +2321,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "156",
@@ -2181,7 +2336,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "157",
@@ -2195,7 +2351,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "158",
@@ -2209,7 +2366,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Meadow — first hint of fire"
+    "notes": "Same-biome: Meadow — first hint of fire",
+    "isSecret": false
   },
   {
     "id": "159",
@@ -2223,7 +2381,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "160",
@@ -2237,7 +2396,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "161",
@@ -2251,7 +2411,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Meadow"
+    "notes": "Same-biome: Meadow",
+    "isSecret": false
   },
   {
     "id": "162",
@@ -2265,7 +2426,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Meadow — zone apex"
+    "notes": "Same-biome: Meadow — zone apex",
+    "isSecret": false
   },
   {
     "id": "163",
@@ -2279,7 +2441,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "164",
@@ -2293,7 +2456,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "165",
@@ -2307,7 +2471,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "166",
@@ -2321,7 +2486,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "167",
@@ -2335,7 +2501,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "168",
@@ -2349,7 +2516,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "169",
@@ -2363,7 +2531,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "170",
@@ -2377,7 +2546,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "171",
@@ -2391,7 +2561,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "172",
@@ -2405,7 +2576,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "173",
@@ -2419,7 +2591,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Crystal"
+    "notes": "Same-biome: Crystal",
+    "isSecret": false
   },
   {
     "id": "174",
@@ -2433,7 +2606,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Crystal — zone apex"
+    "notes": "Same-biome: Crystal — zone apex",
+    "isSecret": false
   },
   {
     "id": "175",
@@ -2447,7 +2621,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "176",
@@ -2461,7 +2636,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "177",
@@ -2475,7 +2651,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "178",
@@ -2489,7 +2666,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "179",
@@ -2503,7 +2681,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "180",
@@ -2517,7 +2696,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "181",
@@ -2531,7 +2711,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "182",
@@ -2545,7 +2726,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "183",
@@ -2559,7 +2741,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "184",
@@ -2573,7 +2756,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "185",
@@ -2587,7 +2771,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Ember"
+    "notes": "Same-biome: Ember",
+    "isSecret": false
   },
   {
     "id": "186",
@@ -2601,7 +2786,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Ember — zone apex"
+    "notes": "Same-biome: Ember — zone apex",
+    "isSecret": false
   },
   {
     "id": "187",
@@ -2615,7 +2801,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "188",
@@ -2629,7 +2816,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "189",
@@ -2643,7 +2831,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "190",
@@ -2657,7 +2846,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "191",
@@ -2671,7 +2861,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "192",
@@ -2685,7 +2876,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "193",
@@ -2699,7 +2891,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "194",
@@ -2713,7 +2906,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "195",
@@ -2727,7 +2921,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "196",
@@ -2741,7 +2936,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "197",
@@ -2755,7 +2951,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Frost"
+    "notes": "Same-biome: Frost",
+    "isSecret": false
   },
   {
     "id": "198",
@@ -2769,7 +2966,8 @@
     "baseGooPerSec": 50,
     "lore": "Its presence alone elevates the collection around it.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Frost — zone apex"
+    "notes": "Same-biome: Frost — zone apex",
+    "isSecret": false
   },
   {
     "id": "199",
@@ -2783,7 +2981,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "200",
@@ -2797,7 +2996,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "201",
@@ -2811,7 +3011,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "202",
@@ -2825,7 +3026,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "203",
@@ -2839,7 +3041,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "204",
@@ -2853,7 +3056,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "205",
@@ -2867,7 +3071,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "206",
@@ -2881,7 +3086,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "207",
@@ -2895,7 +3101,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "208",
@@ -2909,7 +3116,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Wiggles contentedly in its habitat.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "209",
@@ -2923,7 +3131,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Verdant"
+    "notes": "Same-biome: Verdant",
+    "isSecret": false
   },
   {
     "id": "210",
@@ -2937,7 +3146,8 @@
     "baseGooPerSec": 50,
     "lore": "An extraordinary specimen that defies easy categorization.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Verdant — zone apex"
+    "notes": "Same-biome: Verdant — zone apex",
+    "isSecret": false
   },
   {
     "id": "211",
@@ -2951,7 +3161,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "212",
@@ -2965,7 +3176,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "213",
@@ -2979,7 +3191,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "214",
@@ -2993,7 +3206,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "215",
@@ -3007,7 +3221,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "216",
@@ -3021,7 +3236,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "217",
@@ -3035,7 +3251,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "218",
@@ -3049,7 +3266,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "219",
@@ -3063,7 +3281,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "220",
@@ -3077,7 +3296,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Gooberries",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "221",
@@ -3091,7 +3311,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Same-biome: Starfall"
+    "notes": "Same-biome: Starfall",
+    "isSecret": false
   },
   {
     "id": "222",
@@ -3105,7 +3326,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Same-biome: Starfall — zone apex"
+    "notes": "Same-biome: Starfall — zone apex",
+    "isSecret": false
   },
   {
     "id": "223",
@@ -3119,7 +3341,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "224",
@@ -3133,7 +3356,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "225",
@@ -3147,7 +3371,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "226",
@@ -3161,7 +3386,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "227",
@@ -3175,7 +3401,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "228",
@@ -3189,7 +3416,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "229",
@@ -3203,7 +3431,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "230",
@@ -3217,7 +3446,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "231",
@@ -3231,7 +3461,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "232",
@@ -3245,7 +3476,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "233",
@@ -3259,7 +3491,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "234",
@@ -3273,7 +3506,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "235",
@@ -3287,7 +3521,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "236",
@@ -3301,7 +3536,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "237",
@@ -3315,7 +3551,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "238",
@@ -3329,7 +3566,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "239",
@@ -3343,7 +3581,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "240",
@@ -3357,7 +3596,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "241",
@@ -3371,7 +3611,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "242",
@@ -3385,7 +3626,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Crystal"
+    "notes": "Cross-biome: Meadow x Crystal",
+    "isSecret": false
   },
   {
     "id": "243",
@@ -3399,7 +3641,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "244",
@@ -3413,7 +3656,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "245",
@@ -3427,7 +3671,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "246",
@@ -3441,7 +3686,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "247",
@@ -3455,7 +3701,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "248",
@@ -3469,7 +3716,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "249",
@@ -3483,7 +3731,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "250",
@@ -3497,7 +3746,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "251",
@@ -3511,7 +3761,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "252",
@@ -3525,7 +3776,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "253",
@@ -3539,7 +3791,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "254",
@@ -3553,7 +3806,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "255",
@@ -3567,7 +3821,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "256",
@@ -3581,7 +3836,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "257",
@@ -3595,7 +3851,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "258",
@@ -3609,7 +3866,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "259",
@@ -3623,7 +3881,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "260",
@@ -3637,7 +3896,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "261",
@@ -3651,7 +3911,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "262",
@@ -3665,7 +3926,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Ember"
+    "notes": "Cross-biome: Meadow x Ember",
+    "isSecret": false
   },
   {
     "id": "263",
@@ -3679,7 +3941,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "264",
@@ -3693,7 +3956,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "265",
@@ -3707,7 +3971,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "266",
@@ -3721,7 +3986,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "267",
@@ -3735,7 +4001,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "268",
@@ -3749,7 +4016,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "269",
@@ -3763,7 +4031,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "270",
@@ -3777,7 +4046,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "271",
@@ -3791,7 +4061,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "272",
@@ -3805,7 +4076,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Frost"
+    "notes": "Cross-biome: Meadow x Frost",
+    "isSecret": false
   },
   {
     "id": "273",
@@ -3819,7 +4091,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "274",
@@ -3833,7 +4106,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "275",
@@ -3847,7 +4121,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "276",
@@ -3861,7 +4136,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "277",
@@ -3875,7 +4151,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "278",
@@ -3889,7 +4166,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "279",
@@ -3903,7 +4181,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Produces goo at a steady, reliable pace.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "280",
@@ -3917,7 +4196,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "281",
@@ -3931,7 +4211,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "282",
@@ -3945,7 +4226,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Verdant"
+    "notes": "Cross-biome: Meadow x Verdant",
+    "isSecret": false
   },
   {
     "id": "283",
@@ -3959,7 +4241,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "284",
@@ -3973,7 +4256,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "285",
@@ -3987,7 +4271,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "286",
@@ -4001,7 +4286,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "287",
@@ -4015,7 +4301,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "288",
@@ -4029,7 +4316,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "289",
@@ -4043,7 +4331,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "290",
@@ -4057,7 +4346,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "291",
@@ -4071,7 +4361,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "292",
@@ -4085,7 +4376,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Meadow x Starfall"
+    "notes": "Cross-biome: Meadow x Starfall",
+    "isSecret": false
   },
   {
     "id": "293",
@@ -4099,7 +4391,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "294",
@@ -4113,7 +4406,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "295",
@@ -4127,7 +4421,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "296",
@@ -4141,7 +4436,8 @@
     "baseGooPerSec": 2,
     "lore": "Slightly more complex than its common cousins.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "297",
@@ -4155,7 +4451,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "298",
@@ -4169,7 +4466,8 @@
     "baseGooPerSec": 50,
     "lore": "Its presence alone elevates the collection around it.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "299",
@@ -4183,7 +4481,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "300",
@@ -4197,7 +4496,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "301",
@@ -4211,7 +4511,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "302",
@@ -4225,7 +4526,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Ember"
+    "notes": "Cross-biome: Crystal x Ember",
+    "isSecret": false
   },
   {
     "id": "303",
@@ -4239,7 +4541,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "304",
@@ -4253,7 +4556,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "305",
@@ -4267,7 +4571,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "306",
@@ -4281,7 +4586,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "307",
@@ -4295,7 +4601,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "308",
@@ -4309,7 +4616,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "309",
@@ -4323,7 +4631,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "310",
@@ -4337,7 +4646,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "311",
@@ -4351,7 +4661,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "312",
@@ -4365,7 +4676,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Frost"
+    "notes": "Cross-biome: Crystal x Frost",
+    "isSecret": false
   },
   {
     "id": "313",
@@ -4379,7 +4691,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "314",
@@ -4393,7 +4706,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "315",
@@ -4407,7 +4721,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "316",
@@ -4421,7 +4736,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "317",
@@ -4435,7 +4751,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "318",
@@ -4449,7 +4766,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "319",
@@ -4463,7 +4781,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "320",
@@ -4477,7 +4796,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "321",
@@ -4491,7 +4811,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "322",
@@ -4505,7 +4826,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Verdant"
+    "notes": "Cross-biome: Crystal x Verdant",
+    "isSecret": false
   },
   {
     "id": "323",
@@ -4519,7 +4841,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "324",
@@ -4533,7 +4856,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "325",
@@ -4547,7 +4871,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "326",
@@ -4561,7 +4886,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "327",
@@ -4575,7 +4901,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "328",
@@ -4589,7 +4916,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "329",
@@ -4603,7 +4931,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "330",
@@ -4617,7 +4946,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "331",
@@ -4631,7 +4961,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "332",
@@ -4645,7 +4976,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Crystal x Starfall"
+    "notes": "Cross-biome: Crystal x Starfall",
+    "isSecret": false
   },
   {
     "id": "333",
@@ -4659,7 +4991,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Frost — fire+ice = steam"
+    "notes": "Cross-biome: Ember x Frost — fire+ice = steam",
+    "isSecret": false
   },
   {
     "id": "334",
@@ -4673,7 +5006,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "335",
@@ -4687,7 +5021,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "336",
@@ -4701,7 +5036,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "337",
@@ -4715,7 +5051,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "338",
@@ -4729,7 +5066,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "339",
@@ -4743,7 +5081,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "340",
@@ -4757,7 +5096,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "341",
@@ -4771,7 +5111,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Frost"
+    "notes": "Cross-biome: Ember x Frost",
+    "isSecret": false
   },
   {
     "id": "342",
@@ -4785,7 +5126,8 @@
     "baseGooPerSec": 250,
     "lore": "The stuff of idle-game legend.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Frost — biome apex cross"
+    "notes": "Cross-biome: Ember x Frost — biome apex cross",
+    "isSecret": false
   },
   {
     "id": "343",
@@ -4799,7 +5141,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "344",
@@ -4813,7 +5156,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "345",
@@ -4827,7 +5171,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "346",
@@ -4841,7 +5186,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "347",
@@ -4855,7 +5201,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "348",
@@ -4869,7 +5216,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "349",
@@ -4883,7 +5231,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "350",
@@ -4897,7 +5246,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "351",
@@ -4911,7 +5261,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Ember x Verdant"
+    "notes": "Cross-biome: Ember x Verdant",
+    "isSecret": false
   },
   {
     "id": "352",
@@ -4925,7 +5276,8 @@
     "baseGooPerSec": 250,
     "lore": "The stuff of idle-game legend.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Ember x Verdant — biome apex cross"
+    "notes": "Cross-biome: Ember x Verdant — biome apex cross",
+    "isSecret": false
   },
   {
     "id": "353",
@@ -4939,7 +5291,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "354",
@@ -4953,7 +5306,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "355",
@@ -4967,7 +5321,8 @@
     "baseGooPerSec": 50,
     "lore": "An extraordinary specimen that defies easy categorization.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "356",
@@ -4981,7 +5336,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "357",
@@ -4995,7 +5351,8 @@
     "baseGooPerSec": 2,
     "lore": "Curious and energetic, always exploring its surroundings.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "358",
@@ -5009,7 +5366,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "359",
@@ -5023,7 +5381,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "360",
@@ -5037,7 +5396,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "361",
@@ -5051,7 +5411,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Ember x Starfall"
+    "notes": "Cross-biome: Ember x Starfall",
+    "isSecret": false
   },
   {
     "id": "362",
@@ -5065,7 +5426,8 @@
     "baseGooPerSec": 250,
     "lore": "The stuff of idle-game legend.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Ember x Starfall — biome apex cross"
+    "notes": "Cross-biome: Ember x Starfall — biome apex cross",
+    "isSecret": false
   },
   {
     "id": "363",
@@ -5079,7 +5441,8 @@
     "baseGooPerSec": 2,
     "lore": "Has developed a taste for finer things.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "364",
@@ -5093,7 +5456,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "365",
@@ -5107,7 +5471,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "366",
@@ -5121,7 +5486,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "367",
@@ -5135,7 +5501,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "368",
@@ -5149,7 +5516,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "369",
@@ -5163,7 +5531,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "370",
@@ -5177,7 +5546,8 @@
     "baseGooPerSec": 50,
     "lore": "An extraordinary specimen that defies easy categorization.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "371",
@@ -5191,7 +5561,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Frost x Verdant"
+    "notes": "Cross-biome: Frost x Verdant",
+    "isSecret": false
   },
   {
     "id": "372",
@@ -5205,7 +5576,8 @@
     "baseGooPerSec": 250,
     "lore": "The stuff of idle-game legend.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Frost x Verdant — biome apex cross"
+    "notes": "Cross-biome: Frost x Verdant — biome apex cross",
+    "isSecret": false
   },
   {
     "id": "373",
@@ -5219,7 +5591,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "374",
@@ -5233,7 +5606,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "375",
@@ -5247,7 +5621,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "376",
@@ -5261,7 +5636,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "377",
@@ -5275,7 +5651,8 @@
     "baseGooPerSec": 10,
     "lore": "A prized addition to any serious collection.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "378",
@@ -5289,7 +5666,8 @@
     "baseGooPerSec": 50,
     "lore": "Its presence alone elevates the collection around it.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "379",
@@ -5303,7 +5681,8 @@
     "baseGooPerSec": 2,
     "lore": "A notch above ordinary — worth getting to know.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "380",
@@ -5317,7 +5696,8 @@
     "baseGooPerSec": 2,
     "lore": "A step above the ordinary — this slime has developed a personality.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "381",
@@ -5331,7 +5711,8 @@
     "baseGooPerSec": 50,
     "lore": "Legends speak of this slime in hushed tones.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Frost x Starfall"
+    "notes": "Cross-biome: Frost x Starfall",
+    "isSecret": false
   },
   {
     "id": "382",
@@ -5345,7 +5726,8 @@
     "baseGooPerSec": 250,
     "lore": "The stuff of idle-game legend.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Frost x Starfall — biome apex cross"
+    "notes": "Cross-biome: Frost x Starfall — biome apex cross",
+    "isSecret": false
   },
   {
     "id": "383",
@@ -5359,7 +5741,8 @@
     "baseGooPerSec": 10,
     "lore": "Few have seen this slime in the wild.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "384",
@@ -5373,7 +5756,8 @@
     "baseGooPerSec": 10,
     "lore": "Radiates an unusual energy that sets it apart.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "385",
@@ -5387,7 +5771,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "386",
@@ -5401,7 +5786,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "387",
@@ -5415,7 +5801,8 @@
     "baseGooPerSec": 50,
     "lore": "The result of forces not fully understood.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "388",
@@ -5429,7 +5816,8 @@
     "baseGooPerSec": 50,
     "lore": "Its presence alone elevates the collection around it.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "389",
@@ -5443,7 +5831,8 @@
     "baseGooPerSec": 50,
     "lore": "Something ancient stirs within this slime.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "390",
@@ -5457,7 +5846,8 @@
     "baseGooPerSec": 10,
     "lore": "Rarely seen, but unmistakable when encountered.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "391",
@@ -5471,7 +5861,8 @@
     "baseGooPerSec": 10,
     "lore": "Something special about this one — hard to explain, easy to feel.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Cross-biome: Verdant x Starfall"
+    "notes": "Cross-biome: Verdant x Starfall",
+    "isSecret": false
   },
   {
     "id": "392",
@@ -5485,7 +5876,8 @@
     "baseGooPerSec": 250,
     "lore": "The stuff of idle-game legend.",
     "favoriteFood": "Gooberries",
-    "notes": "Cross-biome: Verdant x Starfall — biome apex cross"
+    "notes": "Cross-biome: Verdant x Starfall — biome apex cross",
+    "isSecret": false
   },
   {
     "id": "393",
@@ -5499,7 +5891,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "394",
@@ -5513,7 +5906,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "395",
@@ -5527,7 +5921,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "396",
@@ -5541,7 +5936,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "397",
@@ -5555,7 +5951,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "398",
@@ -5569,7 +5966,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "399",
@@ -5583,7 +5981,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "400",
@@ -5597,7 +5996,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "401",
@@ -5611,7 +6011,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "402",
@@ -5625,7 +6026,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "403",
@@ -5639,7 +6041,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "404",
@@ -5653,7 +6056,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "405",
@@ -5667,7 +6071,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "406",
@@ -5681,7 +6086,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "407",
@@ -5695,7 +6101,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "408",
@@ -5709,7 +6116,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "409",
@@ -5723,7 +6131,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "410",
@@ -5737,7 +6146,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "411",
@@ -5751,7 +6161,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "412",
@@ -5765,7 +6176,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — Gen 2",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — Gen 2"
+    "notes": "Chain Breed — Gen 2",
+    "isSecret": false
   },
   {
     "id": "413",
@@ -5779,7 +6191,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "414",
@@ -5793,7 +6206,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "415",
@@ -5807,7 +6221,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "416",
@@ -5821,7 +6236,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "417",
@@ -5835,7 +6251,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "418",
@@ -5849,7 +6266,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "419",
@@ -5863,7 +6281,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "420",
@@ -5877,7 +6296,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "421",
@@ -5891,7 +6311,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "422",
@@ -5905,7 +6326,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two same-biome — zone 5 pinnacle",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two same-biome — zone 5 pinnacle"
+    "notes": "Chain Breed — two same-biome — zone 5 pinnacle",
+    "isSecret": false
   },
   {
     "id": "423",
@@ -5919,7 +6341,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "424",
@@ -5933,7 +6356,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two same-biome — zone 6 pinnacle",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two same-biome — zone 6 pinnacle"
+    "notes": "Chain Breed — two same-biome — zone 6 pinnacle",
+    "isSecret": false
   },
   {
     "id": "425",
@@ -5947,7 +6371,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "426",
@@ -5961,7 +6386,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "427",
@@ -5975,7 +6401,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "428",
@@ -5989,7 +6416,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "429",
@@ -6003,7 +6431,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "430",
@@ -6017,7 +6446,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "431",
@@ -6031,7 +6461,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "432",
@@ -6045,7 +6476,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two same-biome",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two same-biome"
+    "notes": "Chain Breed — two same-biome",
+    "isSecret": false
   },
   {
     "id": "433",
@@ -6059,7 +6491,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "434",
@@ -6073,7 +6506,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "435",
@@ -6087,7 +6521,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "436",
@@ -6101,7 +6536,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "437",
@@ -6115,7 +6551,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "438",
@@ -6129,7 +6566,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "439",
@@ -6143,7 +6581,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "440",
@@ -6157,7 +6596,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "441",
@@ -6171,7 +6611,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "442",
@@ -6185,7 +6626,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "443",
@@ -6199,7 +6641,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "444",
@@ -6213,7 +6656,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "445",
@@ -6227,7 +6671,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "446",
@@ -6241,7 +6686,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "447",
@@ -6255,7 +6701,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "448",
@@ -6269,7 +6716,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "449",
@@ -6283,7 +6731,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "450",
@@ -6297,7 +6746,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "451",
@@ -6311,7 +6761,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "452",
@@ -6325,7 +6776,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — cross-biome + zone",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — cross-biome + zone"
+    "notes": "Chain Breed — cross-biome + zone",
+    "isSecret": false
   },
   {
     "id": "453",
@@ -6339,7 +6791,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "454",
@@ -6353,7 +6806,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "455",
@@ -6367,7 +6821,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "456",
@@ -6381,7 +6836,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "457",
@@ -6395,7 +6851,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "458",
@@ -6409,7 +6866,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "459",
@@ -6423,7 +6881,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "460",
@@ -6437,7 +6896,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "461",
@@ -6451,7 +6911,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "462",
@@ -6465,7 +6926,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "463",
@@ -6479,7 +6941,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "464",
@@ -6493,7 +6956,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "465",
@@ -6507,7 +6971,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "466",
@@ -6521,7 +6986,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "467",
@@ -6535,7 +7001,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "468",
@@ -6549,7 +7016,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "469",
@@ -6563,7 +7031,8 @@
     "baseGooPerSec": 10,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Meadow Dew",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "470",
@@ -6577,7 +7046,8 @@
     "baseGooPerSec": 50,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "471",
@@ -6591,7 +7061,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Petal Cakes",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "472",
@@ -6605,7 +7076,8 @@
     "baseGooPerSec": 250,
     "lore": "Chain Breed — two cross-biome tier 1",
     "favoriteFood": "Gooberries",
-    "notes": "Chain Breed — two cross-biome tier 1"
+    "notes": "Chain Breed — two cross-biome tier 1",
+    "isSecret": false
   },
   {
     "id": "473",
@@ -6619,7 +7091,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Meadow Dew",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "474",
@@ -6633,7 +7106,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "475",
@@ -6647,7 +7121,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Petal Cakes",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "476",
@@ -6661,7 +7136,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Gooberries",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "477",
@@ -6675,7 +7151,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Meadow Dew",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "478",
@@ -6689,7 +7166,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "479",
@@ -6703,7 +7181,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Petal Cakes",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "480",
@@ -6717,7 +7196,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Gooberries",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "481",
@@ -6731,7 +7211,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Meadow Dew",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "482",
@@ -6745,7 +7226,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "483",
@@ -6759,7 +7241,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Petal Cakes",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "484",
@@ -6773,7 +7256,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Gooberries",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "485",
@@ -6787,7 +7271,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Meadow Dew",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "486",
@@ -6801,7 +7286,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "487",
@@ -6815,7 +7301,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Petal Cakes",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "488",
@@ -6829,7 +7316,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Gooberries",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "489",
@@ -6843,7 +7331,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Meadow Dew",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "490",
@@ -6857,7 +7346,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "491",
@@ -6871,7 +7361,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Petal Cakes",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "492",
@@ -6885,7 +7376,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Gooberries",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "493",
@@ -6899,7 +7391,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Meadow Dew",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "494",
@@ -6913,7 +7406,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "495",
@@ -6927,7 +7421,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Petal Cakes",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "496",
@@ -6941,7 +7436,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Gooberries",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "497",
@@ -6955,7 +7451,8 @@
     "baseGooPerSec": 250,
     "lore": "Deep Chain — Gen 3+",
     "favoriteFood": "Meadow Dew",
-    "notes": "Deep Chain — Gen 3+"
+    "notes": "Deep Chain — Gen 3+",
+    "isSecret": false
   },
   {
     "id": "498",
@@ -6969,7 +7466,8 @@
     "baseGooPerSec": 2000,
     "lore": "Some say it dreamed the world into existence. Others say it just drips goo.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Mythic chain — requires zone 6 apex"
+    "notes": "Mythic chain — requires zone 6 apex",
+    "isSecret": false
   },
   {
     "id": "499",
@@ -6983,7 +7481,8 @@
     "baseGooPerSec": 2000,
     "lore": "The final frontier of slime discovery.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Mythic chain — fire pinnacle"
+    "notes": "Mythic chain — fire pinnacle",
+    "isSecret": false
   },
   {
     "id": "500",
@@ -6997,7 +7496,8 @@
     "baseGooPerSec": 2000,
     "lore": "Beyond classification. Beyond comprehension. Beyond goo.",
     "favoriteFood": "Gooberries",
-    "notes": "Mythic — ID 500 milestone"
+    "notes": "Mythic — ID 500 milestone",
+    "isSecret": false
   },
   {
     "id": "501",
@@ -7011,7 +7511,8 @@
     "baseGooPerSec": 2000,
     "lore": "The universe itself seems to pause when this slime is present.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Mythic chain"
+    "notes": "Mythic chain",
+    "isSecret": false
   },
   {
     "id": "502",
@@ -7025,7 +7526,8 @@
     "baseGooPerSec": 2000,
     "lore": "A mythic entity that transcends the ordinary laws of slime.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Mythic chain — oldest and newest"
+    "notes": "Mythic chain — oldest and newest",
+    "isSecret": false
   },
   {
     "id": "503",
@@ -7039,7 +7541,8 @@
     "baseGooPerSec": 2000,
     "lore": "Some say it dreamed the world into existence. Others say it just drips goo.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Mythic chain — requires 498"
+    "notes": "Mythic chain — requires 498",
+    "isSecret": false
   },
   {
     "id": "504",
@@ -7053,7 +7556,8 @@
     "baseGooPerSec": 2000,
     "lore": "The final frontier of slime discovery.",
     "favoriteFood": "Gooberries",
-    "notes": "Mythic chain — requires 500+501"
+    "notes": "Mythic chain — requires 500+501",
+    "isSecret": false
   },
   {
     "id": "505",
@@ -7067,7 +7571,8 @@
     "baseGooPerSec": 2000,
     "lore": "Beyond classification. Beyond comprehension. Beyond goo.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Mythic chain"
+    "notes": "Mythic chain",
+    "isSecret": false
   },
   {
     "id": "506",
@@ -7081,7 +7586,8 @@
     "baseGooPerSec": 2000,
     "lore": "The universe itself seems to pause when this slime is present.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Mythic chain"
+    "notes": "Mythic chain",
+    "isSecret": false
   },
   {
     "id": "507",
@@ -7095,7 +7601,8 @@
     "baseGooPerSec": 2000,
     "lore": "A mythic entity that transcends the ordinary laws of slime.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Mythic chain — harmony of sound and stars"
+    "notes": "Mythic chain — harmony of sound and stars",
+    "isSecret": false
   },
   {
     "id": "508",
@@ -7109,7 +7616,8 @@
     "baseGooPerSec": 2000,
     "lore": "Some say it dreamed the world into existence. Others say it just drips goo.",
     "favoriteFood": "Gooberries",
-    "notes": "Mythic chain — the cycle"
+    "notes": "Mythic chain — the cycle",
+    "isSecret": false
   },
   {
     "id": "509",
@@ -7123,7 +7631,8 @@
     "baseGooPerSec": 2000,
     "lore": "The final frontier of slime discovery.",
     "favoriteFood": "Meadow Dew",
-    "notes": "Mythic chain — requires 505+506"
+    "notes": "Mythic chain — requires 505+506",
+    "isSecret": false
   },
   {
     "id": "510",
@@ -7137,7 +7646,8 @@
     "baseGooPerSec": 2000,
     "lore": "Beyond classification. Beyond comprehension. Beyond goo.",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Mythic chain — requires 504+502"
+    "notes": "Mythic chain — requires 504+502",
+    "isSecret": false
   },
   {
     "id": "511",
@@ -7151,7 +7661,8 @@
     "baseGooPerSec": 2000,
     "lore": "The universe itself seems to pause when this slime is present.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Mythic chain — visible from anywhere"
+    "notes": "Mythic chain — visible from anywhere",
+    "isSecret": false
   },
   {
     "id": "512",
@@ -7165,7 +7676,8 @@
     "baseGooPerSec": 2000,
     "lore": "A mythic entity that transcends the ordinary laws of slime.",
     "favoriteFood": "Gooberries",
-    "notes": "Mythic pinnacle — final breed in the game"
+    "notes": "Mythic pinnacle — final breed in the game",
+    "isSecret": false
   },
   {
     "id": "513",
@@ -7179,7 +7691,8 @@
     "baseGooPerSec": 0.5,
     "lore": "Failed breed result — incompatible parents produce this",
     "favoriteFood": "Meadow Dew",
-    "notes": "Failed breed result — incompatible parents produce this"
+    "notes": "Failed breed result — incompatible parents produce this",
+    "isSecret": false
   },
   {
     "id": "514",
@@ -7193,7 +7706,8 @@
     "baseGooPerSec": 10,
     "lore": "Breed a slime with the result of breeding that slime — self-reflective chain",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Breed a slime with the result of breeding that slime — self-reflective chain"
+    "notes": "Breed a slime with the result of breeding that slime — self-reflective chain",
+    "isSecret": false
   },
   {
     "id": "515",
@@ -7207,7 +7721,8 @@
     "baseGooPerSec": 50,
     "lore": "Tap the main blob exactly 999 times without spending any Goo",
     "favoriteFood": "Petal Cakes",
-    "notes": "Tap the main blob exactly 999 times without spending any Goo"
+    "notes": "Tap the main blob exactly 999 times without spending any Goo",
+    "isSecret": false
   },
   {
     "id": "516",
@@ -7221,7 +7736,8 @@
     "baseGooPerSec": 10,
     "lore": "0.1% chance to appear on any successful breed",
     "favoriteFood": "Gooberries",
-    "notes": "0.1% chance to appear on any successful breed"
+    "notes": "0.1% chance to appear on any successful breed",
+    "isSecret": false
   },
   {
     "id": "517",
@@ -7235,7 +7751,8 @@
     "baseGooPerSec": 2,
     "lore": "Triggered by having 100+ slimes in collection simultaneously",
     "favoriteFood": "Meadow Dew",
-    "notes": "Triggered by having 100+ slimes in collection simultaneously"
+    "notes": "Triggered by having 100+ slimes in collection simultaneously",
+    "isSecret": false
   },
   {
     "id": "518",
@@ -7249,7 +7766,8 @@
     "baseGooPerSec": 2,
     "lore": "Triggered when any slime reaches level 10 for the first time",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Triggered when any slime reaches level 10 for the first time"
+    "notes": "Triggered when any slime reaches level 10 for the first time",
+    "isSecret": false
   },
   {
     "id": "519",
@@ -7263,7 +7781,8 @@
     "baseGooPerSec": 10,
     "lore": "A single slime remains at max level for 24 real-world hours",
     "favoriteFood": "Petal Cakes",
-    "notes": "A single slime remains at max level for 24 real-world hours"
+    "notes": "A single slime remains at max level for 24 real-world hours",
+    "isSecret": false
   },
   {
     "id": "520",
@@ -7277,7 +7796,8 @@
     "baseGooPerSec": 50,
     "lore": "Discovered in Frostmere — breed any two slimes after midnight local time",
     "favoriteFood": "Gooberries",
-    "notes": "Discovered in Frostmere — breed any two slimes after midnight local time"
+    "notes": "Discovered in Frostmere — breed any two slimes after midnight local time",
+    "isSecret": false
   },
   {
     "id": "521",
@@ -7291,7 +7811,8 @@
     "baseGooPerSec": 10,
     "lore": "Tap the same slime 50 consecutive times without tapping anything else",
     "favoriteFood": "Meadow Dew",
-    "notes": "Tap the same slime 50 consecutive times without tapping anything else"
+    "notes": "Tap the same slime 50 consecutive times without tapping anything else",
+    "isSecret": false
   },
   {
     "id": "522",
@@ -7305,7 +7826,8 @@
     "baseGooPerSec": 50,
     "lore": "Unlock all 25 Zone 3 slimes (all of Ember Wastes)",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Unlock all 25 Zone 3 slimes (all of Ember Wastes)"
+    "notes": "Unlock all 25 Zone 3 slimes (all of Ember Wastes)",
+    "isSecret": false
   },
   {
     "id": "523",
@@ -7319,7 +7841,8 @@
     "baseGooPerSec": 50,
     "lore": "Unlock all 25 Zone 4 slimes (all of Frostmere)",
     "favoriteFood": "Petal Cakes",
-    "notes": "Unlock all 25 Zone 4 slimes (all of Frostmere)"
+    "notes": "Unlock all 25 Zone 4 slimes (all of Frostmere)",
+    "isSecret": false
   },
   {
     "id": "524",
@@ -7333,7 +7856,8 @@
     "baseGooPerSec": 250,
     "lore": "Complete 100 total successful breed operations",
     "favoriteFood": "Gooberries",
-    "notes": "Complete 100 total successful breed operations"
+    "notes": "Complete 100 total successful breed operations",
+    "isSecret": false
   },
   {
     "id": "525",
@@ -7347,7 +7871,8 @@
     "baseGooPerSec": 10,
     "lore": "Breed any slime with a Mudslime",
     "favoriteFood": "Meadow Dew",
-    "notes": "Breed any slime with a Mudslime"
+    "notes": "Breed any slime with a Mudslime",
+    "isSecret": false
   },
   {
     "id": "526",
@@ -7361,7 +7886,8 @@
     "baseGooPerSec": 2000,
     "lore": "Collect all 6 zone apex Epics: Meadow Crown + Sapphire Heart + Hellfire + Frostbite Sovereign + Jungle Sovereign + Cosmic Singularity",
     "favoriteFood": "Clover Sprigs",
-    "notes": "Collect all 6 zone apex Epics: Meadow Crown + Sapphire Heart + Hellfire + Frostbite Sovereign + Jungle Sovereign + Cosmic Singularity"
+    "notes": "Collect all 6 zone apex Epics: Meadow Crown + Sapphire Heart + Hellfire + Frostbite Sovereign + Jungle Sovereign + Cosmic Singularity",
+    "isSecret": false
   },
   {
     "id": "527",
@@ -7375,6 +7901,7 @@
     "baseGooPerSec": 2000,
     "lore": "Complete the Slimepedia — collect all 526 other slimes. This is the true ending.",
     "favoriteFood": "Petal Cakes",
-    "notes": "Complete the Slimepedia — collect all 526 other slimes. This is the true ending."
+    "notes": "Complete the Slimepedia — collect all 526 other slimes. This is the true ending.",
+    "isSecret": false
   }
 ]

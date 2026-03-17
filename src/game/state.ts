@@ -18,6 +18,8 @@ export interface SlimeDefinition {
   lore: string
   favoriteFood: string
   notes: string
+  /** True for zone-secret slimes that should not appear in the normal summon pool. */
+  isSecret: boolean
 }
 
 export interface OwnedSlime {
@@ -38,65 +40,72 @@ export interface BreedSlot {
   resultId: SlimeId | null  // set when breed completes, cleared on collect
 }
 
-export interface GameState {
-  // Currencies
-  goo: number
-  essence: number
-  prismShards: number
-
-  // Zones
-  unlockedZones: ZoneId[]
-  activeZone: ZoneId
-
-  // Collection — keyed by slime ID
-  collection: Record<SlimeId, OwnedSlime>
-
-  // Upgrades
-  tapPowerLevel: number
-  outputLevel: number
-  discoveryLevel: number
-
-  // Breed slots
-  breedSlots: BreedSlot[]
-
-  // Tap tracking
-  tapCount: number          // total taps ever
-  tapsSinceSpend: number    // for Glitch Slime (999 taps without spending)
-  consecutiveTapTarget: SlimeId | null  // for Curious Slime
-  consecutiveTapCount: number
-
-  // Meta
-  totalBreeds: number
-  totalDiscoveries: number
-  lastSaveTime: number
-  firstPlayTime: number
-
-  // Pity system per zone
-  summonsSinceNew: Record<ZoneId, number>
-
-  // Zone summon counts per zone (for tracking)
-  zoneDiscoveries: Record<ZoneId, number>
-
-  // Special trigger tracking
-  maxLevelEverReached: boolean
-  maxLevelSlimeId: SlimeId | null
-  maxLevelReachedAt: number | null
-  glitchSlimeUnlocked: boolean
-  oversizedSlimeUnlocked: boolean
-  miniatureSlimeUnlocked: boolean
-  slimeKingUnlocked: boolean
-  slimeQueenUnlocked: boolean
-  ancientSlimeUnlocked: boolean
-  cosmicJesterUnlocked: boolean
-  primordialGooUnlocked: boolean
-  trueFormUnlocked: boolean
-
-  // Settings
+/** Player-facing accessibility and audio settings, grouped for clarity. */
+export interface GameSettings {
   sfxEnabled: boolean
   musicEnabled: boolean
   reduceMotion: boolean
   highContrast: boolean
   largeText: boolean
+}
+
+export interface GameState {
+  // ---- Currencies ----
+  goo: number
+  essence: number
+  prismShards: number
+
+  // ---- Zones ----
+  unlockedZones: ZoneId[]
+  activeZone: ZoneId
+
+  // ---- Collection — keyed by slime ID ----
+  collection: Record<SlimeId, OwnedSlime>
+
+  // ---- Upgrades ----
+  tapPowerLevel: number
+  outputLevel: number
+  discoveryLevel: number
+
+  // ---- Breed slots ----
+  breedSlots: BreedSlot[]
+
+  // ---- Tap tracking ----
+  tapCount: number          // total taps ever
+  tapsSinceSpend: number    // for Glitch Slime (999 taps without spending)
+  consecutiveTapTarget: SlimeId | null  // for Curious Slime
+  consecutiveTapCount: number
+
+  // ---- Meta ----
+  totalBreeds: number
+  totalDiscoveries: number
+  lastSaveTime: number
+  firstPlayTime: number
+
+  // ---- Pity system per zone ----
+  summonsSinceNew: Record<ZoneId, number>
+
+  // ---- Zone summon counts (for tracking) ----
+  zoneDiscoveries: Record<ZoneId, number>
+
+  // ---- Special trigger tracking ----
+  /**
+   * Set of special slime IDs (513–527) that have been unlocked.
+   * Replaces the previous individual boolean flags.
+   * Serialized as a string[] in save data and reconstructed on load.
+   */
+  unlockedSpecials: Set<SlimeId>
+
+  /**
+   * Metadata needed by specific special triggers.
+   * Kept as top-level fields because they are referenced by multiple systems.
+   */
+  maxLevelEverReached: boolean
+  maxLevelSlimeId: SlimeId | null
+  maxLevelReachedAt: number | null
+
+  // ---- Settings ----
+  settings: GameSettings
 }
 
 // ---- Reactive Store ----
@@ -128,7 +137,7 @@ function notify(): void {
   }
 }
 
-// Batch multiple updates without intermediate notifications
+/** Batch multiple state mutations into a single notification. */
 export function batch(fn: () => void): void {
   fn()
   notify()
@@ -149,9 +158,9 @@ export function createNewGame(): GameState {
     discoveryLevel: 0,
     breedSlots: [
       { id: 0, locked: false, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
-      { id: 1, locked: true, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
-      { id: 2, locked: true, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
-      { id: 3, locked: true, parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
+      { id: 1, locked: true,  parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
+      { id: 2, locked: true,  parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
+      { id: 3, locked: true,  parent1: null, parent2: null, startTime: null, cooldownMs: 45000, resultId: null },
     ],
     tapCount: 0,
     tapsSinceSpend: 0,
@@ -163,22 +172,16 @@ export function createNewGame(): GameState {
     firstPlayTime: Date.now(),
     summonsSinceNew: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     zoneDiscoveries: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+    unlockedSpecials: new Set(),
     maxLevelEverReached: false,
     maxLevelSlimeId: null,
     maxLevelReachedAt: null,
-    glitchSlimeUnlocked: false,
-    oversizedSlimeUnlocked: false,
-    miniatureSlimeUnlocked: false,
-    slimeKingUnlocked: false,
-    slimeQueenUnlocked: false,
-    ancientSlimeUnlocked: false,
-    cosmicJesterUnlocked: false,
-    primordialGooUnlocked: false,
-    trueFormUnlocked: false,
-    sfxEnabled: true,
-    musicEnabled: false,
-    reduceMotion: false,
-    highContrast: false,
-    largeText: false,
+    settings: {
+      sfxEnabled: true,
+      musicEnabled: false,
+      reduceMotion: false,
+      highContrast: false,
+      largeText: false,
+    },
   }
 }

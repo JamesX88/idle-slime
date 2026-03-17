@@ -23,12 +23,13 @@ export function getZoneSlimes(zone: number): SlimeDefinition[] {
 }
 
 export function getSummonableSlimes(zone: number): SlimeDefinition[] {
-  // Only Common, Uncommon, Rare zone slimes are summonable (not secrets)
+  // Only Common, Uncommon, Rare zone slimes are summonable (not secrets).
+  // Uses the dedicated isSecret boolean set by the build script — no string parsing at runtime.
   return _slimes.filter(s =>
     s.zone === zone &&
     s.discovery === 'Zone' &&
     ['Common', 'Uncommon', 'Rare'].includes(s.rarity) &&
-    !s.notes.toLowerCase().includes('secret')
+    !s.isSecret
   )
 }
 

@@ -140,32 +140,32 @@ export function buildSettingsScreen(container: HTMLElement): void {
   const contrastToggle = container.querySelector('#contrast-toggle') as HTMLInputElement
   const textToggle = container.querySelector('#text-toggle') as HTMLInputElement
 
-  sfxToggle.checked = state.sfxEnabled
-  musicToggle.checked = state.musicEnabled
-  motionToggle.checked = state.reduceMotion
-  contrastToggle.checked = state.highContrast
-  textToggle.checked = state.largeText
+  sfxToggle.checked = state.settings.sfxEnabled
+  musicToggle.checked = state.settings.musicEnabled
+  motionToggle.checked = state.settings.reduceMotion
+  contrastToggle.checked = state.settings.highContrast
+  textToggle.checked = state.settings.largeText
 
   sfxToggle.addEventListener('change', () => {
-    setState(s => { s.sfxEnabled = sfxToggle.checked })
+    setState(s => { s.settings.sfxEnabled = sfxToggle.checked })
   })
 
   musicToggle.addEventListener('change', () => {
-    setState(s => { s.musicEnabled = musicToggle.checked })
+    setState(s => { s.settings.musicEnabled = musicToggle.checked })
   })
 
   motionToggle.addEventListener('change', () => {
-    setState(s => { s.reduceMotion = motionToggle.checked })
+    setState(s => { s.settings.reduceMotion = motionToggle.checked })
     document.body.classList.toggle('reduce-motion', motionToggle.checked)
   })
 
   contrastToggle.addEventListener('change', () => {
-    setState(s => { s.highContrast = contrastToggle.checked })
+    setState(s => { s.settings.highContrast = contrastToggle.checked })
     document.body.classList.toggle('high-contrast', contrastToggle.checked)
   })
 
   textToggle.addEventListener('change', () => {
-    setState(s => { s.largeText = textToggle.checked })
+    setState(s => { s.settings.largeText = textToggle.checked })
     document.body.classList.toggle('large-text', textToggle.checked)
   })
 

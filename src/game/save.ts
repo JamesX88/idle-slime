@@ -5,7 +5,9 @@ import { computeTotalProduction } from './economy'
 import { SAVE_KEY, GAME_VERSION, OFFLINE_CAP_HOURS } from '../data/config'
 
 // ---- Schema version — bump this whenever the save shape changes ----
-const SCHEMA_VERSION = 2
+// v2 → v3: replaced individual special booleans with unlockedSpecials Set;
+//           grouped settings into a settings sub-object.
+const SCHEMA_VERSION = 3
 
 // Old save keys from previous codebase versions — always wipe these
 const LEGACY_KEYS = [
@@ -151,38 +153,64 @@ function isValidState(state: any): state is GameState {
 function serializeState(state: GameState): object {
   return {
     ...state,
-    unlockedZones: state.unlockedZones,
-    collection: state.collection,
-    breedSlots: state.breedSlots,
+    // Convert Set → Array for JSON serialization
+    unlockedSpecials: Array.from(state.unlockedSpecials),
+    // settings is a plain object — spreads cleanly
   }
 }
 
 function deserializeState(raw: any): GameState {
   const defaults = createNewGame()
 
+  // Migrate v2 individual boolean flags → unlockedSpecials Set
+  const migratedSpecials = new Set<string>(
+    Array.isArray(raw.unlockedSpecials) ? raw.unlockedSpecials : []
+  )
+  if (raw.glitchSlimeUnlocked)      migratedSpecials.add('515')
+  if (raw.oversizedSlimeUnlocked)   migratedSpecials.add('517')
+  if (raw.miniatureSlimeUnlocked)   migratedSpecials.add('518')
+  if (raw.slimeKingUnlocked)        migratedSpecials.add('522')
+  if (raw.slimeQueenUnlocked)       migratedSpecials.add('523')
+  if (raw.ancientSlimeUnlocked)     migratedSpecials.add('524')
+  if (raw.cosmicJesterUnlocked)     migratedSpecials.add('525')
+  if (raw.primordialGooUnlocked)    migratedSpecials.add('526')
+  if (raw.trueFormUnlocked)         migratedSpecials.add('527')
+
+  // Migrate flat settings fields → settings sub-object
+  const migratedSettings = {
+    sfxEnabled:   raw.settings?.sfxEnabled   ?? raw.sfxEnabled   ?? true,
+    musicEnabled: raw.settings?.musicEnabled ?? raw.musicEnabled ?? false,
+    reduceMotion: raw.settings?.reduceMotion ?? raw.reduceMotion ?? false,
+    highContrast: raw.settings?.highContrast ?? raw.highContrast ?? false,
+    largeText:    raw.settings?.largeText    ?? raw.largeText    ?? false,
+  }
+
   const state: GameState = {
     ...defaults,
     ...raw,
     // Ensure arrays/objects are correct types
     unlockedZones: Array.isArray(raw.unlockedZones) ? raw.unlockedZones : [1],
-    collection: raw.collection && typeof raw.collection === 'object' && !Array.isArray(raw.collection)
+    collection: (raw.collection && typeof raw.collection === 'object' && !Array.isArray(raw.collection))
       ? raw.collection
       : {},
     breedSlots: Array.isArray(raw.breedSlots) ? raw.breedSlots : defaults.breedSlots,
-    summonsSinceNew: raw.summonsSinceNew && typeof raw.summonsSinceNew === 'object'
+    summonsSinceNew: (raw.summonsSinceNew && typeof raw.summonsSinceNew === 'object')
       ? raw.summonsSinceNew
       : { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
-    zoneDiscoveries: raw.zoneDiscoveries && typeof raw.zoneDiscoveries === 'object'
+    zoneDiscoveries: (raw.zoneDiscoveries && typeof raw.zoneDiscoveries === 'object')
       ? raw.zoneDiscoveries
       : { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     // Numeric fields — fall back to defaults if wrong type
-    goo: typeof raw.goo === 'number' ? raw.goo : defaults.goo,
-    essence: typeof raw.essence === 'number' ? raw.essence : defaults.essence,
-    prismShards: typeof raw.prismShards === 'number' ? raw.prismShards : defaults.prismShards,
+    goo:           typeof raw.goo           === 'number' ? raw.goo           : defaults.goo,
+    essence:       typeof raw.essence       === 'number' ? raw.essence       : defaults.essence,
+    prismShards:   typeof raw.prismShards   === 'number' ? raw.prismShards   : defaults.prismShards,
     tapPowerLevel: typeof raw.tapPowerLevel === 'number' ? raw.tapPowerLevel : defaults.tapPowerLevel,
-    outputLevel: typeof raw.outputLevel === 'number' ? raw.outputLevel : defaults.outputLevel,
-    discoveryLevel: typeof raw.discoveryLevel === 'number' ? raw.discoveryLevel : defaults.discoveryLevel,
-    activeZone: typeof raw.activeZone === 'number' ? raw.activeZone : defaults.activeZone,
+    outputLevel:   typeof raw.outputLevel   === 'number' ? raw.outputLevel   : defaults.outputLevel,
+    discoveryLevel:typeof raw.discoveryLevel=== 'number' ? raw.discoveryLevel: defaults.discoveryLevel,
+    activeZone:    typeof raw.activeZone    === 'number' ? raw.activeZone    : defaults.activeZone,
+    // Migrated fields
+    unlockedSpecials: migratedSpecials,
+    settings: migratedSettings,
   }
 
   // Ensure breed slots have all required fields

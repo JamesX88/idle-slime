@@ -1,6 +1,8 @@
-// Breed Lab screen
-import { getState, setState, subscribe } from '../../game/state'
-import type { SlimeId } from '../../game/state'
+// Breed Lab screen — NO subscribe() to prevent 100ms re-render thrash
+// Slots are rebuilt only when slot state changes (structural diff).
+// Timer countdowns use a rAF loop that only patches text nodes.
+import { getState, setState } from '../../game/state'
+import type { SlimeId, BreedSlot } from '../../game/state'
 import { getSlime, rarityColor, slimeEmoji, formatTime } from '../../game/slimes'
 import { startBreed, collectBreedResult } from '../../game/breeds'
 import { navigateBack } from '../router'
@@ -16,6 +18,14 @@ interface RecentBreed {
 const recentBreeds: RecentBreed[] = []
 const MAX_RECENT = 5
 
+// Per-slot pending parent selections (persists across renders)
+const pendingParents: Record<number, { p1: SlimeId | null; p2: SlimeId | null }> = {}
+
+// Last-rendered slot snapshot for structural diffing
+let _lastSlotHash = ''
+let _rafId: number | null = null
+let _isActive = false
+
 export function buildBreedLabScreen(container: HTMLElement): void {
   container.innerHTML = `
     <div class="screen-header">
@@ -25,13 +35,18 @@ export function buildBreedLabScreen(container: HTMLElement): void {
     <div class="scroll-content" id="breed-content"></div>
   `
 
-  container.querySelector('#breed-back')!.addEventListener('click', () => navigateBack())
+  container.querySelector('#breed-back')!.addEventListener('click', () => {
+    navigateBack()
+    _isActive = false
+  })
 
-  // Event delegation on breed content
+  // Event delegation on breed content — never re-attached
   const content = container.querySelector('#breed-content')!
   content.addEventListener('click', (e) => {
     const target = (e.target as HTMLElement).closest('button') as HTMLButtonElement | null
-    if (!target || target.disabled) return
+    if (!target) return
+    // Check data-disabled instead of HTML disabled attribute
+    if (target.dataset.disabled === 'true') return
 
     const action = target.dataset.action
     const slotId = parseInt(target.dataset.slot ?? '-1')
@@ -46,25 +61,43 @@ export function buildBreedLabScreen(container: HTMLElement): void {
     }
   })
 
+  // Activate on screen-change, deactivate when leaving
   window.addEventListener('screen-change', (e: Event) => {
     const detail = (e as CustomEvent).detail
-    if (detail.screen === 'breed-lab') renderBreedContent(container)
+    if (detail.screen === 'breed-lab') {
+      _isActive = true
+      _lastSlotHash = '' // force full rebuild on re-entry
+      rebuildIfNeeded(container)
+      startTickLoop(container)
+    } else {
+      _isActive = false
+    }
   })
-
-  subscribe(() => renderBreedContent(container))
-  renderBreedContent(container)
 }
 
-// Per-slot pending parent selections (persists across renders)
-const pendingParents: Record<number, { p1: SlimeId | null; p2: SlimeId | null }> = {}
+// ---- Structural rebuild (only when slot state changes) ----
 
-function renderBreedContent(container: HTMLElement): void {
+function slotHash(slots: BreedSlot[], pending: typeof pendingParents): string {
+  return slots.map(s => {
+    const p = pending[s.id] ?? { p1: null, p2: null }
+    // Include everything that changes the structure (not the timer text)
+    return `${s.id}:${s.locked}:${s.resultId}:${s.parent1}:${s.parent2}:${s.startTime !== null ? 'brewing' : 'idle'}:${p.p1}:${p.p2}`
+  }).join('|') + '|recent:' + recentBreeds.map(r => r.resultId).join(',')
+}
+
+function rebuildIfNeeded(container: HTMLElement): void {
+  const state = getState()
+  const hash = slotHash(state.breedSlots, pendingParents)
+  if (hash === _lastSlotHash) return
+  _lastSlotHash = hash
+  buildSlots(container, state)
+}
+
+function buildSlots(container: HTMLElement, state: ReturnType<typeof getState>): void {
   const content = container.querySelector('#breed-content')
   if (!content) return
 
-  const state = getState()
   const now = Date.now()
-
   let html = ''
 
   for (const slot of state.breedSlots) {
@@ -79,11 +112,9 @@ function renderBreedContent(container: HTMLElement): void {
       const unlockInfo = slot.id === 1 ? 'Discovery Lv.4 (50 ✨)'
         : slot.id === 2 ? 'Discovery Lv.9 (300 ✨)'
         : 'Discovery Lv.15 + 50 💎'
-
       statusHtml = `<span class="breed-slot__status locked">🔒 Locked</span>`
       bodyHtml = `<div style="font-size:var(--font-size-sm);color:var(--color-text-muted)">Unlock with ${unlockInfo}</div>`
     } else if (slot.resultId !== null) {
-      // Result ready to collect
       const def = getSlime(slot.resultId)
       const color = def ? rarityColor(def.rarity) : '#9ca3af'
       const emoji = def ? slimeEmoji(slot.resultId) : '🟢'
@@ -101,14 +132,13 @@ function renderBreedContent(container: HTMLElement): void {
         </div>
       `
     } else if (slot.startTime !== null) {
-      // Brewing
       const elapsed = now - slot.startTime
       const progress = Math.min(elapsed / slot.cooldownMs, 1)
       const remaining = Math.max(slot.cooldownMs - elapsed, 0)
       const p1Def = slot.parent1 ? getSlime(slot.parent1) : null
       const p2Def = slot.parent2 ? getSlime(slot.parent2) : null
 
-      statusHtml = `<span class="breed-slot__status brewing">⏱ ${formatTime(remaining)}</span>`
+      statusHtml = `<span class="breed-slot__status brewing" id="breed-timer-${slot.id}">⏱ ${formatTime(remaining)}</span>`
       bodyHtml = `
         <div style="display:flex;align-items:center;gap:8px;font-size:var(--font-size-sm)">
           <span>${p1Def ? slimeEmoji(slot.parent1!) : '?'} ${p1Def?.name ?? '?'}</span>
@@ -116,14 +146,12 @@ function renderBreedContent(container: HTMLElement): void {
           <span>${p2Def ? slimeEmoji(slot.parent2!) : '?'} ${p2Def?.name ?? '?'}</span>
         </div>
         <div class="breed-progress">
-          <div class="breed-progress__fill" style="width:${progress * 100}%"></div>
+          <div class="breed-progress__fill" id="breed-fill-${slot.id}" style="width:${progress * 100}%"></div>
         </div>
       `
     } else {
-      // Ready for input
-      statusHtml = `<span class="breed-slot__status ready">✓ Ready</span>`
       const canBreed = !!(pending.p1 && pending.p2)
-
+      statusHtml = `<span class="breed-slot__status ready">✓ Ready</span>`
       bodyHtml = `
         <div class="breed-slot__parents">
           <button class="parent-btn ${pending.p1 ? 'filled' : ''}"
@@ -135,8 +163,11 @@ function renderBreedContent(container: HTMLElement): void {
             data-action="pick-parent" data-slot="${slot.id}" data-parent="2">
             ${p2Name ? `${slimeEmoji(pending.p2!)} ${p2Name}` : '+ Parent 2'}
           </button>
-          <button class="btn btn--primary btn--sm" data-action="start-breed" data-slot="${slot.id}"
-            ${!canBreed ? 'disabled' : ''} style="flex-shrink:0">
+          <button class="btn btn--primary btn--sm"
+            data-action="start-breed" data-slot="${slot.id}"
+            data-disabled="${!canBreed}"
+            class="${!canBreed ? 'btn--cant-afford' : ''}"
+            style="flex-shrink:0;${!canBreed ? 'opacity:0.45;cursor:not-allowed' : ''}">
             ▶
           </button>
         </div>
@@ -180,6 +211,44 @@ function renderBreedContent(container: HTMLElement): void {
   content.innerHTML = html
 }
 
+// ---- rAF tick loop — only patches timer text and progress bar width ----
+
+function startTickLoop(container: HTMLElement): void {
+  if (_rafId !== null) cancelAnimationFrame(_rafId)
+
+  function tick() {
+    if (!_isActive) {
+      _rafId = null
+      return
+    }
+
+    const state = getState()
+    const now = Date.now()
+
+    // Check if structural rebuild is needed (slot completed, collected, etc.)
+    rebuildIfNeeded(container)
+
+    // Patch only timer text and progress bar — no innerHTML replacement
+    for (const slot of state.breedSlots) {
+      if (slot.startTime === null || slot.resultId !== null) continue
+      const remaining = Math.max(slot.cooldownMs - (now - slot.startTime), 0)
+      const progress = Math.min((now - slot.startTime) / slot.cooldownMs, 1)
+
+      const timerEl = document.getElementById(`breed-timer-${slot.id}`)
+      if (timerEl) timerEl.textContent = `⏱ ${formatTime(remaining)}`
+
+      const fillEl = document.getElementById(`breed-fill-${slot.id}`) as HTMLElement | null
+      if (fillEl) fillEl.style.width = `${progress * 100}%`
+    }
+
+    _rafId = requestAnimationFrame(tick)
+  }
+
+  _rafId = requestAnimationFrame(tick)
+}
+
+// ---- Action handlers ----
+
 function handleStartBreed(slotId: number): void {
   const pending = pendingParents[slotId]
   if (!pending?.p1 || !pending?.p2) return
@@ -191,6 +260,7 @@ function handleStartBreed(slotId: number): void {
 
   if (success) {
     delete pendingParents[slotId]
+    _lastSlotHash = '' // force rebuild
     showNotif('Breeding started!')
   } else {
     showNotif('Cannot start breed — check your collection.')
@@ -211,6 +281,7 @@ function handleCollect(slotId: number): void {
 
   recentBreeds.push({ resultId, isNew, timestamp: Date.now() })
   if (recentBreeds.length > MAX_RECENT) recentBreeds.shift()
+  _lastSlotHash = '' // force rebuild
 
   if (isNew && resultId !== '513') {
     showFanfare(resultId)
@@ -225,7 +296,6 @@ let _pickerOverlay: HTMLElement | null = null
 let _pickerPanel: HTMLElement | null = null
 
 function openParentPicker(slotId: number, parentNum: number, screenContainer: HTMLElement): void {
-  // Remove any existing picker
   _pickerOverlay?.remove()
   _pickerPanel?.remove()
 
@@ -257,12 +327,15 @@ function openParentPicker(slotId: number, parentNum: number, screenContainer: HT
   title.style.cssText = 'font-weight:700;margin-bottom:12px;font-size:var(--font-size-md)'
   title.textContent = `Select Parent ${parentNum}`
 
-  // Warning if any slime has only 1 copy
   const hasSingleCopies = ownedIds.some(id => state.collection[id].count === 1)
-  let warningHtml = ''
   if (hasSingleCopies) {
-    warningHtml = `<div class="picker-warning">⚠️ Slimes with ×1 will be consumed on breed</div>`
+    const warning = document.createElement('div')
+    warning.className = 'picker-warning'
+    warning.textContent = '⚠️ Slimes with ×1 will be consumed on breed'
+    content.appendChild(warning)
   }
+
+  content.appendChild(title)
 
   const grid = document.createElement('div')
   grid.className = 'picker-grid'
@@ -297,15 +370,14 @@ function openParentPicker(slotId: number, parentNum: number, screenContainer: HT
       _pickerPanel?.remove()
       _pickerOverlay = null
       _pickerPanel = null
+
+      _lastSlotHash = '' // force slot rebuild to show selected parent
     })
 
     grid.appendChild(cell)
   }
 
-  content.innerHTML = warningHtml
-  content.appendChild(title)
   content.appendChild(grid)
-
   _pickerPanel.appendChild(handle)
   _pickerPanel.appendChild(content)
 

@@ -1,5 +1,5 @@
 // Slimepedia screen — full collection browser
-import { getState, subscribe } from '../../game/state'
+import { getState } from '../../game/state'
 import { getAllSlimes, getSlime, rarityColor, rarityEmoji, slimeEmoji, sortByRarity } from '../../game/slimes'
 import type { SlimeDefinition } from '../../game/state'
 import { computeSlimeOutput } from '../../game/economy'
@@ -77,12 +77,7 @@ export function buildSlimepediaScreen(container: HTMLElement): void {
     if (detail.screen === 'slimepedia') renderGrid(container)
   })
 
-  subscribe(() => {
-    const countEl = container.querySelector('#pedia-count')
-    if (countEl) countEl.textContent = `${getState().totalDiscoveries} / 527`
-    renderGrid(container)
-  })
-
+  // Re-render on screen-change only (hash-based diff prevents unnecessary DOM work)
   renderGrid(container)
 }
 

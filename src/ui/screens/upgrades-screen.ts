@@ -1,5 +1,7 @@
-// Upgrades screen — three tracks: Tap Power, Slime Output, Discovery
-import { getState, setState, subscribe } from '../../game/state'
+// Upgrades screen — NO subscribe() to prevent 100ms re-render thrash
+// Full re-render only on: tab switch, successful upgrade, screen-change.
+// Goo/essence balance text is patched in-place via a rAF loop.
+import { getState, setState } from '../../game/state'
 import { getTapUpgradeCost, getOutputUpgradeCost, getDiscoveryUpgradeCost } from '../../game/economy'
 import { upgradeTap, upgradeOutput, upgradeDiscovery } from '../../game/upgrades'
 import { formatNumber } from '../../game/slimes'
@@ -14,6 +16,8 @@ import { showNotif } from '../components/notif'
 type Track = 'tap' | 'output' | 'discovery'
 
 let _activeTrack: Track = 'tap'
+let _isActive = false
+let _rafId: number | null = null
 
 export function buildUpgradesScreen(container: HTMLElement): void {
   container.innerHTML = `
@@ -41,9 +45,12 @@ export function buildUpgradesScreen(container: HTMLElement): void {
   `
 
   // Back button
-  container.querySelector('#upg-back')!.addEventListener('click', () => navigateBack())
+  container.querySelector('#upg-back')!.addEventListener('click', () => {
+    navigateBack()
+    _isActive = false
+  })
 
-  // Tab switching — event delegation
+  // Tab switching — event delegation, triggers full re-render
   const tabs = container.querySelector('.upgrade-tabs')!
   tabs.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest('[data-track]') as HTMLElement | null
@@ -54,13 +61,12 @@ export function buildUpgradesScreen(container: HTMLElement): void {
     renderContent(container)
   })
 
-  // Upgrade button — event delegation on content
+  // Upgrade button — event delegation on content container (never replaced)
   const content = container.querySelector('#upg-content')!
   content.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest('#do-upgrade') as HTMLElement | null
     if (!btn) return
 
-    // Check affordability via data attribute (not disabled, which blocks bubbling)
     if (btn.dataset.canAfford === 'false') {
       showNotif('Not enough resources to upgrade!')
       return
@@ -74,36 +80,84 @@ export function buildUpgradesScreen(container: HTMLElement): void {
     })
 
     if (success) {
-      renderContent(container)
+      renderContent(container) // full re-render only on success
     } else {
       showNotif('Not enough resources to upgrade!')
     }
   })
 
-  // Refresh on screen-change event
+  // Activate on screen-change
   window.addEventListener('screen-change', (e: Event) => {
     const detail = (e as CustomEvent).detail
-    if (detail.screen === 'upgrades') renderContent(container)
+    if (detail.screen === 'upgrades') {
+      _isActive = true
+      renderContent(container)
+      startTickLoop(container)
+    } else {
+      _isActive = false
+    }
   })
-
-  subscribe(() => renderContent(container))
-  renderContent(container)
 }
+
+// ---- Full content render (only on tab switch / upgrade / screen entry) ----
 
 function renderContent(container: HTMLElement): void {
   const content = container.querySelector('#upg-content')
   if (!content) return
-
   const state = getState()
-
-  if (_activeTrack === 'tap') {
-    renderTapTrack(content as HTMLElement, state)
-  } else if (_activeTrack === 'output') {
-    renderOutputTrack(content as HTMLElement, state)
-  } else {
-    renderDiscoveryTrack(content as HTMLElement, state)
-  }
+  if (_activeTrack === 'tap') renderTapTrack(content as HTMLElement, state)
+  else if (_activeTrack === 'output') renderOutputTrack(content as HTMLElement, state)
+  else renderDiscoveryTrack(content as HTMLElement, state)
 }
+
+// ---- rAF loop — only patches balance text and button affordability ----
+
+function startTickLoop(container: HTMLElement): void {
+  if (_rafId !== null) cancelAnimationFrame(_rafId)
+
+  function tick() {
+    if (!_isActive) { _rafId = null; return }
+
+    const state = getState()
+    const content = container.querySelector('#upg-content')
+    if (!content) { _rafId = requestAnimationFrame(tick); return }
+
+    // Patch balance display
+    const balanceEl = content.querySelector('#upg-balance') as HTMLElement | null
+    const upgradeBtn = content.querySelector('#do-upgrade') as HTMLElement | null
+
+    if (_activeTrack === 'tap' || _activeTrack === 'output') {
+      const level = _activeTrack === 'tap' ? state.tapPowerLevel : state.outputLevel
+      const maxLevel = _activeTrack === 'tap' ? TAP_UPGRADE_MAX_LEVEL : OUTPUT_UPGRADE_MAX_LEVEL
+      if (level < maxLevel) {
+        const cost = _activeTrack === 'tap' ? getTapUpgradeCost(level) : getOutputUpgradeCost(level)
+        const canAfford = state.goo >= cost
+        if (balanceEl) balanceEl.textContent = `${formatNumber(state.goo)} 💧`
+        if (upgradeBtn) {
+          upgradeBtn.dataset.canAfford = String(canAfford)
+          upgradeBtn.classList.toggle('btn--cant-afford', !canAfford)
+        }
+      }
+    } else {
+      const level = state.discoveryLevel
+      if (level < DISCOVERY_UPGRADE_MAX_LEVEL) {
+        const cost = getDiscoveryUpgradeCost(level)
+        const canAfford = state.essence >= cost
+        if (balanceEl) balanceEl.textContent = `${formatNumber(state.essence)} ✨`
+        if (upgradeBtn) {
+          upgradeBtn.dataset.canAfford = String(canAfford)
+          upgradeBtn.classList.toggle('btn--cant-afford', !canAfford)
+        }
+      }
+    }
+
+    _rafId = requestAnimationFrame(tick)
+  }
+
+  _rafId = requestAnimationFrame(tick)
+}
+
+// ---- Track renderers ----
 
 function renderTapTrack(content: HTMLElement, state: ReturnType<typeof getState>): void {
   const level = state.tapPowerLevel
@@ -116,7 +170,6 @@ function renderTapTrack(content: HTMLElement, state: ReturnType<typeof getState>
   const currentName = TAP_UPGRADE_NAMES[level] || 'Base Tap'
   const nextName = TAP_UPGRADE_NAMES[level + 1] || '—'
 
-  // Milestones
   const milestones = [
     { level: 5, text: 'Tap Burst ability unlocked (hold for 10× burst)' },
     { level: 10, text: 'Tapping slimes has 10% chance to drop Essence' },
@@ -134,7 +187,7 @@ function renderTapTrack(content: HTMLElement, state: ReturnType<typeof getState>
         }
       </div>
       <div class="upgrade-card__cost">
-        <span>You have: <span style="color:var(--color-goo)">${formatNumber(state.goo)} 💧</span></span>
+        <span>You have: <span id="upg-balance" style="color:var(--color-goo)">${formatNumber(state.goo)} 💧</span></span>
         ${isMax ? '<span style="color:var(--color-success)">✓ MAX</span>' : `<span class="upgrade-card__cost-value">${formatNumber(cost)} 💧</span>`}
       </div>
       ${!isMax ? `
@@ -196,7 +249,7 @@ function renderOutputTrack(content: HTMLElement, state: ReturnType<typeof getSta
         }
       </div>
       <div class="upgrade-card__cost">
-        <span>You have: <span style="color:var(--color-goo)">${formatNumber(state.goo)} 💧</span></span>
+        <span>You have: <span id="upg-balance" style="color:var(--color-goo)">${formatNumber(state.goo)} 💧</span></span>
         ${isMax ? '<span style="color:var(--color-success)">✓ MAX</span>' : `<span class="upgrade-card__cost-value">${formatNumber(cost)} 💧</span>`}
       </div>
       ${!isMax ? `
@@ -235,7 +288,7 @@ function renderDiscoveryTrack(content: HTMLElement, state: ReturnType<typeof get
   const isMax = level >= maxLevel
   const cost = isMax ? 0 : getDiscoveryUpgradeCost(level)
   const canAfford = state.essence >= cost
-  const nextUpgrade = DISCOVERY_UPGRADES[level] // next to purchase (0-indexed = level 1)
+  const nextUpgrade = DISCOVERY_UPGRADES[level]
 
   content.innerHTML = `
     <div class="upgrade-card">
@@ -248,7 +301,7 @@ function renderDiscoveryTrack(content: HTMLElement, state: ReturnType<typeof get
         }
       </div>
       <div class="upgrade-card__cost">
-        <span>You have: <span style="color:var(--color-essence)">${formatNumber(state.essence)} ✨</span></span>
+        <span>You have: <span id="upg-balance" style="color:var(--color-essence)">${formatNumber(state.essence)} ✨</span></span>
         ${isMax ? '<span style="color:var(--color-success)">✓ MAX</span>' : `<span style="color:var(--color-essence);font-weight:700">${formatNumber(cost)} ✨</span>`}
       </div>
       ${!isMax ? `

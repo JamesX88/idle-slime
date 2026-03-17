@@ -63,7 +63,7 @@
 html, body {
   height: 100%;
   overflow: hidden;
-  background: var(--color-bg);
+  background: #000;
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: var(--font-size-md);
@@ -82,6 +82,7 @@ html, body {
   display: flex;
   flex-direction: column;
   background: var(--color-bg);
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
 }
 
 /* ===== Screens ===== */
@@ -192,6 +193,15 @@ html, body {
   .slime-grid { grid-template-columns: repeat(5, 1fr); }
 }
 
+.slime-grid__empty {
+  grid-column: 1 / -1;
+  padding: var(--spacing-6) var(--spacing-4);
+  text-align: center;
+  color: var(--color-text-dim);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
 .slime-cell {
   aspect-ratio: 1;
   background: var(--color-surface);
@@ -250,20 +260,44 @@ html, body {
   font-weight: 700;
 }
 
-/* Summon cell */
-.slime-cell--summon {
-  border-color: var(--color-accent);
-  border-style: dashed;
-  color: var(--color-text-muted);
+/* ===== Summon Bar ===== */
+.summon-bar {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+  gap: var(--spacing-2);
 }
 
-.slime-cell--summon:hover {
-  border-color: var(--color-accent-hover);
-  background: rgba(124, 58, 237, 0.1);
+.summon-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast);
+  min-height: 40px;
 }
 
-.slime-cell--summon .summon-icon { font-size: 24px; }
-.slime-cell--summon .summon-cost { font-size: 10px; color: var(--color-goo); }
+.summon-btn:hover:not(:disabled) { background: var(--color-accent-hover); }
+.summon-btn:active:not(:disabled) { transform: scale(0.96); }
+.summon-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.summon-btn__icon { font-size: 16px; }
+.summon-btn__cost { font-size: var(--font-size-xs); opacity: 0.85; }
 
 /* ===== Production Bar ===== */
 .production-bar {

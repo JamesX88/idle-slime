@@ -4,7 +4,7 @@ import { getSlime, rarityColor, slimeEmoji, formatNumber, sortByRarity } from '.
 import { computeTotalProduction, getGooPerTap } from '../../game/economy'
 import { performSummon } from '../../game/zones'
 import { checkTapSpecials } from '../../game/zones'
-import { SUMMON_COST, ZONE_NAMES, ZONE_THEMES } from '../../data/config'
+import { SUMMON_COST, ZONE_NAMES } from '../../data/config'
 import { navigateTo } from '../router'
 import { openSlimePanel, refreshPanel } from '../components/slime-panel'
 import { spawnFloatingNumber } from '../components/floating-numbers'
@@ -35,6 +35,14 @@ export function buildMainScreen(container: HTMLElement): void {
         <span class="currency-item__value" id="shards-display">0</span>
         <span class="currency-item__label">Shards</span>
       </div>
+    </div>
+
+    <div class="summon-bar">
+      <button class="summon-btn" id="summon-btn" disabled>
+        <span class="summon-btn__icon">＋</span>
+        <span>Summon Slime</span>
+        <span class="summon-btn__cost" id="summon-cost-label">25 💧</span>
+      </button>
     </div>
 
     <div id="slime-grid" class="slime-grid"></div>
@@ -76,6 +84,10 @@ export function buildMainScreen(container: HTMLElement): void {
   tapBlob.addEventListener('click', handleTap)
   tapBlob.addEventListener('touchstart', handleTap, { passive: true })
 
+  // Summon button — dedicated, always-visible
+  const summonBtn = container.querySelector('#summon-btn')!
+  summonBtn.addEventListener('click', handleSummon)
+
   // Settings
   container.querySelector('#settings-btn')!.addEventListener('click', () => navigateTo('settings'))
 
@@ -85,18 +97,12 @@ export function buildMainScreen(container: HTMLElement): void {
   container.querySelector('#nav-upgrades')!.addEventListener('click', () => navigateTo('upgrades'))
   container.querySelector('#nav-zones')!.addEventListener('click', () => navigateTo('zone-map'))
 
-  // Slime grid — event delegation
+  // Slime grid — event delegation (no summon cell in grid anymore)
   const grid = container.querySelector('#slime-grid')!
   grid.addEventListener('click', (e) => {
     const cell = (e.target as HTMLElement).closest('[data-slime-id]') as HTMLElement | null
     if (!cell) return
-
-    const id = cell.dataset.slimeId!
-    if (id === '__summon__') {
-      handleSummon(e as MouseEvent)
-    } else {
-      openSlimePanel(id)
-    }
+    openSlimePanel(cell.dataset.slimeId!)
   })
 
   // Subscribe to state changes — update display only, no DOM rebuild
@@ -144,7 +150,7 @@ function handleTap(e: Event): void {
   spawnFloatingNumber(`+${formatNumber(gooGained)} 💧`, cx + jitter(), cy + jitter())
 }
 
-function handleSummon(e: MouseEvent): void {
+function handleSummon(): void {
   let result: { slimeId: string; isNew: boolean; cost: number } | null = null
 
   setState(state => {
@@ -175,6 +181,8 @@ function updateCurrencyDisplay(container: HTMLElement): void {
   const prodEl = container.querySelector('#production-display')
   const zoneEl = container.querySelector('#zone-name')
   const progEl = container.querySelector('#pedia-progress')
+  const summonBtn = container.querySelector('#summon-btn') as HTMLButtonElement | null
+  const summonCostLabel = container.querySelector('#summon-cost-label')
 
   if (gooEl) gooEl.textContent = formatNumber(state.goo)
   if (essEl) essEl.textContent = formatNumber(state.essence)
@@ -182,6 +190,11 @@ function updateCurrencyDisplay(container: HTMLElement): void {
   if (prodEl) prodEl.textContent = formatNumber(computeTotalProduction(state))
   if (zoneEl) zoneEl.textContent = ZONE_NAMES[state.activeZone] ?? 'Zone 1'
   if (progEl) progEl.textContent = `${state.totalDiscoveries}/527 🔬`
+
+  // Update summon button state
+  const minCost = SUMMON_COST.Common
+  if (summonBtn) summonBtn.disabled = state.goo < minCost
+  if (summonCostLabel) summonCostLabel.textContent = `${formatNumber(minCost)} 💧`
 }
 
 let _lastGridHash = ''
@@ -196,7 +209,7 @@ function updateGrid(container: HTMLElement): void {
   const hash = ownedIds.join(',') + '|' + ownedIds.map(id => {
     const o = state.collection[id]
     return `${o.count}:${o.level}`
-  }).join(',') + '|' + state.goo.toFixed(0) + '|' + state.activeZone
+  }).join(',') + '|' + state.activeZone
 
   if (hash === _lastGridHash) return
   _lastGridHash = hash
@@ -234,20 +247,9 @@ function updateGrid(container: HTMLElement): void {
     `
   }
 
-  // Summon cell
-  const minCost = SUMMON_COST.Common
-  const canSummon = state.goo >= minCost
-  html += `
-    <div class="slime-cell slime-cell--summon ${canSummon ? '' : 'disabled'}"
-      data-slime-id="__summon__"
-      role="button"
-      aria-label="Summon a slime for ${minCost} Goo"
-    >
-      <div class="summon-icon">＋</div>
-      <div class="slime-cell__name">Summon</div>
-      <div class="summon-cost">${minCost} 💧</div>
-    </div>
-  `
+  if (!html) {
+    html = `<div class="slime-grid__empty">Tap the blob to earn Goo, then summon your first slime!</div>`
+  }
 
   grid.innerHTML = html
 }

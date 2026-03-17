@@ -374,3 +374,91 @@ export function getOutputUpgradeCost(currentLevel: number): number {
 export function getDiscoveryUpgradeCost(currentLevel: number): number {
   return DISCOVERY_UPGRADE_COSTS[currentLevel + 1] ?? 9999
 }
+
+// ---- Bulk actions ----
+
+/**
+ * Check whether at least one slime in the collection is eligible to merge
+ * (i.e. has count >= 3 and is not a max-rarity slime with no upgrade path).
+ */
+export function canMergeAny(state: GameState): boolean {
+  return Object.keys(state.collection).some(id => canMerge(state, id))
+}
+
+/**
+ * Merge every eligible slime in the collection once per pass.
+ * Runs multiple passes until no more merges are possible, so that
+ * newly created slimes that immediately have 3 copies also get merged.
+ *
+ * Returns aggregate totals for UI feedback.
+ */
+export function mergeAll(
+  state: GameState,
+): { mergeCount: number; newDiscoveries: number; essenceGained: number; shardsGained: number } {
+  let mergeCount = 0
+  let newDiscoveries = 0
+  let essenceGained = 0
+  let shardsGained = 0
+
+  // Cap passes to prevent infinite loops in degenerate cases
+  const MAX_PASSES = 20
+  for (let pass = 0; pass < MAX_PASSES; pass++) {
+    const eligible = Object.keys(state.collection).filter(id => canMerge(state, id))
+    if (eligible.length === 0) break
+
+    for (const id of eligible) {
+      // Re-check inside loop — a previous merge in this pass may have consumed copies
+      if (!canMerge(state, id)) continue
+      const result = mergeSlimes(state, id)
+      mergeCount++
+      essenceGained += result.essenceGained
+      shardsGained += result.shardsGained
+      if (result.isNew) newDiscoveries++
+    }
+  }
+
+  return { mergeCount, newDiscoveries, essenceGained, shardsGained }
+}
+
+/**
+ * Check whether at least one slime can be fed (has Goo available for the cost).
+ */
+export function canFeedAny(state: GameState): boolean {
+  return Object.keys(state.collection).some(id => canFeed(state, id))
+}
+
+/**
+ * Feed every slime that can be levelled up, spending Goo greedily from highest
+ * rarity down (so expensive upgrades are prioritised while Goo lasts).
+ * Each slime is fed once per call — the player can tap again for another round.
+ *
+ * Returns aggregate totals for UI feedback.
+ */
+export function feedAll(
+  state: GameState,
+): { fedCount: number; essenceGained: number; maxLevelReached: number } {
+  const RARITY_RANK: Record<string, number> = {
+    Mythic: 0, Legendary: 1, Epic: 2, Rare: 3, Uncommon: 4, Common: 5,
+  }
+
+  // Sort by rarity descending (Mythic first) so expensive slimes are fed first
+  const ids = Object.keys(state.collection).sort((a, b) => {
+    const ra = getSlime(a)?.rarity ?? 'Common'
+    const rb = getSlime(b)?.rarity ?? 'Common'
+    return (RARITY_RANK[ra] ?? 5) - (RARITY_RANK[rb] ?? 5)
+  })
+
+  let fedCount = 0
+  let essenceGained = 0
+  let maxLevelReached = 0
+
+  for (const id of ids) {
+    if (!canFeed(state, id)) continue
+    const result = feedSlime(state, id)
+    fedCount++
+    essenceGained += result.essenceGained
+    if (result.maxLevelReached) maxLevelReached++
+  }
+
+  return { fedCount, essenceGained, maxLevelReached }
+}

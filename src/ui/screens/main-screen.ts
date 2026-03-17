@@ -3,7 +3,7 @@
 // Grid only rebuilds when collection hash changes.
 import { getState, setState } from '../../game/state'
 import { getSlime, rarityColor, slimeEmoji, formatNumber, sortByRarity } from '../../game/slimes'
-import { computeTotalProduction, getGooPerTap } from '../../game/economy'
+import { computeTotalProduction, getGooPerTap, mergeAll, feedAll, canMergeAny, canFeedAny } from '../../game/economy'
 import { performSummon } from '../../game/zones'
 import { checkTapSpecials } from '../../game/zones'
 import { ZONE_NAMES } from '../../data/config'
@@ -25,6 +25,8 @@ let _prodEl: HTMLElement | null = null
 let _zoneEl: HTMLElement | null = null
 let _progEl: HTMLElement | null = null
 let _summonBtn: HTMLButtonElement | null = null
+let _mergeAllBtn: HTMLButtonElement | null = null
+let _feedAllBtn: HTMLButtonElement | null = null
 let _gridEl: HTMLElement | null = null
 
 export function buildMainScreen(container: HTMLElement): void {
@@ -58,6 +60,14 @@ export function buildMainScreen(container: HTMLElement): void {
         <span class="summon-btn__icon">＋</span>
         <span>Summon Slime</span>
         <span class="summon-btn__cost" id="summon-cost-label">… 💧</span>
+      </button>
+      <button class="summon-btn bulk-btn" id="merge-all-btn" disabled title="Merge all slimes with 3+ copies">
+        <span class="summon-btn__icon">⚡</span>
+        <span>Merge All</span>
+      </button>
+      <button class="summon-btn bulk-btn" id="feed-all-btn" disabled title="Level up every slime you can afford">
+        <span class="summon-btn__icon">🍖</span>
+        <span>Upgrade All</span>
       </button>
     </div>
 
@@ -101,6 +111,8 @@ export function buildMainScreen(container: HTMLElement): void {
   _zoneEl = container.querySelector('#zone-name')
   _progEl = container.querySelector('#pedia-progress')
   _summonBtn = container.querySelector('#summon-btn')
+  _mergeAllBtn = container.querySelector('#merge-all-btn')
+  _feedAllBtn = container.querySelector('#feed-all-btn')
   _gridEl = container.querySelector('#slime-grid')
 
   // ---- Event Listeners (set up ONCE, never re-attached) ----
@@ -112,6 +124,12 @@ export function buildMainScreen(container: HTMLElement): void {
 
   // Summon button
   _summonBtn!.addEventListener('click', handleSummon)
+
+  // Merge All button
+  _mergeAllBtn!.addEventListener('click', handleMergeAll)
+
+  // Upgrade All button
+  _feedAllBtn!.addEventListener('click', handleFeedAll)
 
   // Settings
   container.querySelector('#settings-btn')!.addEventListener('click', () => navigateTo('settings'))
@@ -160,6 +178,8 @@ function tickFrame(): void {
   if (_zoneEl && _zoneEl.textContent !== zone) _zoneEl.textContent = zone
   if (_progEl && _progEl.textContent !== prog) _progEl.textContent = prog
   if (_summonBtn) _summonBtn.disabled = !canSummon
+  if (_mergeAllBtn) _mergeAllBtn.disabled = !canMergeAny(state)
+  if (_feedAllBtn) _feedAllBtn.disabled = !canFeedAny(state)
 
   // Grid — only rebuild if collection changed
   updateGrid(state)
@@ -229,6 +249,45 @@ function handleSummon(): void {
   } else {
     showNotif(`${slimeEmoji(slimeId)} ${def.name} added!`)
   }
+}
+
+// ---- Merge All handler ----
+
+function handleMergeAll(): void {
+  let result: ReturnType<typeof mergeAll> | null = null
+  setState(state => {
+    result = mergeAll(state)
+  })
+  if (!result) return
+  const { mergeCount, newDiscoveries, essenceGained, shardsGained } = result as ReturnType<typeof mergeAll>
+  if (mergeCount === 0) {
+    showNotif('No slimes ready to merge!')
+    return
+  }
+  const parts: string[] = [`⚡ ${mergeCount} merge${mergeCount !== 1 ? 's' : ''}`]
+  if (newDiscoveries > 0) parts.push(`${newDiscoveries} new 🔬`)
+  if (essenceGained > 0) parts.push(`+${essenceGained} ✨`)
+  if (shardsGained > 0) parts.push(`+${shardsGained} 💎`)
+  showNotif(parts.join(' · '))
+}
+
+// ---- Upgrade All handler ----
+
+function handleFeedAll(): void {
+  let result: ReturnType<typeof feedAll> | null = null
+  setState(state => {
+    result = feedAll(state)
+  })
+  if (!result) return
+  const { fedCount, essenceGained, maxLevelReached } = result as ReturnType<typeof feedAll>
+  if (fedCount === 0) {
+    showNotif('Not enough Goo to upgrade any slime!')
+    return
+  }
+  const parts: string[] = [`🍖 ${fedCount} slime${fedCount !== 1 ? 's' : ''} upgraded`]
+  if (maxLevelReached > 0) parts.push(`${maxLevelReached} max level! 🌟`)
+  if (essenceGained > 0) parts.push(`+${essenceGained} ✨`)
+  showNotif(parts.join(' · '))
 }
 
 // ---- Grid update (hash-guarded, only rebuilds on collection change) ----

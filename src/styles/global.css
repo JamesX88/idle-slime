@@ -307,6 +307,24 @@ html, body {
 .summon-btn__icon { font-size: 16px; }
 .summon-btn__cost { font-size: var(--font-size-xs); opacity: 0.85; }
 
+/* Bulk action buttons (Merge All, Upgrade All) — narrower, secondary style */
+.bulk-btn {
+  flex: 0 0 auto;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  gap: var(--spacing-1);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  min-width: 76px;
+}
+.bulk-btn:hover:not(:disabled) {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.bulk-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
 /* ===== Production Bar ===== */
 .production-bar {
   padding: var(--spacing-2) var(--spacing-3);

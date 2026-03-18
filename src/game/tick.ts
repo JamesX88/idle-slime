@@ -1,7 +1,7 @@
 // Game loop — production tick + UI tick
 import { getState, setState } from './state'
 import { computeTotalProduction } from './economy'
-import { tickBreeds } from './breeds'
+import { tickBreeds, autoBreedTick } from './breeds'
 import { checkTimeSpecials } from './zones'
 import { saveGame } from './save'
 
@@ -36,6 +36,9 @@ export function startGameLoop(): void {
       // Production tick
       const production = computeTotalProduction(state)
       state.goo += production * dt
+
+      // Auto-breed: collect completed slots and queue new pairs
+      autoBreedTick(state)
 
       // Breed ticks
       const completed = tickBreeds(state)

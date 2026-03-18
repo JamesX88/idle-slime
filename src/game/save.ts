@@ -211,6 +211,11 @@ function deserializeState(raw: any): GameState {
     // Migrated fields
     unlockedSpecials: migratedSpecials,
     settings: migratedSettings,
+    autoBreed: {
+      enabled:     raw.autoBreed?.enabled     ?? false,
+      maxRarity:   raw.autoBreed?.maxRarity   ?? null,
+      autoCollect: raw.autoBreed?.autoCollect ?? true,
+    },
   }
 
   // Ensure breed slots have all required fields

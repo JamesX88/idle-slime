@@ -3,11 +3,12 @@
 // Timer countdowns use a rAF loop that only patches text nodes.
 import { getState, setState } from '../../game/state'
 import type { SlimeId, BreedSlot } from '../../game/state'
-import { getSlime, rarityColor, slimeEmoji, formatTime } from '../../game/slimes'
+import { getSlime, rarityColor, slimeEmoji, formatTime, rarityEmoji } from '../../game/slimes'
 import { startBreed, collectBreedResult } from '../../game/breeds'
 import { navigateBack } from '../router'
 import { showFanfare } from '../fanfare'
 import { showNotif } from '../components/notif'
+import type { Rarity } from '../../game/state'
 
 interface RecentBreed {
   resultId: string
@@ -23,8 +24,11 @@ const pendingParents: Record<number, { p1: SlimeId | null; p2: SlimeId | null }>
 
 // Last-rendered slot snapshot for structural diffing
 let _lastSlotHash = ''
+let _lastAutoBreedHash = ''
 let _rafId: number | null = null
 let _isActive = false
+
+const RARITIES: Rarity[] = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic']
 
 export function buildBreedLabScreen(container: HTMLElement): void {
   container.innerHTML = `
@@ -43,9 +47,8 @@ export function buildBreedLabScreen(container: HTMLElement): void {
   // Event delegation on breed content — never re-attached
   const content = container.querySelector('#breed-content')!
   content.addEventListener('click', (e) => {
-    const target = (e.target as HTMLElement).closest('button') as HTMLButtonElement | null
+    const target = (e.target as HTMLElement).closest('[data-action]') as HTMLElement | null
     if (!target) return
-    // Check data-disabled instead of HTML disabled attribute
     if (target.dataset.disabled === 'true') return
 
     const action = target.dataset.action
@@ -58,6 +61,10 @@ export function buildBreedLabScreen(container: HTMLElement): void {
       handleStartBreed(slotId)
     } else if (action === 'collect') {
       handleCollect(slotId)
+    } else if (action === 'toggle-auto-breed') {
+      handleToggleAutoBreed()
+    } else if (action === 'set-max-rarity') {
+      handleSetMaxRarity(target.dataset.rarity as Rarity | 'any')
     }
   })
 
@@ -66,7 +73,8 @@ export function buildBreedLabScreen(container: HTMLElement): void {
     const detail = (e as CustomEvent).detail
     if (detail.screen === 'breed-lab') {
       _isActive = true
-      _lastSlotHash = '' // force full rebuild on re-entry
+      _lastSlotHash = ''
+      _lastAutoBreedHash = ''
       rebuildIfNeeded(container)
       startTickLoop(container)
     } else {
@@ -75,21 +83,78 @@ export function buildBreedLabScreen(container: HTMLElement): void {
   })
 }
 
+// ---- Auto-breed panel ----
+
+function autoBreedHash(state: ReturnType<typeof getState>): string {
+  const ab = state.autoBreed
+  return `${ab.enabled}:${ab.maxRarity}:${ab.autoCollect}`
+}
+
+function buildAutoBreedPanel(state: ReturnType<typeof getState>): string {
+  const ab = state.autoBreed
+  const toggleLabel = ab.enabled ? '⏸ Auto-Breed ON' : '▶ Auto-Breed OFF'
+  const toggleClass = ab.enabled ? 'btn--primary' : 'btn--secondary'
+
+  const rarityChips = RARITIES.map(r => {
+    const isActive = ab.maxRarity === r
+    const color = rarityColor(r)
+    return `<button
+      class="rarity-chip ${isActive ? 'rarity-chip--active' : ''}"
+      data-action="set-max-rarity"
+      data-rarity="${r}"
+      style="${isActive ? `background:${color};color:#000;border-color:${color}` : `border-color:${color};color:${color}`}"
+      title="Use parents up to ${r} rarity"
+    >${rarityEmoji(r)} ${r}</button>`
+  }).join('')
+
+  const anyActive = ab.maxRarity === null
+  const anyChip = `<button
+    class="rarity-chip ${anyActive ? 'rarity-chip--active rarity-chip--any' : ''}"
+    data-action="set-max-rarity"
+    data-rarity="any"
+    title="Use any rarity parent"
+  >✨ Any</button>`
+
+  const statusText = ab.enabled
+    ? (ab.maxRarity
+        ? `Using up to <strong style="color:${rarityColor(ab.maxRarity)}">${ab.maxRarity}</strong> parents`
+        : 'Using <strong>any rarity</strong> parents')
+    : 'Enable to automatically queue breed pairs'
+
+  return `
+    <div class="auto-breed-panel">
+      <div class="auto-breed-panel__header">
+        <span class="auto-breed-panel__title">🤖 Auto-Breed</span>
+        <button class="btn btn--sm ${toggleClass}" data-action="toggle-auto-breed">
+          ${toggleLabel}
+        </button>
+      </div>
+      <div class="auto-breed-panel__status">${statusText}</div>
+      <div class="auto-breed-panel__label">Max parent rarity:</div>
+      <div class="rarity-chip-row">
+        ${rarityChips}
+        ${anyChip}
+      </div>
+    </div>
+  `
+}
+
 // ---- Structural rebuild (only when slot state changes) ----
 
 function slotHash(slots: BreedSlot[], pending: typeof pendingParents): string {
   return slots.map(s => {
     const p = pending[s.id] ?? { p1: null, p2: null }
-    // Include everything that changes the structure (not the timer text)
     return `${s.id}:${s.locked}:${s.resultId}:${s.parent1}:${s.parent2}:${s.startTime !== null ? 'brewing' : 'idle'}:${p.p1}:${p.p2}`
   }).join('|') + '|recent:' + recentBreeds.map(r => r.resultId).join(',')
 }
 
 function rebuildIfNeeded(container: HTMLElement): void {
   const state = getState()
-  const hash = slotHash(state.breedSlots, pendingParents)
-  if (hash === _lastSlotHash) return
-  _lastSlotHash = hash
+  const sHash = slotHash(state.breedSlots, pendingParents)
+  const abHash = autoBreedHash(state)
+  if (sHash === _lastSlotHash && abHash === _lastAutoBreedHash) return
+  _lastSlotHash = sHash
+  _lastAutoBreedHash = abHash
   buildSlots(container, state)
 }
 
@@ -99,6 +164,9 @@ function buildSlots(container: HTMLElement, state: ReturnType<typeof getState>):
 
   const now = Date.now()
   let html = ''
+
+  // Auto-breed panel at the top
+  html += buildAutoBreedPanel(state)
 
   for (const slot of state.breedSlots) {
     const pending = pendingParents[slot.id] ?? { p1: null, p2: null }
@@ -166,7 +234,6 @@ function buildSlots(container: HTMLElement, state: ReturnType<typeof getState>):
           <button class="btn btn--primary btn--sm"
             data-action="start-breed" data-slot="${slot.id}"
             data-disabled="${!canBreed}"
-            class="${!canBreed ? 'btn--cant-afford' : ''}"
             style="flex-shrink:0;${!canBreed ? 'opacity:0.45;cursor:not-allowed' : ''}">
             ▶
           </button>
@@ -290,6 +357,22 @@ function handleCollect(slotId: number): void {
   }
 }
 
+function handleToggleAutoBreed(): void {
+  setState(state => {
+    state.autoBreed.enabled = !state.autoBreed.enabled
+  })
+  const enabled = getState().autoBreed.enabled
+  showNotif(enabled ? '🤖 Auto-Breed enabled!' : '⏸ Auto-Breed paused.')
+  _lastAutoBreedHash = '' // force panel rebuild
+}
+
+function handleSetMaxRarity(rarity: Rarity | 'any'): void {
+  setState(state => {
+    state.autoBreed.maxRarity = rarity === 'any' ? null : rarity
+  })
+  _lastAutoBreedHash = '' // force panel rebuild
+}
+
 // ---- Parent Picker ----
 
 let _pickerOverlay: HTMLElement | null = null
@@ -370,7 +453,6 @@ function openParentPicker(slotId: number, parentNum: number, screenContainer: HT
       _pickerPanel?.remove()
       _pickerOverlay = null
       _pickerPanel = null
-
       _lastSlotHash = '' // force slot rebuild to show selected parent
     })
 

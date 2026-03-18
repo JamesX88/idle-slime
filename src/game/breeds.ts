@@ -1,8 +1,10 @@
 // Breed resolution logic
 import breedTableData from '../data/breeds.json'
 import type { SlimeId, GameState } from './state'
-import { MUDSLIME_ID, LUCKY_SLIME_ID, LUCKY_SLIME_CHANCE, BREED_COOLDOWN_MS, BREED_FAIL_COOLDOWN_MS } from '../data/config'
+import { MUDSLIME_ID, LUCKY_SLIME_ID, LUCKY_SLIME_CHANCE, BREED_COOLDOWN_MS, BREED_FAIL_COOLDOWN_MS, RARITY_ORDER } from '../data/config'
+import type { Rarity } from './state'
 import { checkBreedSpecials } from './specials'
+import { getSlime } from './slimes'
 
 const breedTable: Record<string, SlimeId> = breedTableData as Record<string, SlimeId>
 
@@ -147,4 +149,107 @@ export function unlockBreedSlot(state: GameState, slotId: number): void {
   if (state.breedSlots[slotId]) {
     state.breedSlots[slotId].locked = false
   }
+}
+
+// ---- Auto-Breed logic ----
+
+/**
+ * Priority order for auto-breed parent selection:
+ * 1. Prefer pairs that produce an UNDISCOVERED result (new discovery first).
+ * 2. Among those, prefer the highest-rarity valid pair.
+ * 3. Fall back to any valid pair that won't produce Mudslime.
+ *
+ * "Valid" means both parents pass the maxRarity filter and are owned.
+ */
+export function pickBestBreedPair(
+  state: GameState,
+  maxRarity: Rarity | null,
+): [SlimeId, SlimeId] | null {
+  // RARITY_ORDER: Mythic=0, Common=5 — higher rank number = lower rarity
+  const maxRank = maxRarity !== null ? (RARITY_ORDER[maxRarity] ?? 5) : 5
+
+  // Build list of eligible parent IDs (owned, within rarity cap)
+  const eligible = Object.keys(state.collection).filter(id => {
+    const def = getSlime(id)
+    if (!def) return false
+    const rank = RARITY_ORDER[def.rarity] ?? 5
+    // rank >= maxRank means rarity is <= maxRarity (e.g. Common rank 5 >= Uncommon rank 4)
+    return rank >= maxRank
+  })
+
+  if (eligible.length < 2) return null
+
+  type Candidate = {
+    p1: SlimeId
+    p2: SlimeId
+    resultId: SlimeId
+    isNew: boolean
+    combinedRank: number // lower = higher rarity parents
+  }
+
+  const candidates: Candidate[] = []
+
+  for (let i = 0; i < eligible.length; i++) {
+    for (let j = i + 1; j < eligible.length; j++) {
+      const p1 = eligible[i]
+      const p2 = eligible[j]
+      const resultId = resolveBreed(p1, p2)
+      if (resultId === MUDSLIME_ID) continue // skip guaranteed failures
+      const isNew = !state.collection[resultId]
+      const def1 = getSlime(p1)
+      const def2 = getSlime(p2)
+      const r1 = RARITY_ORDER[def1?.rarity ?? 'Common'] ?? 5
+      const r2 = RARITY_ORDER[def2?.rarity ?? 'Common'] ?? 5
+      candidates.push({ p1, p2, resultId, isNew, combinedRank: r1 + r2 })
+    }
+  }
+
+  if (candidates.length === 0) return null
+
+  // Sort: new discoveries first, then highest combined rarity (lowest combinedRank)
+  candidates.sort((a, b) => {
+    if (a.isNew !== b.isNew) return a.isNew ? -1 : 1
+    return a.combinedRank - b.combinedRank
+  })
+
+  const best = candidates[0]
+  return [best.p1, best.p2]
+}
+
+/**
+ * Called every production tick when auto-breed is enabled.
+ * - If autoCollect is on, collects any completed slots first.
+ * - Fills every free (non-locked, idle) slot with the best available pair.
+ *
+ * Returns the number of breeds started this tick.
+ */
+export function autoBreedTick(state: GameState): number {
+  if (!state.autoBreed?.enabled) return 0
+
+  const { maxRarity, autoCollect } = state.autoBreed
+  let started = 0
+
+  // Step 1 — auto-collect completed slots
+  if (autoCollect) {
+    for (const slot of state.breedSlots) {
+      if (!slot.locked && slot.resultId !== null) {
+        collectBreedResult(state, slot.id)
+      }
+    }
+  }
+
+  // Step 2 — fill idle slots
+  for (const slot of state.breedSlots) {
+    if (slot.locked) continue
+    if (slot.startTime !== null) continue // already running
+    if (slot.resultId !== null) continue  // waiting for manual collect
+
+    const pair = pickBestBreedPair(state, maxRarity as Rarity | null)
+    if (!pair) break // no valid pairs available
+
+    const success = startBreed(state, slot.id, pair[0], pair[1])
+    if (success) started++
+  }
+
+  return started
 }

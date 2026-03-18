@@ -40,6 +40,20 @@ export interface BreedSlot {
   resultId: SlimeId | null  // set when breed completes, cleared on collect
 }
 
+/** Auto-breed configuration — persisted so it survives reloads. */
+export interface AutoBreedSettings {
+  /** Whether auto-breed is active. */
+  enabled: boolean
+  /**
+   * Maximum rarity of parents the auto-breeder is allowed to use.
+   * e.g. 'Uncommon' means only Common + Uncommon parents are eligible.
+   * null = no restriction (use any rarity).
+   */
+  maxRarity: Rarity | null
+  /** Whether to auto-collect completed breed results before queuing the next pair. */
+  autoCollect: boolean
+}
+
 /** Player-facing accessibility and audio settings, grouped for clarity. */
 export interface GameSettings {
   sfxEnabled: boolean
@@ -115,6 +129,8 @@ export interface GameState {
 
   // ---- Settings ----
   settings: GameSettings
+  // ---- Auto-breed ----
+  autoBreed: AutoBreedSettings
 }
 
 // ---- Reactive Store ----
@@ -194,6 +210,11 @@ export function createNewGame(): GameState {
       reduceMotion: false,
       highContrast: false,
       largeText: false,
+    },
+    autoBreed: {
+      enabled: false,
+      maxRarity: null,
+      autoCollect: true,
     },
   }
 }
